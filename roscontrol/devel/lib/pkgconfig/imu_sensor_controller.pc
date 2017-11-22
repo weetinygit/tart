@@ -1,0 +1,8 @@
+prefix=/home/weety/roscontrol/devel
+
+Name: imu_sensor_controller
+Description: Description of imu_sensor_controller
+Version: 0.13.1
+Cflags: -I/home/weety/roscontrol/src/ros_controllers/imu_sensor_controller/include
+Libs: -L/home/weety/roscontrol/devel/lib -limu_sensor_controller
+Requires: controller_interface hardware_interface pluginlib realtime_tools roscpp sensor_msgs

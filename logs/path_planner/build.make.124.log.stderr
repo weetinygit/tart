@@ -1,0 +1,7 @@
+[01m[K/home/weety/tart5/src/path_planner/src/path_planner_3.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/weety/tart5/src/path_planner/src/path_planner_3.cpp:75:74:[m[K [01;31m[Kerror: [m[KISO C++ forbids comparison between pointer and integer [-fpermissive]
+   while(&my_plan.trajectory_.joint_trajectory.points[a].positions[0] != -1000){
+[01;32m[K                                                                          ^[m[K
+make[2]: *** [CMakeFiles/path_planner_3.dir/src/path_planner_3.cpp.o] Error 1
+make[1]: *** [CMakeFiles/path_planner_3.dir/all] Error 2
+make: *** [all] Error 2

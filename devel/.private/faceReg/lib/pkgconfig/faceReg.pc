@@ -1,0 +1,8 @@
+prefix=/home/weety/tart5/devel/.private/faceReg
+
+Name: faceReg
+Description: Description of faceReg
+Version: 0.0.0
+Cflags: -I/home/weety/tart5/devel/.private/faceReg/include -I/home/weety/tart5/src/faceReg/include
+Libs: -L/home/weety/tart5/devel/.private/faceReg/lib -lfaceReg
+Requires: roscpp rospy std_msgs message_runtime

@@ -1,0 +1,8 @@
+prefix=/home/weety/tart5/devel/.private/gazebo_tutorials
+
+Name: gazebo_tutorials
+Description: Description of gazebo_tutorials
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/weety/tart5/devel/.private/gazebo_tutorials/lib -lgazebo_tutorials
+Requires: roscpp gazebo_ros

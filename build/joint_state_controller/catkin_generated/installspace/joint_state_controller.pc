@@ -1,0 +1,8 @@
+prefix=/home/weety/tart5/install
+
+Name: joint_state_controller
+Description: Description of joint_state_controller
+Version: 0.13.1
+Cflags: -I/home/weety/tart5/install/include
+Libs: -L/home/weety/tart5/install/lib -ljoint_state_controller
+Requires: realtime_tools roscpp hardware_interface pluginlib controller_interface sensor_msgs

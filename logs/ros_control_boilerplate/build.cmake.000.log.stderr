@@ -1,0 +1,6 @@
+[31m[1mCMake Error[0m at /opt/ros/kinetic/share/cmake_modules/cmake/Modules/FindGflags.cmake:50 (message):
+  Could not find gflags library.
+[36mCall Stack (most recent call first):[0m
+  CMakeLists.txt:25 (find_package)
+
+

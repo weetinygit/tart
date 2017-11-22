@@ -1,0 +1,1 @@
+/home/weety/tart5/devel/.private/diff_drive_controller/lib/pkgconfig/diff_drive_controller.pc

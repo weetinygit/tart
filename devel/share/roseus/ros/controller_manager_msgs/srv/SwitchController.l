@@ -1,0 +1,1 @@
+/home/weety/tart5/devel/.private/controller_manager_msgs/share/roseus/ros/controller_manager_msgs/srv/SwitchController.l

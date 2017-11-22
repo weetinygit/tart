@@ -1,0 +1,10 @@
+[01m[K/home/weety/tart5/src/path_planner/src/path_planner_3.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/weety/tart5/src/path_planner/src/path_planner_3.cpp:44:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass moveit::planning_interface::MoveGroupInterface[m[K’ has no member named ‘[01m[KgetposeTarget[m[K’
+   ROS_INFO_stream("#" << group.getposeTarget());
+[01;32m[K                                ^[m[K
+[01m[K/home/weety/tart5/src/path_planner/src/path_planner_3.cpp:44:47:[m[K [01;31m[Kerror: [m[K‘[01m[KROS_INFO_stream[m[K’ was not declared in this scope
+   ROS_INFO_stream("#" << group.getposeTarget());
+[01;32m[K                                               ^[m[K
+make[2]: *** [CMakeFiles/path_planner_3.dir/src/path_planner_3.cpp.o] Error 1
+make[1]: *** [CMakeFiles/path_planner_3.dir/all] Error 2
+make: *** [all] Error 2

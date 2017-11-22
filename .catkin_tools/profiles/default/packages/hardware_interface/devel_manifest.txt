@@ -1,0 +1,4 @@
+roscontrol/src/ros_control/hardware_interface
+/home/weety/tart5/devel/.private/hardware_interface/share/hardware_interface/cmake/hardware_interfaceConfig.cmake /home/weety/tart5/devel/share/hardware_interface/cmake/hardware_interfaceConfig.cmake
+/home/weety/tart5/devel/.private/hardware_interface/share/hardware_interface/cmake/hardware_interfaceConfig-version.cmake /home/weety/tart5/devel/share/hardware_interface/cmake/hardware_interfaceConfig-version.cmake
+/home/weety/tart5/devel/.private/hardware_interface/lib/pkgconfig/hardware_interface.pc /home/weety/tart5/devel/lib/pkgconfig/hardware_interface.pc

@@ -1,0 +1,8 @@
+prefix=/home/weety/tart5/install
+
+Name: rrbot_control
+Description: Description of rrbot_control
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/weety/tart5/install/lib 
+Requires: 

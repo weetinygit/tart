@@ -1,0 +1,1 @@
+/home/weety/tart5/devel/.private/velocity_controllers/lib/pkgconfig/velocity_controllers.pc

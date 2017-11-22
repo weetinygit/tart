@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/weety/tart5/devel/.private/diff_drive_controller/setup.sh

@@ -1,0 +1,8 @@
+prefix=/home/weety/tart5/devel/.private/controller_interface
+
+Name: controller_interface
+Description: Description of controller_interface
+Version: 0.12.0
+Cflags: -I/home/weety/tart5/src/roscontrol/src/ros_control/controller_interface/include
+Libs: -L/home/weety/tart5/devel/.private/controller_interface/lib 
+Requires: roscpp hardware_interface pluginlib

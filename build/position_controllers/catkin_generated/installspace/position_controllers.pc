@@ -1,0 +1,8 @@
+prefix=/home/weety/tart5/install
+
+Name: position_controllers
+Description: Description of position_controllers
+Version: 0.13.1
+Cflags: -I/home/weety/tart5/install/include
+Libs: -L/home/weety/tart5/install/lib -lposition_controllers
+Requires: controller_interface forward_command_controller

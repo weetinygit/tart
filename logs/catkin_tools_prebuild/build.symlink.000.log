@@ -1,0 +1,8 @@
+Symlinking /home/weety/tart5/devel/./setup.zsh
+Symlinking /home/weety/tart5/devel/./_setup_util.py
+Symlinking /home/weety/tart5/devel/./setup.sh
+Symlinking /home/weety/tart5/devel/./setup.bash
+Symlinking /home/weety/tart5/devel/./env.sh
+Symlinking /home/weety/tart5/devel/share/catkin_tools_prebuild/cmake/catkin_tools_prebuildConfig-version.cmake
+Symlinking /home/weety/tart5/devel/share/catkin_tools_prebuild/cmake/catkin_tools_prebuildConfig.cmake
+Symlinking /home/weety/tart5/devel/lib/pkgconfig/catkin_tools_prebuild.pc

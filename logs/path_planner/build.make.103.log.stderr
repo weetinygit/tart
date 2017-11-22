@@ -1,0 +1,4 @@
+[01m[K/home/weety/tart5/src/path_planner/src/path_planner_3.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/weety/tart5/src/path_planner/src/path_planner_3.cpp:69:72:[m[K [01;35m[Kwarning: [m[KNULL used in arithmetic [-Wpointer-arith]
+   while(my_plan.trajectory_.joint_trajectory.points[a].positions[0] != NULL){
+[01;32m[K                                                                        ^[m[K

@@ -1,0 +1,8 @@
+prefix=/home/weety/tart5/devel/.private/tart_moveit_config
+
+Name: tart_moveit_config
+Description: Description of tart_moveit_config
+Version: 0.3.0
+Cflags: 
+Libs: -L/home/weety/tart5/devel/.private/tart_moveit_config/lib 
+Requires: 

@@ -1,0 +1,1 @@
+/home/weety/tart5/devel/.private/faceReg/share/gennodejs/ros/faceReg/_index.js

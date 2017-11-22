@@ -1,0 +1,8 @@
+prefix=/home/weety/tart5/devel/.private/realtime_tools
+
+Name: realtime_tools
+Description: Description of realtime_tools
+Version: 1.11.0
+Cflags: -I/home/weety/tart5/src/roscontrol/src/realtime_tools/include
+Libs: -L/home/weety/tart5/devel/.private/realtime_tools/lib -lrealtime_tools
+Requires: roscpp rospy

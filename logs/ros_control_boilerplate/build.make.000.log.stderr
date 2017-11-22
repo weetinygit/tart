@@ -1,0 +1,95 @@
+In file included from [01m[K/opt/ros/kinetic/include/hardware_interface/robot_hw.h:35:0[m[K,
+                 from [01m[K/home/weety/tart5/src/ros_control_boilerplate/include/ros_control_boilerplate/generic_hw_interface.h:51[m[K,
+                 from [01m[K/home/weety/tart5/src/ros_control_boilerplate/include/ros_control_boilerplate/generic_hw_control_loop.h:41[m[K,
+                 from [01m[K/home/weety/tart5/src/ros_control_boilerplate/src/generic_hw_control_loop.cpp:40[m[K:
+[01m[K/opt/ros/kinetic/include/hardware_interface/internal/interface_manager.h:[m[K In static member function ‘[01m[Kstatic char (& hardware_interface::CheckIsResourceManager<T>::callCM(std::vector<C*>&, C*, typename C::resource_manager_type*))[1][m[K’:
+[01m[K/opt/ros/kinetic/include/hardware_interface/internal/interface_manager.h:73:3:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [-Wreturn-type]
+   }
+[01;32m[K   ^[m[K
+[01m[K/opt/ros/kinetic/include/hardware_interface/internal/interface_manager.h:[m[K In static member function ‘[01m[Kstatic char (& hardware_interface::CheckIsResourceManager<T>::callCM(std::vector<C*>&, C*, ...))[2][m[K’:
+[01m[K/opt/ros/kinetic/include/hardware_interface/internal/interface_manager.h:77:74:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [-Wreturn-type]
+   static no& callCM(typename std::vector<C*>& managers, C* result, ...) {}
+[01;32m[K                                                                          ^[m[K
+[01m[K/opt/ros/kinetic/include/hardware_interface/internal/interface_manager.h:[m[K In static member function ‘[01m[Kstatic std::vector<std::__cxx11::basic_string<char> > hardware_interface::CheckIsResourceManager<T>::callGR(T*, ...)[m[K’:
+[01m[K/opt/ros/kinetic/include/hardware_interface/internal/interface_manager.h:93:58:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [-Wreturn-type]
+   static std::vector<std::string> callGR(T* iface, ...) {}
+[01;32m[K                                                          ^[m[K
+In file included from [01m[K/opt/ros/kinetic/include/hardware_interface/robot_hw.h:35:0[m[K,
+                 from [01m[K/home/weety/tart5/src/ros_control_boilerplate/include/ros_control_boilerplate/generic_hw_interface.h:51[m[K,
+                 from [01m[K/home/weety/tart5/src/ros_control_boilerplate/src/generic_hw_interface.cpp:39[m[K:
+[01m[K/opt/ros/kinetic/include/hardware_interface/internal/interface_manager.h:[m[K In static member function ‘[01m[Kstatic char (& hardware_interface::CheckIsResourceManager<T>::callCM(std::vector<C*>&, C*, typename C::resource_manager_type*))[1][m[K’:
+[01m[K/opt/ros/kinetic/include/hardware_interface/internal/interface_manager.h:73:3:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [-Wreturn-type]
+   }
+[01;32m[K   ^[m[K
+[01m[K/opt/ros/kinetic/include/hardware_interface/internal/interface_manager.h:[m[K In static member function ‘[01m[Kstatic char (& hardware_interface::CheckIsResourceManager<T>::callCM(std::vector<C*>&, C*, ...))[2][m[K’:
+[01m[K/opt/ros/kinetic/include/hardware_interface/internal/interface_manager.h:77:74:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [-Wreturn-type]
+   static no& callCM(typename std::vector<C*>& managers, C* result, ...) {}
+[01;32m[K                                                                          ^[m[K
+[01m[K/opt/ros/kinetic/include/hardware_interface/internal/interface_manager.h:[m[K In static member function ‘[01m[Kstatic std::vector<std::__cxx11::basic_string<char> > hardware_interface::CheckIsResourceManager<T>::callGR(T*, ...)[m[K’:
+[01m[K/opt/ros/kinetic/include/hardware_interface/internal/interface_manager.h:93:58:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [-Wreturn-type]
+   static std::vector<std::string> callGR(T* iface, ...) {}
+[01;32m[K                                                          ^[m[K
+In file included from [01m[K/opt/ros/kinetic/include/hardware_interface/robot_hw.h:35:0[m[K,
+                 from [01m[K/home/weety/tart5/src/ros_control_boilerplate/include/ros_control_boilerplate/generic_hw_interface.h:51[m[K,
+                 from [01m[K/home/weety/tart5/src/ros_control_boilerplate/include/ros_control_boilerplate/sim_hw_interface.h:43[m[K,
+                 from [01m[K/home/weety/tart5/src/ros_control_boilerplate/src/sim_hw_interface.cpp:40[m[K:
+[01m[K/opt/ros/kinetic/include/hardware_interface/internal/interface_manager.h:[m[K In static member function ‘[01m[Kstatic char (& hardware_interface::CheckIsResourceManager<T>::callCM(std::vector<C*>&, C*, typename C::resource_manager_type*))[1][m[K’:
+[01m[K/opt/ros/kinetic/include/hardware_interface/internal/interface_manager.h:73:3:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [-Wreturn-type]
+   }
+[01;32m[K   ^[m[K
+[01m[K/opt/ros/kinetic/include/hardware_interface/internal/interface_manager.h:[m[K In static member function ‘[01m[Kstatic char (& hardware_interface::CheckIsResourceManager<T>::callCM(std::vector<C*>&, C*, ...))[2][m[K’:
+[01m[K/opt/ros/kinetic/include/hardware_interface/internal/interface_manager.h:77:74:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [-Wreturn-type]
+   static no& callCM(typename std::vector<C*>& managers, C* result, ...) {}
+[01;32m[K                                                                          ^[m[K
+[01m[K/opt/ros/kinetic/include/hardware_interface/internal/interface_manager.h:[m[K In static member function ‘[01m[Kstatic std::vector<std::__cxx11::basic_string<char> > hardware_interface::CheckIsResourceManager<T>::callGR(T*, ...)[m[K’:
+[01m[K/opt/ros/kinetic/include/hardware_interface/internal/interface_manager.h:93:58:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [-Wreturn-type]
+   static std::vector<std::string> callGR(T* iface, ...) {}
+[01;32m[K                                                          ^[m[K
+In file included from [01m[K/opt/ros/kinetic/include/hardware_interface/robot_hw.h:35:0[m[K,
+                 from [01m[K/home/weety/tart5/src/ros_control_boilerplate/include/ros_control_boilerplate/generic_hw_interface.h:51[m[K,
+                 from [01m[K/home/weety/tart5/src/ros_control_boilerplate/rrbot_control/include/rrbot_control/rrbot_hw_interface.h:43[m[K,
+                 from [01m[K/home/weety/tart5/src/ros_control_boilerplate/rrbot_control/src/rrbot_hw_interface.cpp:40[m[K:
+[01m[K/opt/ros/kinetic/include/hardware_interface/internal/interface_manager.h:[m[K In static member function ‘[01m[Kstatic char (& hardware_interface::CheckIsResourceManager<T>::callCM(std::vector<C*>&, C*, typename C::resource_manager_type*))[1][m[K’:
+[01m[K/opt/ros/kinetic/include/hardware_interface/internal/interface_manager.h:73:3:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [-Wreturn-type]
+   }
+[01;32m[K   ^[m[K
+[01m[K/opt/ros/kinetic/include/hardware_interface/internal/interface_manager.h:[m[K In static member function ‘[01m[Kstatic char (& hardware_interface::CheckIsResourceManager<T>::callCM(std::vector<C*>&, C*, ...))[2][m[K’:
+[01m[K/opt/ros/kinetic/include/hardware_interface/internal/interface_manager.h:77:74:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [-Wreturn-type]
+   static no& callCM(typename std::vector<C*>& managers, C* result, ...) {}
+[01;32m[K                                                                          ^[m[K
+[01m[K/opt/ros/kinetic/include/hardware_interface/internal/interface_manager.h:[m[K In static member function ‘[01m[Kstatic std::vector<std::__cxx11::basic_string<char> > hardware_interface::CheckIsResourceManager<T>::callGR(T*, ...)[m[K’:
+[01m[K/opt/ros/kinetic/include/hardware_interface/internal/interface_manager.h:93:58:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [-Wreturn-type]
+   static std::vector<std::string> callGR(T* iface, ...) {}
+[01;32m[K                                                          ^[m[K
+In file included from [01m[K/opt/ros/kinetic/include/hardware_interface/robot_hw.h:35:0[m[K,
+                 from [01m[K/home/weety/tart5/src/ros_control_boilerplate/include/ros_control_boilerplate/generic_hw_interface.h:51[m[K,
+                 from [01m[K/home/weety/tart5/src/ros_control_boilerplate/include/ros_control_boilerplate/generic_hw_control_loop.h:41[m[K,
+                 from [01m[K/home/weety/tart5/src/ros_control_boilerplate/rrbot_control/src/rrbot_hw_main.cpp:39[m[K:
+[01m[K/opt/ros/kinetic/include/hardware_interface/internal/interface_manager.h:[m[K In static member function ‘[01m[Kstatic char (& hardware_interface::CheckIsResourceManager<T>::callCM(std::vector<C*>&, C*, typename C::resource_manager_type*))[1][m[K’:
+[01m[K/opt/ros/kinetic/include/hardware_interface/internal/interface_manager.h:73:3:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [-Wreturn-type]
+   }
+[01;32m[K   ^[m[K
+[01m[K/opt/ros/kinetic/include/hardware_interface/internal/interface_manager.h:[m[K In static member function ‘[01m[Kstatic char (& hardware_interface::CheckIsResourceManager<T>::callCM(std::vector<C*>&, C*, ...))[2][m[K’:
+[01m[K/opt/ros/kinetic/include/hardware_interface/internal/interface_manager.h:77:74:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [-Wreturn-type]
+   static no& callCM(typename std::vector<C*>& managers, C* result, ...) {}
+[01;32m[K                                                                          ^[m[K
+[01m[K/opt/ros/kinetic/include/hardware_interface/internal/interface_manager.h:[m[K In static member function ‘[01m[Kstatic std::vector<std::__cxx11::basic_string<char> > hardware_interface::CheckIsResourceManager<T>::callGR(T*, ...)[m[K’:
+[01m[K/opt/ros/kinetic/include/hardware_interface/internal/interface_manager.h:93:58:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [-Wreturn-type]
+   static std::vector<std::string> callGR(T* iface, ...) {}
+[01;32m[K                                                          ^[m[K
+In file included from [01m[K/opt/ros/kinetic/include/hardware_interface/robot_hw.h:35:0[m[K,
+                 from [01m[K/home/weety/tart5/src/ros_control_boilerplate/include/ros_control_boilerplate/generic_hw_interface.h:51[m[K,
+                 from [01m[K/home/weety/tart5/src/ros_control_boilerplate/include/ros_control_boilerplate/generic_hw_control_loop.h:41[m[K,
+                 from [01m[K/home/weety/tart5/src/ros_control_boilerplate/src/sim_hw_main.cpp:39[m[K:
+[01m[K/opt/ros/kinetic/include/hardware_interface/internal/interface_manager.h:[m[K In static member function ‘[01m[Kstatic char (& hardware_interface::CheckIsResourceManager<T>::callCM(std::vector<C*>&, C*, typename C::resource_manager_type*))[1][m[K’:
+[01m[K/opt/ros/kinetic/include/hardware_interface/internal/interface_manager.h:73:3:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [-Wreturn-type]
+   }
+[01;32m[K   ^[m[K
+[01m[K/opt/ros/kinetic/include/hardware_interface/internal/interface_manager.h:[m[K In static member function ‘[01m[Kstatic char (& hardware_interface::CheckIsResourceManager<T>::callCM(std::vector<C*>&, C*, ...))[2][m[K’:
+[01m[K/opt/ros/kinetic/include/hardware_interface/internal/interface_manager.h:77:74:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [-Wreturn-type]
+   static no& callCM(typename std::vector<C*>& managers, C* result, ...) {}
+[01;32m[K                                                                          ^[m[K
+[01m[K/opt/ros/kinetic/include/hardware_interface/internal/interface_manager.h:[m[K In static member function ‘[01m[Kstatic std::vector<std::__cxx11::basic_string<char> > hardware_interface::CheckIsResourceManager<T>::callGR(T*, ...)[m[K’:
+[01m[K/opt/ros/kinetic/include/hardware_interface/internal/interface_manager.h:93:58:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [-Wreturn-type]
+   static std::vector<std::string> callGR(T* iface, ...) {}
+[01;32m[K                                                          ^[m[K

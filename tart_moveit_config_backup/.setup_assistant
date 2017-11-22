@@ -1,0 +1,10 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: ""
+    relative_path: /home/weety/tart2/urdf/urdf.xml
+  SRDF:
+    relative_path: config/tart_robot.srdf
+  CONFIG:
+    author_name: Wee Ting Yit
+    author_email: weetingyit36@gmail.com
+    generated_timestamp: 1510498873

@@ -1,0 +1,8 @@
+prefix=/home/weety/tart5/devel/.private/velocity_controllers
+
+Name: velocity_controllers
+Description: Description of velocity_controllers
+Version: 0.13.1
+Cflags: -I/home/weety/tart5/src/roscontrol/src/ros_controllers/velocity_controllers/include
+Libs: -L/home/weety/tart5/devel/.private/velocity_controllers/lib -lvelocity_controllers
+Requires: angles control_msgs control_toolbox controller_interface forward_command_controller realtime_tools urdf

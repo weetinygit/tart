@@ -1,0 +1,8 @@
+prefix=/home/weety/tart5/install
+
+Name: rqt_joint_trajectory_controller
+Description: Description of rqt_joint_trajectory_controller
+Version: 0.13.1
+Cflags: 
+Libs: -L/home/weety/tart5/install/lib 
+Requires: 

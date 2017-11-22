@@ -1,0 +1,5 @@
+roscontrol/src/ros_controllers/effort_controllers
+/home/weety/tart5/devel/.private/effort_controllers/share/effort_controllers/cmake/effort_controllersConfig.cmake /home/weety/tart5/devel/share/effort_controllers/cmake/effort_controllersConfig.cmake
+/home/weety/tart5/devel/.private/effort_controllers/share/effort_controllers/cmake/effort_controllersConfig-version.cmake /home/weety/tart5/devel/share/effort_controllers/cmake/effort_controllersConfig-version.cmake
+/home/weety/tart5/devel/.private/effort_controllers/lib/libeffort_controllers.so /home/weety/tart5/devel/lib/libeffort_controllers.so
+/home/weety/tart5/devel/.private/effort_controllers/lib/pkgconfig/effort_controllers.pc /home/weety/tart5/devel/lib/pkgconfig/effort_controllers.pc

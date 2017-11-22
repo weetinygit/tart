@@ -1,0 +1,1 @@
+/home/weety/tart5/devel/.private/transmission_interface/lib/pkgconfig/transmission_interface.pc

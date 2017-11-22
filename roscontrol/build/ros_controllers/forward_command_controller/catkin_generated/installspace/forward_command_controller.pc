@@ -1,0 +1,8 @@
+prefix=/home/weety/roscontrol/install
+
+Name: forward_command_controller
+Description: Description of forward_command_controller
+Version: 0.13.1
+Cflags: -I/home/weety/roscontrol/install/include
+Libs: -L/home/weety/roscontrol/install/lib 
+Requires: controller_interface hardware_interface std_msgs realtime_tools

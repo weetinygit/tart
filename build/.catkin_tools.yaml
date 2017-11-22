@@ -1,0 +1,6 @@
+devel_space: /home/weety/tart5/devel
+install: false
+install_space: /home/weety/tart5/install
+profile: default
+source_space: /home/weety/tart5/src
+workspace: /home/weety/tart5

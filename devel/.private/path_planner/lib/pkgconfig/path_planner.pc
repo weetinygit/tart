@@ -1,0 +1,8 @@
+prefix=/home/weety/tart5/devel/.private/path_planner
+
+Name: path_planner
+Description: Description of path_planner
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/weety/tart5/devel/.private/path_planner/lib 
+Requires: 

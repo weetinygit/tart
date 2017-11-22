@@ -1,0 +1,12 @@
+[  8%] Built target csv_to_controller
+[ 16%] Built target ros_control_boilerplate_test_trajectory
+[ 25%] Built target generic_hw_control_loop
+[ 33%] Built target generic_hw_interface
+[ 41%] Built target ros_control_boilerplate_keyboard_teleop
+[ 50%] Built target controller_to_csv
+[ 58%] Built target sim_hw_interface
+[ 66%] Built target rrbot_hw_interface
+[ 75%] Built target ros_control_boilerplate_csv_to_controller_main
+[ 83%] Built target ros_control_boilerplate_controller_to_csv_main
+[ 91%] Built target ros_control_boilerplate_sim_hw_main
+[100%] Built target rrbot_hw_main

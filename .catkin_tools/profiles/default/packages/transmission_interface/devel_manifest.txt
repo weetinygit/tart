@@ -1,0 +1,7 @@
+roscontrol/src/ros_control/transmission_interface
+/home/weety/tart5/devel/.private/transmission_interface/share/transmission_interface/cmake/transmission_interfaceConfig-version.cmake /home/weety/tart5/devel/share/transmission_interface/cmake/transmission_interfaceConfig-version.cmake
+/home/weety/tart5/devel/.private/transmission_interface/share/transmission_interface/cmake/transmission_interfaceConfig.cmake /home/weety/tart5/devel/share/transmission_interface/cmake/transmission_interfaceConfig.cmake
+/home/weety/tart5/devel/.private/transmission_interface/lib/libtransmission_interface_parser.so /home/weety/tart5/devel/lib/libtransmission_interface_parser.so
+/home/weety/tart5/devel/.private/transmission_interface/lib/libtransmission_interface_loader_plugins.so /home/weety/tart5/devel/lib/libtransmission_interface_loader_plugins.so
+/home/weety/tart5/devel/.private/transmission_interface/lib/libtransmission_interface_loader.so /home/weety/tart5/devel/lib/libtransmission_interface_loader.so
+/home/weety/tart5/devel/.private/transmission_interface/lib/pkgconfig/transmission_interface.pc /home/weety/tart5/devel/lib/pkgconfig/transmission_interface.pc

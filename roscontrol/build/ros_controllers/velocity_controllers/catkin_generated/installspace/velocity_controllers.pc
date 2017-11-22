@@ -1,0 +1,8 @@
+prefix=/home/weety/roscontrol/install
+
+Name: velocity_controllers
+Description: Description of velocity_controllers
+Version: 0.13.1
+Cflags: -I/home/weety/roscontrol/install/include
+Libs: -L/home/weety/roscontrol/install/lib -lvelocity_controllers
+Requires: angles control_msgs control_toolbox controller_interface forward_command_controller realtime_tools urdf

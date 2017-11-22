@@ -1,0 +1,244 @@
+<robot name="tart_robot">
+
+	<!-- * * * Link Definitions * * * -->
+    <!--1st DOF-->
+ 	<link name="base_link">
+		<visual>
+		    <origin xyz="0 0 1.5" rpy="0 0 0"/>
+			<geometry>
+				<cylinder radius="3.5" length="3"/>
+			</geometry>
+			<material name="Cyan1">
+	       		<color rgba="0 0.9 0.9 1.0"/>
+	     	</material>
+  </visual>
+	</link>
+	
+  	<link name="base_rotating">
+		<visual>
+		    <origin xyz="0 0 0.5" rpy="0 0 0"/>
+			<geometry>
+				<cylinder radius="3.4" length="1"/>
+			</geometry>
+			<material name="Magenta1">
+	       		<color rgba="0.9 0 0.9 1.0"/>
+	     	</material>
+		</visual>	
+	</link>
+
+        <link name="motor1_holder">
+		<visual>
+			<origin xyz="-0.25 0 2" rpy="0 0 0"/>
+			<geometry>
+				<box size="0.5 3.5 4"/>
+			</geometry>
+	     	<material name="Grey1">
+				<color rgba="0.9 0.9 0.9 1.0"/>
+			</material>
+	   </visual>
+	</link>
+
+        <link name="motor2_holder">
+		<visual>
+			<origin xyz="0.25 0 2" rpy="0 0 0"/>
+			<geometry>
+				<box size="0.5 3.5 4"/>
+			</geometry>
+	     	<material name="Grey2">
+				<color rgba="0.7 0.7 0.7 1.0"/>
+			</material>
+	   </visual>
+	</link>
+
+        <link name="main_axis">
+		<visual>
+			<origin xyz="0 0 2" rpy="0 0 0"/>
+			<geometry>
+				<box size="1 1 4"/>
+			</geometry>
+	     	<material name="Red1">
+				<color rgba="1 0.1 0.1 1.0"/>
+			</material>
+	   </visual>
+	</link>
+	<!--2nd DOF-->
+	
+	<link name="main_link_1_left">
+		<visual>
+			<origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<box size="0.75 0.75 9"/>
+			</geometry>
+	     	<material name="White1">
+				<color rgba="1 1 1 1.0"/>
+			</material>
+	   </visual>
+	</link>
+	<link name="main_link_1_center">
+		<visual>
+			<origin xyz="-0.75 0 0" rpy="0 0 0"/>
+			<geometry>
+				<box size="1.5 0.75 0.5"/>
+			</geometry>
+	     	<material name="White1">
+				<color rgba="1 1 1 1.0"/>
+			</material>
+	   </visual>
+	</link>
+	
+	<link name="main_link_1_right">
+		<visual>
+			<origin xyz="0 0 4" rpy="0 0 0"/>
+			<geometry>
+				<box size="1.5 0.75 9"/>
+			</geometry>
+	     	<material name="White1">
+				<color rgba="1 1 1 1.0"/>
+			</material>
+	   </visual>
+	</link>
+
+	<!--3rd DOF-->
+
+
+	
+	<link name="main_link_3">
+		<visual>
+			<origin xyz="0.5 0 1.75" rpy="0 0 0"/>
+			<geometry>
+				<box size="1 0.75 12.5"/>
+			</geometry>
+	     	<material name="White1">
+				<color rgba="1 1 1 1.0"/>
+			</material>
+	   </visual>
+	</link>
+	<!--4th and 5th DOF-->
+	<link name="dummy_link">
+		<visual>
+			<origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<box size="1 0.75 0.75"/>
+			</geometry>
+	     	<material name="Magenta1">
+	     	<color rgba="0.9 0 0.9 1.0"/>
+			</material>
+	   </visual>
+	</link>
+	<link name="main_link_4">
+		<visual>
+			<origin xyz="0.75 0 0" rpy="0 0 0"/>
+			<geometry>
+				<box size="1.5 0.75 0.75"/>
+			</geometry>
+	     	<material name="Grey3">
+				<color rgba="0.5 0.5 0.5 1.0"/>
+			</material>
+	   </visual>
+	</link>
+	<link name="main_link_5">
+		<visual>
+			<origin xyz="0 0 0.375" rpy="0 0 0"/>
+			<geometry>
+				<box size="1.5 0.75 0.75"/>
+			</geometry>
+	     	<material name="Grey3">
+				<color rgba="0.5 0.5 0.5 1.0"/>
+			</material>
+	   </visual>
+	</link>
+	<link name="tablet">
+		<visual>
+			<origin xyz="0 0 3" rpy="0 0 0"/>
+			<geometry>
+				<box size="5 2 6"/>
+			</geometry>
+	     	<material name="Black2">
+				<color rgba="0.1 0.1 0.1 1.0"/>
+			</material>
+	   </visual>
+	</link>
+	
+	
+	<!-- * * * Joint Definitions * * * -->
+
+   <!--1st DOF-->	
+	<joint name="base_joint" type="continuous">
+    	<parent link="base_link"/>
+    	<child link="base_rotating"/>
+    	<origin xyz="0 0 3" rpy="0 0 0"/>
+    	<axis xyz="0 0 1"/>
+	</joint>
+
+    <joint name="motor1_fixed" type="fixed">
+    	<parent link="base_rotating"/>
+    	<child link="motor1_holder"/>
+    	<origin xyz="-2 0 1" rpy="0 0 0"/>
+	</joint>
+
+    <joint name="motor2_fixed" type="fixed">
+    	<parent link="base_rotating"/>
+    	<child link="motor2_holder"/>
+    	<origin xyz="2 0 1" rpy="0 0 0"/>
+	</joint>
+
+    <joint name="main_axis_fixed" type="fixed">
+    	<parent link="base_rotating"/>
+    	<child link="main_axis"/>
+    	<origin xyz="0 0 1" rpy="0 0 0"/>
+	</joint>
+   <!--2nd DOF-->
+   <joint name="link_1" type="continuous">
+    	<parent link="motor2_holder"/>
+    	<child link="main_link_1_right"/>
+    	<origin xyz="-0.75 0 3.5" rpy="0 0 0"/>
+	</joint>
+	
+    <joint name="link_1.1" type="fixed">
+    	<parent link="main_link_1_right"/>
+    	<child link="main_link_1_center"/>
+    	<origin xyz="-0.75 0 4" rpy="0 0 0"/>
+	</joint>
+	
+    <joint name="link_1.2" type="fixed">
+    	<parent link="main_link_1_center"/>
+    	<child link="main_link_1_left"/>
+    	<origin xyz="-1.375 0 0" rpy="0 0 0"/>
+	</joint>
+	
+	
+   <!--3rd DOF-->
+	
+
+    <joint name="link_3" type="continuous">
+    	<parent link="main_link_1_left"/>
+    	<child link="main_link_3"/>
+    	<origin xyz="0.375 0 4" rpy="0 0 0"/>
+	</joint>
+	
+   <!--4th and 5th DOF-->
+   <joint name="dummy_link" type="continuous">
+    	<parent link="main_link_3"/>
+    	<child link="dummy_link"/>
+    	<origin xyz="0.5 0 7.5" rpy="0 0 0"/>
+        <axis xyz="0 1 0"/>
+	</joint>
+   <joint name="link_4" type="continuous">
+    	<parent link="dummy_link"/>
+    	<child link="main_link_4"/>
+    	<origin xyz="0.5 0 0" rpy="-0.785 0 0"/>
+	</joint>
+    <joint name="link_5" type="continuous">
+    	<parent link="main_link_4"/>
+    	<child link="main_link_5"/>
+    	<origin xyz="0.75 0 0.375" rpy="0 0 0"/>
+        <axis xyz="0 0 1"/>
+	</joint>
+    <joint name="to_tablet" type="fixed">
+    	<parent link="main_link_5"/>
+    	<child link="tablet"/>
+    	<origin xyz="0 0 0.375" rpy="0 0 0"/>
+        <axis xyz="0 0 1"/>
+	</joint>
+   
+</robot>
