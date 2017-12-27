@@ -17,6 +17,11 @@ joint_limits:
     max_velocity: 0
     has_acceleration_limits: false
     max_acceleration: 0
+  dummy_link:
+    has_velocity_limits: false
+    max_velocity: 0
+    has_acceleration_limits: false
+    max_acceleration: 0
   link_4:
     has_velocity_limits: false
     max_velocity: 0

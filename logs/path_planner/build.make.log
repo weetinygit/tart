@@ -1,7 +1,6 @@
-[35m[1mScanning dependencies of target path_planner_3[0m
-[ 25%] Built target fake_robot
-[ 37%] [32mBuilding CXX object CMakeFiles/path_planner_3.dir/src/path_planner_3.cpp.o[0m
-[ 62%] Built target path_planner_2
-[ 87%] Built target path_planner
-[100%] [32m[1mLinking CXX executable /home/weety/tart5/devel/.private/path_planner/lib/path_planner/path_planner_3[0m
-[100%] Built target path_planner_3
+[35m[1mScanning dependencies of target path_planner_2[0m
+[ 33%] Built target path_planner
+[ 66%] Built target arduino_comm
+[ 83%] [32mBuilding CXX object CMakeFiles/path_planner_2.dir/src/path_planner_2.cpp.o[0m
+[100%] [32m[1mLinking CXX executable /home/weety/tart5/devel/.private/path_planner/lib/path_planner/path_planner_2[0m
+[100%] Built target path_planner_2

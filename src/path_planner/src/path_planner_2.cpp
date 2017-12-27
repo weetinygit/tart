@@ -1,114 +1,118 @@
 #include <pluginlib/class_loader.h>
 #include <ros/ros.h>
 #include <boost/scoped_ptr.hpp>
+#include "std_msgs/String.h"
+#include <string>     // std::string, std::stoi
 
 // MoveIt!
-#include <moveit/robot_model_loader/robot_model_loader.h>
-#include <moveit/planning_interface/planning_interface.h>
-#include <moveit/planning_scene/planning_scene.h>
-#include <moveit/kinematic_constraints/utils.h>
+
+#include <moveit/move_group_interface/move_group_interface.h>
+#include <moveit/planning_scene_interface/planning_scene_interface.h>
+
+#include <moveit_msgs/DisplayRobotState.h>
 #include <moveit_msgs/DisplayTrajectory.h>
-#include <moveit_msgs/PlanningScene.h>
+
+#include <moveit_msgs/AttachedCollisionObject.h>
+#include <moveit_msgs/CollisionObject.h>
+
+//Setup loop variables
+int completeStatus = 0;
+
+void actionNodeCallback(const std_msgs::String::ConstPtr& msg)
+{
+  ROS_INFO("I heard: [%s]", msg->data.c_str());
+  //Transmit loop variable
+  completeStatus = std::stoi (msg->data.c_str(),nullptr,0);
+}
 
 int main(int argc, char **argv) {
-    ros::init(argc, argv, "move_group_tutorial");
-    ros::AsyncSpinner spinner(1);
-    spinner.start();
-    ros::NodeHandle node_handle("~");
-
-    robot_model_loader::RobotModelLoader robot_model_loader("robot_description");
-    robot_model::RobotModelPtr robot_model = robot_model_loader.getModel();
-    planning_scene::PlanningScenePtr planning_scene(new planning_scene::PlanningScene(robot_model));
-    boost::scoped_ptr<pluginlib::ClassLoader<planning_interface::PlannerManager>> planner_plugin_loader;
-    planning_interface::PlannerManagerPtr planner_instance;
-    std::string planner_plugin_name; 
-    
-    
-    
-    if (!node_handle.getParam("planning_plugin", planner_plugin_name))
-  ROS_FATAL_STREAM("Could not find planner plugin name");
-try
-{
-  planner_plugin_loader.reset(new pluginlib::ClassLoader<planning_interface::PlannerManager>(
-      "moveit_core", "planning_interface::PlannerManager"));
-}
-catch (pluginlib::PluginlibException& ex)
-{
-  ROS_FATAL_STREAM("Exception while creating planning plugin loader " << ex.what());
-}
-try
-{
-  planner_instance.reset(planner_plugin_loader->createUnmanagedInstance(planner_plugin_name));
-  if (!planner_instance->initialize(robot_model, node_handle.getNamespace()))
-    ROS_FATAL_STREAM("Could not initialize planner instance");
-  ROS_INFO_STREAM("Using planning interface '" << planner_instance->getDescription() << "'");
-}
-catch (pluginlib::PluginlibException& ex)
-{
-  const std::vector<std::string>& classes = planner_plugin_loader->getDeclaredClasses();
-  std::stringstream ss;
-  for (std::size_t i = 0; i < classes.size(); ++i)
-    ss << classes[i] << " ";
-  ROS_ERROR_STREAM("Exception while loading planner '" << planner_plugin_name << "': " << ex.what() << std::endl
-                                                       << "Available plugins: " << ss.str());
-}
-
-/* Sleep a little to allow time to startup rviz, etc. */
-ros::WallDuration sleep_time(15.0);
-sleep_time.sleep();
-
-planning_interface::MotionPlanRequest req;
-planning_interface::MotionPlanResponse res;
-/*
-geometry_msgs::PoseStamped pose;
-pose.header.frame_id = "base_link";
-pose.pose.position.x = 5.0;
-pose.pose.position.y = 5.0;
-pose.pose.position.z = 5.0;
-pose.pose.orientation.w = 1.0;
-std::vector<double> tolerance_pose(3, 0.01);
-std::vector<double> tolerance_angle(3, 0.1);
-req.group_name = "manipulator";
-  moveit_msgs::Constraints pose_goal =
-      kinematic_constraints::constructGoalConstraints("tablet", pose, tolerance_pose, tolerance_angle);
-  req.goal_constraints.push_back(pose_goal);
-  */
   
-/*
-std::vector<double> joint_values(7, 0.0);
-joint_values[0] = -2.0;
-joint_values[3] = -0.2;
-joint_values[5] = -0.15;
-goal_state.setJointGroupPositions(joint_model_group, joint_values);
-moveit_msgs::Constraints joint_goal = kinematic_constraints::constructGoalConstraints(goal_state, joint_model_group);
-req.goal_constraints.clear();
-req.goal_constraints.push_back(joint_goal);
-*/
-  // We now construct a planning context that encapsulate the scene,
-  // the request and the response. We call the planner using this
-  // planning context
-  planning_interface::PlanningContextPtr context =
-      planner_instance->getPlanningContext(planning_scene, req, res.error_code_);
-  context->solve(res);
-  if (res.error_code_.val != res.error_code_.SUCCESS)
-  {
-    ROS_ERROR("Could not compute plan successfully");
-    return 0;
-}
+  //Setup ROS
+  ros::init(argc, argv, "plan_node");
+  ros::NodeHandle nh;
+  ros::AsyncSpinner spinner(2);
+  spinner.start();
+  
+  
+  //Setup ROS publishers & subscribers
+  moveit::planning_interface::MoveGroupInterface group("manipulator");
+  moveit::planning_interface::PlanningSceneInterface planning_scene_interface;
+  ros::Publisher display_publisher = nh.advertise<moveit_msgs::DisplayTrajectory>("/move_group/display_planned_path", 1, true);
+  ros::Subscriber sub = nh.subscribe("/action_node", 1000, actionNodeCallback);
+    
+  group.setPlannerId("RRTConnectkConfigDefault");
+  //Attempt to write directly to /joint_states topic
+  ros::Publisher joint_states_pub = nh.advertise<sensor_msgs::JointState>("/move_group/fake_controller_joint_states", 1000);
+  ros::Rate loop_rate(10);
+  sensor_msgs::JointState joint_states_msg;
+  
+  //Initialize variables needed for pose and path planning
+  geometry_msgs::Pose target_pose1;
+  moveit_msgs::DisplayTrajectory display_trajectory;
+  
 
-ros::Publisher display_publisher =
-    node_handle.advertise<moveit_msgs::DisplayTrajectory>("/move_group/display_planned_path", 1, true);
-moveit_msgs::DisplayTrajectory display_trajectory;
+  
+  //Loop
+  while (ros::ok()){
 
-/* Visualize the trajectory */
-ROS_INFO("Visualizing the trajectory");
-moveit_msgs::MotionPlanResponse response;
-res.getMessage(response);
+      if (completeStatus != 0){
 
-display_trajectory.trajectory_start = response.trajectory_start;
-display_trajectory.trajectory.push_back(response.trajectory);
-display_publisher.publish(display_trajectory);
+        ROS_INFO("Pose status: %d", completeStatus);
+        ROS_INFO_STREAM("Current pose: #" << group.getCurrentPose());
 
-sleep_time.sleep();
+        if (completeStatus == 1) {
+          target_pose1.position.x = -0.195;
+          target_pose1.position.y = -0.036;
+          target_pose1.position.z = 0.129;
+          target_pose1.orientation.w = -0.008;
+          target_pose1.orientation.x = -0.010;
+          target_pose1.orientation.y = 0.784;
+          target_pose1.orientation.z = 0.620;
+          group.setPoseTarget(target_pose1);
+        }
+        else {
+          target_pose1.position.x = 0.082;
+          target_pose1.position.y = 0.035;
+          target_pose1.position.z = 0.279;
+          target_pose1.orientation.w = 0.472;
+          target_pose1.orientation.x = 0.352;
+          target_pose1.orientation.y = 0.483;
+          target_pose1.orientation.z = 0.648;
+          group.setPoseTarget(target_pose1);
+        }
+
+        completeStatus = 0;
+        ROS_INFO_STREAM("Target pose: " << group.getPoseTarget());
+
+        group.setGoalTolerance(0.1);
+        moveit::planning_interface::MoveGroupInterface::Plan my_plan;
+        bool success = group.plan(my_plan);
+        group.setPlanningTime(10);
+
+        ROS_INFO("Visualizing plan 1 (pose goal) %s",success?"":"FAILED");
+
+        //Recognize end of plan  
+        trajectory_msgs::JointTrajectoryPoint plan_end;
+        plan_end.positions.push_back(-1000.0);
+        my_plan.trajectory_.joint_trajectory.points.push_back(plan_end);
+       joint_states_msg.name = my_plan.trajectory_.joint_trajectory.joint_names; 
+
+        int a = 0;
+        try{
+        while(my_plan.trajectory_.joint_trajectory.points[a].positions[0] != -1000.0f){
+          joint_states_msg.position = my_plan.trajectory_.joint_trajectory.points[a].positions;
+          joint_states_pub.publish(joint_states_msg);
+          a = a+1;
+          ROS_INFO("a: %d",a);
+          loop_rate.sleep();
+         ROS_INFO("Conditional value: %f", my_plan.trajectory_.joint_trajectory.points[a].positions[0]);
+         } 
+         }catch(int e){
+         }
+          
+      }
+      
+  }
+   
 
 }

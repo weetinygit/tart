@@ -1,8 +1,7 @@
 /home/weety/tart5/build/path_planner/CMakeFiles/rebuild_cache.dir
 /home/weety/tart5/build/path_planner/CMakeFiles/edit_cache.dir
 /home/weety/tart5/build/path_planner/CMakeFiles/install/strip.dir
-/home/weety/tart5/build/path_planner/CMakeFiles/fake_robot.dir
-/home/weety/tart5/build/path_planner/CMakeFiles/path_planner_3.dir
+/home/weety/tart5/build/path_planner/CMakeFiles/arduino_comm.dir
 /home/weety/tart5/build/path_planner/CMakeFiles/path_planner_2.dir
 /home/weety/tart5/build/path_planner/CMakeFiles/path_planner.dir
 /home/weety/tart5/build/path_planner/CMakeFiles/moveit_ros_manipulation_gencfg.dir

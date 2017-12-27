@@ -132,13 +132,11 @@ add_executable(path_planner_2 src/path_planner_2.cpp)
 target_link_libraries(path_planner_2 ${catkin_LIBRARIES}  ${Boost_LIBRARIES})
 install(TARGETS path_planner_2 DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
 
-add_executable(path_planner_3 src/path_planner_3.cpp)
-target_link_libraries(path_planner_3 ${catkin_LIBRARIES}  ${Boost_LIBRARIES})
-install(TARGETS path_planner_3 DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+add_executable(arduino_comm src/arduino_comm.cpp)
+target_link_libraries(arduino_comm ${catkin_LIBRARIES}  ${Boost_LIBRARIES})
+install(TARGETS arduino_comm DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
 
-add_executable(fake_robot src/fake_robot.cpp)
-target_link_libraries(fake_robot ${catkin_LIBRARIES})
-install(TARGETS fake_robot DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
 #   src/${PROJECT_NAME}/path_planner.cpp

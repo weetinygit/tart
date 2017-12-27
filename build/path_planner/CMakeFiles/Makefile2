@@ -60,76 +60,39 @@ CMAKE_SOURCE_DIR = /home/weety/tart5/src/path_planner
 CMAKE_BINARY_DIR = /home/weety/tart5/build/path_planner
 
 #=============================================================================
-# Target rules for target CMakeFiles/fake_robot.dir
+# Target rules for target CMakeFiles/arduino_comm.dir
 
 # All Build rule for target.
-CMakeFiles/fake_robot.dir/all:
-	$(MAKE) -f CMakeFiles/fake_robot.dir/build.make CMakeFiles/fake_robot.dir/depend
-	$(MAKE) -f CMakeFiles/fake_robot.dir/build.make CMakeFiles/fake_robot.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/weety/tart5/build/path_planner/CMakeFiles --progress-num=1,2 "Built target fake_robot"
-.PHONY : CMakeFiles/fake_robot.dir/all
+CMakeFiles/arduino_comm.dir/all:
+	$(MAKE) -f CMakeFiles/arduino_comm.dir/build.make CMakeFiles/arduino_comm.dir/depend
+	$(MAKE) -f CMakeFiles/arduino_comm.dir/build.make CMakeFiles/arduino_comm.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/weety/tart5/build/path_planner/CMakeFiles --progress-num=1,2 "Built target arduino_comm"
+.PHONY : CMakeFiles/arduino_comm.dir/all
 
 # Include target in all.
-all: CMakeFiles/fake_robot.dir/all
+all: CMakeFiles/arduino_comm.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/fake_robot.dir/rule: cmake_check_build_system
+CMakeFiles/arduino_comm.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/weety/tart5/build/path_planner/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/fake_robot.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/arduino_comm.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/weety/tart5/build/path_planner/CMakeFiles 0
-.PHONY : CMakeFiles/fake_robot.dir/rule
+.PHONY : CMakeFiles/arduino_comm.dir/rule
 
 # Convenience name for target.
-fake_robot: CMakeFiles/fake_robot.dir/rule
+arduino_comm: CMakeFiles/arduino_comm.dir/rule
 
-.PHONY : fake_robot
-
-# clean rule for target.
-CMakeFiles/fake_robot.dir/clean:
-	$(MAKE) -f CMakeFiles/fake_robot.dir/build.make CMakeFiles/fake_robot.dir/clean
-.PHONY : CMakeFiles/fake_robot.dir/clean
+.PHONY : arduino_comm
 
 # clean rule for target.
-clean: CMakeFiles/fake_robot.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/path_planner_3.dir
-
-# All Build rule for target.
-CMakeFiles/path_planner_3.dir/all:
-	$(MAKE) -f CMakeFiles/path_planner_3.dir/build.make CMakeFiles/path_planner_3.dir/depend
-	$(MAKE) -f CMakeFiles/path_planner_3.dir/build.make CMakeFiles/path_planner_3.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/weety/tart5/build/path_planner/CMakeFiles --progress-num=11,12 "Built target path_planner_3"
-.PHONY : CMakeFiles/path_planner_3.dir/all
-
-# Include target in all.
-all: CMakeFiles/path_planner_3.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/path_planner_3.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/weety/tart5/build/path_planner/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/path_planner_3.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/weety/tart5/build/path_planner/CMakeFiles 0
-.PHONY : CMakeFiles/path_planner_3.dir/rule
-
-# Convenience name for target.
-path_planner_3: CMakeFiles/path_planner_3.dir/rule
-
-.PHONY : path_planner_3
+CMakeFiles/arduino_comm.dir/clean:
+	$(MAKE) -f CMakeFiles/arduino_comm.dir/build.make CMakeFiles/arduino_comm.dir/clean
+.PHONY : CMakeFiles/arduino_comm.dir/clean
 
 # clean rule for target.
-CMakeFiles/path_planner_3.dir/clean:
-	$(MAKE) -f CMakeFiles/path_planner_3.dir/build.make CMakeFiles/path_planner_3.dir/clean
-.PHONY : CMakeFiles/path_planner_3.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/path_planner_3.dir/clean
+clean: CMakeFiles/arduino_comm.dir/clean
 
 .PHONY : clean
 

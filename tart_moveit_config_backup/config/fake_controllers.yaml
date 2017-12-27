@@ -1,8 +1,11 @@
+rate: 10
 controller_list:
   - name: fake_manipulator_controller
+    type: interpolate | via points | last point
     joints:
       - base_joint
       - link_1
       - link_3
+      - dummy_link
       - link_4
       - link_5

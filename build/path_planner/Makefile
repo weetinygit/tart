@@ -166,30 +166,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named fake_robot
+# Target rules for targets named arduino_comm
 
 # Build rule for target.
-fake_robot: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 fake_robot
-.PHONY : fake_robot
+arduino_comm: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 arduino_comm
+.PHONY : arduino_comm
 
 # fast build rule for target.
-fake_robot/fast:
-	$(MAKE) -f CMakeFiles/fake_robot.dir/build.make CMakeFiles/fake_robot.dir/build
-.PHONY : fake_robot/fast
-
-#=============================================================================
-# Target rules for targets named path_planner_3
-
-# Build rule for target.
-path_planner_3: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 path_planner_3
-.PHONY : path_planner_3
-
-# fast build rule for target.
-path_planner_3/fast:
-	$(MAKE) -f CMakeFiles/path_planner_3.dir/build.make CMakeFiles/path_planner_3.dir/build
-.PHONY : path_planner_3/fast
+arduino_comm/fast:
+	$(MAKE) -f CMakeFiles/arduino_comm.dir/build.make CMakeFiles/arduino_comm.dir/build
+.PHONY : arduino_comm/fast
 
 #=============================================================================
 # Target rules for targets named path_planner_2
@@ -1114,32 +1101,32 @@ gtest_main/fast:
 	$(MAKE) -f gtest/CMakeFiles/gtest_main.dir/build.make gtest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
-src/fake_robot.o: src/fake_robot.cpp.o
+src/arduino_comm.o: src/arduino_comm.cpp.o
 
-.PHONY : src/fake_robot.o
+.PHONY : src/arduino_comm.o
 
 # target to build an object file
-src/fake_robot.cpp.o:
-	$(MAKE) -f CMakeFiles/fake_robot.dir/build.make CMakeFiles/fake_robot.dir/src/fake_robot.cpp.o
-.PHONY : src/fake_robot.cpp.o
+src/arduino_comm.cpp.o:
+	$(MAKE) -f CMakeFiles/arduino_comm.dir/build.make CMakeFiles/arduino_comm.dir/src/arduino_comm.cpp.o
+.PHONY : src/arduino_comm.cpp.o
 
-src/fake_robot.i: src/fake_robot.cpp.i
+src/arduino_comm.i: src/arduino_comm.cpp.i
 
-.PHONY : src/fake_robot.i
+.PHONY : src/arduino_comm.i
 
 # target to preprocess a source file
-src/fake_robot.cpp.i:
-	$(MAKE) -f CMakeFiles/fake_robot.dir/build.make CMakeFiles/fake_robot.dir/src/fake_robot.cpp.i
-.PHONY : src/fake_robot.cpp.i
+src/arduino_comm.cpp.i:
+	$(MAKE) -f CMakeFiles/arduino_comm.dir/build.make CMakeFiles/arduino_comm.dir/src/arduino_comm.cpp.i
+.PHONY : src/arduino_comm.cpp.i
 
-src/fake_robot.s: src/fake_robot.cpp.s
+src/arduino_comm.s: src/arduino_comm.cpp.s
 
-.PHONY : src/fake_robot.s
+.PHONY : src/arduino_comm.s
 
 # target to generate assembly for a file
-src/fake_robot.cpp.s:
-	$(MAKE) -f CMakeFiles/fake_robot.dir/build.make CMakeFiles/fake_robot.dir/src/fake_robot.cpp.s
-.PHONY : src/fake_robot.cpp.s
+src/arduino_comm.cpp.s:
+	$(MAKE) -f CMakeFiles/arduino_comm.dir/build.make CMakeFiles/arduino_comm.dir/src/arduino_comm.cpp.s
+.PHONY : src/arduino_comm.cpp.s
 
 src/path_planner.o: src/path_planner.cpp.o
 
@@ -1195,33 +1182,6 @@ src/path_planner_2.cpp.s:
 	$(MAKE) -f CMakeFiles/path_planner_2.dir/build.make CMakeFiles/path_planner_2.dir/src/path_planner_2.cpp.s
 .PHONY : src/path_planner_2.cpp.s
 
-src/path_planner_3.o: src/path_planner_3.cpp.o
-
-.PHONY : src/path_planner_3.o
-
-# target to build an object file
-src/path_planner_3.cpp.o:
-	$(MAKE) -f CMakeFiles/path_planner_3.dir/build.make CMakeFiles/path_planner_3.dir/src/path_planner_3.cpp.o
-.PHONY : src/path_planner_3.cpp.o
-
-src/path_planner_3.i: src/path_planner_3.cpp.i
-
-.PHONY : src/path_planner_3.i
-
-# target to preprocess a source file
-src/path_planner_3.cpp.i:
-	$(MAKE) -f CMakeFiles/path_planner_3.dir/build.make CMakeFiles/path_planner_3.dir/src/path_planner_3.cpp.i
-.PHONY : src/path_planner_3.cpp.i
-
-src/path_planner_3.s: src/path_planner_3.cpp.s
-
-.PHONY : src/path_planner_3.s
-
-# target to generate assembly for a file
-src/path_planner_3.cpp.s:
-	$(MAKE) -f CMakeFiles/path_planner_3.dir/build.make CMakeFiles/path_planner_3.dir/src/path_planner_3.cpp.s
-.PHONY : src/path_planner_3.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1231,8 +1191,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... install/strip"
-	@echo "... fake_robot"
-	@echo "... path_planner_3"
+	@echo "... arduino_comm"
 	@echo "... path_planner_2"
 	@echo "... path_planner"
 	@echo "... moveit_ros_manipulation_gencfg"
@@ -1308,18 +1267,15 @@ help:
 	@echo "... actionlib_msgs_generate_messages_nodejs"
 	@echo "... gtest"
 	@echo "... gtest_main"
-	@echo "... src/fake_robot.o"
-	@echo "... src/fake_robot.i"
-	@echo "... src/fake_robot.s"
+	@echo "... src/arduino_comm.o"
+	@echo "... src/arduino_comm.i"
+	@echo "... src/arduino_comm.s"
 	@echo "... src/path_planner.o"
 	@echo "... src/path_planner.i"
 	@echo "... src/path_planner.s"
 	@echo "... src/path_planner_2.o"
 	@echo "... src/path_planner_2.i"
 	@echo "... src/path_planner_2.s"
-	@echo "... src/path_planner_3.o"
-	@echo "... src/path_planner_3.i"
-	@echo "... src/path_planner_3.s"
 .PHONY : help
 
 
