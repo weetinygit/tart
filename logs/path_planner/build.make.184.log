@@ -1,0 +1,14 @@
+[35m[1mScanning dependencies of target arduino_comm[0m
+[ 16%] [32mBuilding CXX object CMakeFiles/arduino_comm.dir/src/arduino_comm.cpp.o[0m
+[ 50%] Built target path_planner_2
+[ 83%] Built target path_planner
+[01m[K/home/weety/tart5/src/path_planner/src/arduino_comm.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/weety/tart5/src/path_planner/src/arduino_comm.cpp:44:6:[m[K [01;31m[Kerror: [m[K‘[01m[Kmotor1_pub[m[K’ was not declared in this scope
+      motor1_pub.publish(joint_states_msg[i]);
+[01;32m[K      ^[m[K
+CMakeFiles/arduino_comm.dir/build.make:62: recipe for target 'CMakeFiles/arduino_comm.dir/src/arduino_comm.cpp.o' failed
+make[2]: *** [CMakeFiles/arduino_comm.dir/src/arduino_comm.cpp.o] Error 1
+CMakeFiles/Makefile2:67: recipe for target 'CMakeFiles/arduino_comm.dir/all' failed
+Makefile:138: recipe for target 'all' failed
+make[1]: *** [CMakeFiles/arduino_comm.dir/all] Error 2
+make: *** [all] Error 2

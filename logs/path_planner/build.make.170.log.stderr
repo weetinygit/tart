@@ -1,0 +1,34 @@
+[01m[K/home/weety/tart5/src/path_planner/src/arduino_comm.cpp:[m[K In function ‘[01m[Kvoid actionNodeCallback(const JointState&)[m[K’:
+[01m[K/home/weety/tart5/src/path_planner/src/arduino_comm.cpp:13:22:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[Kstd_msgs::Float32 {aka std_msgs::Float32_<std::allocator<void> >}[m[K’ and ‘[01m[Kconst value_type {aka const double}[m[K’)
+  joint_states_msg[0] = msg.position[0];
+[01;32m[K                      ^[m[K
+In file included from [01m[K/home/weety/tart5/src/path_planner/src/arduino_comm.cpp:5:0[m[K:
+[01m[K/opt/ros/kinetic/include/std_msgs/Float32.h:22:8:[m[K [01;36m[Knote: [m[Kcandidate: std_msgs::Float32_<std::allocator<void> >& std_msgs::Float32_<std::allocator<void> >::operator=(const std_msgs::Float32_<std::allocator<void> >&)
+ struct Float32_
+[01;32m[K        ^[m[K
+[01m[K/opt/ros/kinetic/include/std_msgs/Float32.h:22:8:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst value_type {aka const double}[m[K’ to ‘[01m[Kconst std_msgs::Float32_<std::allocator<void> >&[m[K’
+[01m[K/opt/ros/kinetic/include/std_msgs/Float32.h:22:8:[m[K [01;36m[Knote: [m[Kcandidate: std_msgs::Float32_<std::allocator<void> >& std_msgs::Float32_<std::allocator<void> >::operator=(std_msgs::Float32_<std::allocator<void> >&&)
+[01m[K/opt/ros/kinetic/include/std_msgs/Float32.h:22:8:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst value_type {aka const double}[m[K’ to ‘[01m[Kstd_msgs::Float32_<std::allocator<void> >&&[m[K’
+In file included from [01m[K/opt/ros/kinetic/include/pluginlib/class_loader.h:38:0[m[K,
+                 from [01m[K/home/weety/tart5/src/path_planner/src/arduino_comm.cpp:1[m[K:
+[01m[K/opt/ros/kinetic/include/ros/console.h:346:176:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%f[m[K’ expects argument of type ‘[01m[Kdouble[m[K’, but argument 8 has type ‘[01m[Kstd_msgs::Float32 {aka std_msgs::Float32_<std::allocator<void> >}[m[K’ [-Wformat=]
+     ::ros::console::print(filter, __rosconsole_define_location__loc.logger_, __rosconsole_define_location__loc.level_, __FILE__, __LINE__, __ROSCONSOLE_FUNCTION__, __VA_ARGS__)
+[01;32m[K                                                                                                                                                                                ^[m[K
+[01m[K/opt/ros/kinetic/include/ros/console.h:349:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER[m[K’
+     ROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER(0, __VA_ARGS__)
+[01;32m[K     ^[m[K
+[01m[K/opt/ros/kinetic/include/ros/console.h:379:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION[m[K’
+       ROSCONSOLE_PRINT_AT_LOCATION(__VA_ARGS__); \
+[01;32m[K       ^[m[K
+[01m[K/opt/ros/kinetic/include/ros/console.h:561:35:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG_COND[m[K’
+ #define ROS_LOG(level, name, ...) ROS_LOG_COND(true, level, name, __VA_ARGS__)
+[01;32m[K                                   ^[m[K
+[01m[K/opt/ros/kinetic/include/rosconsole/macros_generated.h:110:23:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG[m[K’
+ #define ROS_INFO(...) ROS_LOG(::ros::console::levels::Info, ROSCONSOLE_DEFAULT_NAME, __VA_ARGS__)
+[01;32m[K                       ^[m[K
+[01m[K/home/weety/tart5/src/path_planner/src/arduino_comm.cpp:15:2:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_INFO[m[K’
+  ROS_INFO("I heard: [%f]", joint_states_msg[0]);
+[01;32m[K  ^[m[K
+make[2]: *** [CMakeFiles/arduino_comm.dir/src/arduino_comm.cpp.o] Error 1
+make[1]: *** [CMakeFiles/arduino_comm.dir/all] Error 2
+make: *** [all] Error 2

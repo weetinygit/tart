@@ -1,0 +1,10 @@
+[01m[K/home/weety/tart5/src/path_planner/src/arduino_comm.cpp:7:11:[m[K [01;31m[Kerror: [m[K‘[01m[KFloat64[m[K’ in namespace ‘[01m[Kstd_msgs[m[K’ does not name a type
+ std_msgs::Float64 joint_states_msg[6];
+[01;32m[K           ^[m[K
+[01m[K/home/weety/tart5/src/path_planner/src/arduino_comm.cpp:[m[K In function ‘[01m[Kvoid actionNodeCallback(const JointState&)[m[K’:
+[01m[K/home/weety/tart5/src/path_planner/src/arduino_comm.cpp:13:2:[m[K [01;31m[Kerror: [m[K‘[01m[Kjoint_states_msg[m[K’ was not declared in this scope
+  joint_states_msg[0] = msg.position[0];
+[01;32m[K  ^[m[K
+make[2]: *** [CMakeFiles/arduino_comm.dir/src/arduino_comm.cpp.o] Error 1
+make[1]: *** [CMakeFiles/arduino_comm.dir/all] Error 2
+make: *** [all] Error 2

@@ -1,0 +1,4 @@
+make[2]: *** No rule to make target '/home/weety/tart5/src/path_planner/src/path_planner_3.cpp', needed by 'CMakeFiles/path_planner_3.dir/src/path_planner_3.cpp.o'.  Stop.
+make[1]: *** [CMakeFiles/path_planner_3.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [all] Error 2

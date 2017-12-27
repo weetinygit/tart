@@ -1,0 +1,59 @@
+In file included from [01m[K/opt/ros/kinetic/include/pluginlib/class_loader.h:38:0[m[K,
+                 from [01m[K/home/weety/tart5/src/path_planner/src/arduino_comm.cpp:1[m[K:
+[01m[K/home/weety/tart5/src/path_planner/src/arduino_comm.cpp:[m[K In function ‘[01m[Kvoid actionNodeCallback(const JointState&)[m[K’:
+[01m[K/home/weety/tart5/src/path_planner/src/arduino_comm.cpp:8:32:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kconst JointState {aka const sensor_msgs::JointState_<std::allocator<void> >}[m[K’
+   ROS_INFO("I heard: [%s]", msg->data.c_str());
+[01;32m[K                                ^[m[K
+[01m[K/opt/ros/kinetic/include/ros/console.h:346:165:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER[m[K’
+     ::ros::console::print(filter, __rosconsole_define_location__loc.logger_, __rosconsole_define_location__loc.level_, __FILE__, __LINE__, __ROSCONSOLE_FUNCTION__, __VA_ARGS__)
+[01;32m[K                                                                                                                                                                     ^[m[K
+[01m[K/opt/ros/kinetic/include/ros/console.h:379:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION[m[K’
+       ROSCONSOLE_PRINT_AT_LOCATION(__VA_ARGS__); \
+[01;32m[K       ^[m[K
+[01m[K/opt/ros/kinetic/include/ros/console.h:561:35:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG_COND[m[K’
+ #define ROS_LOG(level, name, ...) ROS_LOG_COND(true, level, name, __VA_ARGS__)
+[01;32m[K                                   ^[m[K
+[01m[K/opt/ros/kinetic/include/rosconsole/macros_generated.h:110:23:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG[m[K’
+ #define ROS_INFO(...) ROS_LOG(::ros::console::levels::Info, ROSCONSOLE_DEFAULT_NAME, __VA_ARGS__)
+[01;32m[K                       ^[m[K
+[01m[K/home/weety/tart5/src/path_planner/src/arduino_comm.cpp:8:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_INFO[m[K’
+   ROS_INFO("I heard: [%s]", msg->data.c_str());
+[01;32m[K   ^[m[K
+[01m[K/home/weety/tart5/src/path_planner/src/arduino_comm.cpp:10:3:[m[K [01;31m[Kerror: [m[K‘[01m[KcompleteStatus[m[K’ was not declared in this scope
+   completeStatus = std::stoi (msg->data.c_str(),nullptr,0);
+[01;32m[K   ^[m[K
+[01m[K/home/weety/tart5/src/path_planner/src/arduino_comm.cpp:10:34:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kconst JointState {aka const sensor_msgs::JointState_<std::allocator<void> >}[m[K’
+   completeStatus = std::stoi (msg->data.c_str(),nullptr,0);
+[01;32m[K                                  ^[m[K
+In file included from [01m[K/opt/ros/kinetic/include/ros/serialization.h:37:0[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/publisher.h:34[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/node_handle.h:32[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/weety/tart5/src/path_planner/src/arduino_comm.cpp:2[m[K:
+/opt/ros/kinetic/include/ros/message_traits.h: In instantiation of ‘[01m[Kstatic const char* ros::message_traits::MD5Sum<M>::value() [with M = float][m[K’:
+[01m[K/opt/ros/kinetic/include/ros/message_traits.h:228:102:[m[K   required from ‘[01m[Kconst char* ros::message_traits::md5sum() [with M = float][m[K’
+[01m[K/opt/ros/kinetic/include/ros/advertise_options.h:92:39:[m[K   required from ‘[01m[Kvoid ros::AdvertiseOptions::init(const string&, uint32_t, const SubscriberStatusCallback&, const SubscriberStatusCallback&) [with M = float; std::__cxx11::string = std::__cxx11::basic_string<char>; uint32_t = unsigned int; ros::SubscriberStatusCallback = boost::function<void(const ros::SingleSubscriberPublisher&)>][m[K’
+[01m[K/opt/ros/kinetic/include/ros/node_handle.h:251:7:[m[K   required from ‘[01m[Kros::Publisher ros::NodeHandle::advertise(const string&, uint32_t, bool) [with M = float; std::__cxx11::string = std::__cxx11::basic_string<char>; uint32_t = unsigned int][m[K’
+[01m[K/home/weety/tart5/src/path_planner/src/arduino_comm.cpp:21:85:[m[K   required from here
+[01m[K/opt/ros/kinetic/include/ros/message_traits.h:121:28:[m[K [01;31m[Kerror: [m[K‘[01m[K__s_getMD5Sum[m[K’ is not a member of ‘[01m[Kfloat[m[K’
+     return M::__s_getMD5Sum().c_str();
+[01;32m[K                            ^[m[K
+/opt/ros/kinetic/include/ros/message_traits.h: In instantiation of ‘[01m[Kstatic const char* ros::message_traits::DataType<M>::value() [with M = float][m[K’:
+[01m[K/opt/ros/kinetic/include/ros/message_traits.h:237:104:[m[K   required from ‘[01m[Kconst char* ros::message_traits::datatype() [with M = float][m[K’
+[01m[K/opt/ros/kinetic/include/ros/advertise_options.h:93:43:[m[K   required from ‘[01m[Kvoid ros::AdvertiseOptions::init(const string&, uint32_t, const SubscriberStatusCallback&, const SubscriberStatusCallback&) [with M = float; std::__cxx11::string = std::__cxx11::basic_string<char>; uint32_t = unsigned int; ros::SubscriberStatusCallback = boost::function<void(const ros::SingleSubscriberPublisher&)>][m[K’
+[01m[K/opt/ros/kinetic/include/ros/node_handle.h:251:7:[m[K   required from ‘[01m[Kros::Publisher ros::NodeHandle::advertise(const string&, uint32_t, bool) [with M = float; std::__cxx11::string = std::__cxx11::basic_string<char>; uint32_t = unsigned int][m[K’
+[01m[K/home/weety/tart5/src/path_planner/src/arduino_comm.cpp:21:85:[m[K   required from here
+[01m[K/opt/ros/kinetic/include/ros/message_traits.h:138:30:[m[K [01;31m[Kerror: [m[K‘[01m[K__s_getDataType[m[K’ is not a member of ‘[01m[Kfloat[m[K’
+     return M::__s_getDataType().c_str();
+[01;32m[K                              ^[m[K
+/opt/ros/kinetic/include/ros/message_traits.h: In instantiation of ‘[01m[Kstatic const char* ros::message_traits::Definition<M>::value() [with M = float][m[K’:
+[01m[K/opt/ros/kinetic/include/ros/message_traits.h:246:106:[m[K   required from ‘[01m[Kconst char* ros::message_traits::definition() [with M = float][m[K’
+[01m[K/opt/ros/kinetic/include/ros/advertise_options.h:94:55:[m[K   required from ‘[01m[Kvoid ros::AdvertiseOptions::init(const string&, uint32_t, const SubscriberStatusCallback&, const SubscriberStatusCallback&) [with M = float; std::__cxx11::string = std::__cxx11::basic_string<char>; uint32_t = unsigned int; ros::SubscriberStatusCallback = boost::function<void(const ros::SingleSubscriberPublisher&)>][m[K’
+[01m[K/opt/ros/kinetic/include/ros/node_handle.h:251:7:[m[K   required from ‘[01m[Kros::Publisher ros::NodeHandle::advertise(const string&, uint32_t, bool) [with M = float; std::__cxx11::string = std::__cxx11::basic_string<char>; uint32_t = unsigned int][m[K’
+[01m[K/home/weety/tart5/src/path_planner/src/arduino_comm.cpp:21:85:[m[K   required from here
+[01m[K/opt/ros/kinetic/include/ros/message_traits.h:155:39:[m[K [01;31m[Kerror: [m[K‘[01m[K__s_getMessageDefinition[m[K’ is not a member of ‘[01m[Kfloat[m[K’
+     return M::__s_getMessageDefinition().c_str();
+[01;32m[K                                       ^[m[K
+make[2]: *** [CMakeFiles/arduino_comm.dir/src/arduino_comm.cpp.o] Error 1
+make[1]: *** [CMakeFiles/arduino_comm.dir/all] Error 2
+make: *** [all] Error 2

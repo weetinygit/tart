@@ -1,0 +1,48 @@
+[01m[K/home/weety/tart5/src/path_planner/src/arduino_comm.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/weety/tart5/src/path_planner/src/arduino_comm.cpp:27:44:[m[K [01;31m[Kerror: [m[K‘[01m[KFloat64[m[K’ is not a member of ‘[01m[Kstd_msgs[m[K’
+   ros::Publisher motor1_pub = nh.advertise<std_msgs::Float64>("/arduino/motor_1", 1, true);
+[01;32m[K                                            ^[m[K
+[01m[K/home/weety/tart5/src/path_planner/src/arduino_comm.cpp:27:44:[m[K [01;31m[Kerror: [m[K‘[01m[KFloat64[m[K’ is not a member of ‘[01m[Kstd_msgs[m[K’
+[01m[K/home/weety/tart5/src/path_planner/src/arduino_comm.cpp:27:90:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kros::NodeHandle::advertise(const char [17], int, bool)[m[K’
+   ros::Publisher motor1_pub = nh.advertise<std_msgs::Float64>("/arduino/motor_1", 1, true);
+[01;32m[K                                                                                          ^[m[K
+In file included from [01m[K/opt/ros/kinetic/include/ros/ros.h:45:0[m[K,
+                 from [01m[K/home/weety/tart5/src/path_planner/src/arduino_comm.cpp:2[m[K:
+[01m[K/opt/ros/kinetic/include/ros/node_handle.h:248:15:[m[K [01;36m[Knote: [m[Kcandidate: template<class M> ros::Publisher ros::NodeHandle::advertise(const string&, uint32_t, bool)
+     Publisher advertise(const std::string& topic, uint32_t queue_size, bool latch = false)
+[01;32m[K               ^[m[K
+[01m[K/opt/ros/kinetic/include/ros/node_handle.h:248:15:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/weety/tart5/src/path_planner/src/arduino_comm.cpp:27:90:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   ros::Publisher motor1_pub = nh.advertise<std_msgs::Float64>("/arduino/motor_1", 1, true);
+[01;32m[K                                                                                          ^[m[K
+In file included from [01m[K/opt/ros/kinetic/include/ros/ros.h:45:0[m[K,
+                 from [01m[K/home/weety/tart5/src/path_planner/src/arduino_comm.cpp:2[m[K:
+[01m[K/opt/ros/kinetic/include/ros/node_handle.h:314:13:[m[K [01;36m[Knote: [m[Kcandidate: template<class M> ros::Publisher ros::NodeHandle::advertise(const string&, uint32_t, const SubscriberStatusCallback&, const SubscriberStatusCallback&, const VoidConstPtr&, bool)
+   Publisher advertise(const std::string& topic, uint32_t queue_size,
+[01;32m[K             ^[m[K
+[01m[K/opt/ros/kinetic/include/ros/node_handle.h:314:13:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/weety/tart5/src/path_planner/src/arduino_comm.cpp:27:90:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   ros::Publisher motor1_pub = nh.advertise<std_msgs::Float64>("/arduino/motor_1", 1, true);
+[01;32m[K                                                                                          ^[m[K
+In file included from [01m[K/opt/ros/kinetic/include/ros/serialization.h:37:0[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/publisher.h:34[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/node_handle.h:32[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/weety/tart5/src/path_planner/src/arduino_comm.cpp:2[m[K:
+/opt/ros/kinetic/include/ros/message_traits.h: In instantiation of ‘[01m[Kstatic const char* ros::message_traits::MD5Sum<M>::value(const M&) [with M = double][m[K’:
+[01m[K/opt/ros/kinetic/include/ros/message_traits.h:255:102:[m[K   required from ‘[01m[Kconst char* ros::message_traits::md5sum(const M&) [with M = double][m[K’
+[01m[K/opt/ros/kinetic/include/ros/publisher.h:112:7:[m[K   required from ‘[01m[Kvoid ros::Publisher::publish(const M&) const [with M = double][m[K’
+[01m[K/home/weety/tart5/src/path_planner/src/arduino_comm.cpp:33:52:[m[K   required from here
+[01m[K/opt/ros/kinetic/include/ros/message_traits.h:126:34:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[K__getMD5Sum[m[K’ in ‘[01m[Km[m[K’, which is of non-class type ‘[01m[Kconst double[m[K’
+     return m.__getMD5Sum().c_str();
+[01;32m[K                                  ^[m[K
+/opt/ros/kinetic/include/ros/message_traits.h: In instantiation of ‘[01m[Kstatic const char* ros::message_traits::DataType<M>::value(const M&) [with M = double][m[K’:
+[01m[K/opt/ros/kinetic/include/ros/message_traits.h:264:104:[m[K   required from ‘[01m[Kconst char* ros::message_traits::datatype(const M&) [with M = double][m[K’
+[01m[K/opt/ros/kinetic/include/ros/publisher.h:112:7:[m[K   required from ‘[01m[Kvoid ros::Publisher::publish(const M&) const [with M = double][m[K’
+[01m[K/home/weety/tart5/src/path_planner/src/arduino_comm.cpp:33:52:[m[K   required from here
+[01m[K/opt/ros/kinetic/include/ros/message_traits.h:143:36:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[K__getDataType[m[K’ in ‘[01m[Km[m[K’, which is of non-class type ‘[01m[Kconst double[m[K’
+     return m.__getDataType().c_str();
+[01;32m[K                                    ^[m[K
+make[2]: *** [CMakeFiles/arduino_comm.dir/src/arduino_comm.cpp.o] Error 1
+make[1]: *** [CMakeFiles/arduino_comm.dir/all] Error 2
+make: *** [all] Error 2

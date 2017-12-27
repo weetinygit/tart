@@ -1,0 +1,28 @@
+[01m[K/home/weety/tart5/src/path_planner/src/arduino_comm.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/weety/tart5/src/path_planner/src/arduino_comm.cpp:23:41:[m[K [01;31m[Kerror: [m[Kparse error in template argument list
+   ros::Publisher display_publisher = nh.advertise<std::float>("/arduino/motor_1", 1, true);
+[01;32m[K                                         ^[m[K
+[01m[K/home/weety/tart5/src/path_planner/src/arduino_comm.cpp:23:90:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kros::NodeHandle::advertise(const char [17], int, bool)[m[K’
+   ros::Publisher display_publisher = nh.advertise<std::float>("/arduino/motor_1", 1, true);
+[01;32m[K                                                                                          ^[m[K
+In file included from [01m[K/opt/ros/kinetic/include/ros/ros.h:45:0[m[K,
+                 from [01m[K/home/weety/tart5/src/path_planner/src/arduino_comm.cpp:2[m[K:
+[01m[K/opt/ros/kinetic/include/ros/node_handle.h:248:15:[m[K [01;36m[Knote: [m[Kcandidate: template<class M> ros::Publisher ros::NodeHandle::advertise(const string&, uint32_t, bool)
+     Publisher advertise(const std::string& topic, uint32_t queue_size, bool latch = false)
+[01;32m[K               ^[m[K
+[01m[K/opt/ros/kinetic/include/ros/node_handle.h:248:15:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/weety/tart5/src/path_planner/src/arduino_comm.cpp:23:90:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   ros::Publisher display_publisher = nh.advertise<std::float>("/arduino/motor_1", 1, true);
+[01;32m[K                                                                                          ^[m[K
+In file included from [01m[K/opt/ros/kinetic/include/ros/ros.h:45:0[m[K,
+                 from [01m[K/home/weety/tart5/src/path_planner/src/arduino_comm.cpp:2[m[K:
+[01m[K/opt/ros/kinetic/include/ros/node_handle.h:314:13:[m[K [01;36m[Knote: [m[Kcandidate: template<class M> ros::Publisher ros::NodeHandle::advertise(const string&, uint32_t, const SubscriberStatusCallback&, const SubscriberStatusCallback&, const VoidConstPtr&, bool)
+   Publisher advertise(const std::string& topic, uint32_t queue_size,
+[01;32m[K             ^[m[K
+[01m[K/opt/ros/kinetic/include/ros/node_handle.h:314:13:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/weety/tart5/src/path_planner/src/arduino_comm.cpp:23:90:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   ros::Publisher display_publisher = nh.advertise<std::float>("/arduino/motor_1", 1, true);
+[01;32m[K                                                                                          ^[m[K
+make[2]: *** [CMakeFiles/arduino_comm.dir/src/arduino_comm.cpp.o] Error 1
+make[1]: *** [CMakeFiles/arduino_comm.dir/all] Error 2
+make: *** [all] Error 2

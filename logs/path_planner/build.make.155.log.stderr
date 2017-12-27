@@ -1,0 +1,5 @@
+[01m[K/home/weety/tart5/src/path_planner/src/arduino_comm.cpp:4:30:[m[K [01;31m[Kfatal error: [m[Kstd_msgs/float64.h: No such file or directory
+compilation terminated.
+make[2]: *** [CMakeFiles/arduino_comm.dir/src/arduino_comm.cpp.o] Error 1
+make[1]: *** [CMakeFiles/arduino_comm.dir/all] Error 2
+make: *** [all] Error 2
