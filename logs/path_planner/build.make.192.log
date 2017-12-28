@@ -1,0 +1,17 @@
+[35m[1mScanning dependencies of target path_planner_2[0m
+[ 83%] [32mBuilding CXX object CMakeFiles/path_planner_2.dir/src/path_planner_2.cpp.o[0m
+[ 50%] Built target path_planner
+[ 83%] Built target arduino_comm
+[01m[K/home/weety/tart5/src/path_planner/src/path_planner_2.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/weety/tart5/src/path_planner/src/path_planner_2.cpp:59:3:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[Kwhile[m[K’
+   while (ros::ok()){
+[01;32m[K   ^[m[K
+[01m[K/home/weety/tart5/src/path_planner/src/path_planner_2.cpp:144:1:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+ }
+[01;32m[K ^[m[K
+CMakeFiles/path_planner_2.dir/build.make:62: recipe for target 'CMakeFiles/path_planner_2.dir/src/path_planner_2.cpp.o' failed
+make[2]: *** [CMakeFiles/path_planner_2.dir/src/path_planner_2.cpp.o] Error 1
+CMakeFiles/Makefile2:104: recipe for target 'CMakeFiles/path_planner_2.dir/all' failed
+make[1]: *** [CMakeFiles/path_planner_2.dir/all] Error 2
+Makefile:138: recipe for target 'all' failed
+make: *** [all] Error 2

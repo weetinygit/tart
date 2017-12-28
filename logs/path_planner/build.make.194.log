@@ -1,0 +1,81 @@
+[35m[1mScanning dependencies of target path_planner_2[0m
+[ 33%] Built target path_planner
+[ 66%] Built target arduino_comm
+[ 83%] [32mBuilding CXX object CMakeFiles/path_planner_2.dir/src/path_planner_2.cpp.o[0m
+[01m[K/home/weety/tart5/src/path_planner/src/path_planner_2.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/weety/tart5/src/path_planner/src/path_planner_2.cpp:70:20:[m[K [01;31m[Kerror: [m[K‘[01m[Kmove_group[m[K’ was not declared in this scope
+    current_state = move_group.getCurrentState();
+[01;32m[K                    ^[m[K
+[01m[K/home/weety/tart5/src/path_planner/src/path_planner_2.cpp:71:52:[m[K [01;31m[Kerror: [m[K‘[01m[Kjoint_model_group[m[K’ was not declared in this scope
+             current_state->copyJointGroupPositions(joint_model_group, joint_group_positions);
+[01;32m[K                                                    ^[m[K
+[01m[K/home/weety/tart5/src/path_planner/src/path_planner_2.cpp:74:4:[m[K [01;31m[Kerror: [m[K‘[01m[Ksuccess[m[K’ was not declared in this scope
+    success = group.plan(my_plan);
+[01;32m[K    ^[m[K
+[01m[K/home/weety/tart5/src/path_planner/src/path_planner_2.cpp:74:4:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+In file included from [01m[K/usr/include/boost/exception/detail/exception_ptr.hpp:23:0[m[K,
+                 from [01m[K/usr/include/boost/exception_ptr.hpp:9[m[K,
+                 from [01m[K/usr/include/boost/thread/exceptional_ptr.hpp:10[m[K,
+                 from [01m[K/usr/include/boost/thread/future.hpp:23[m[K,
+                 from [01m[K/usr/include/boost/thread.hpp:24[m[K,
+                 from [01m[K/opt/ros/kinetic/include/class_loader/multi_library_class_loader.h:34[m[K,
+                 from [01m[K/opt/ros/kinetic/include/pluginlib/class_loader.h:33[m[K,
+                 from [01m[K/home/weety/tart5/src/path_planner/src/path_planner_2.cpp:1[m[K:
+[01m[K/usr/include/boost/exception/detail/clone_current_exception.hpp:34:23:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::exception_detail::clone_current_exception_result::success[m[K’
+             int const success=0;
+[01;32m[K                       ^[m[K
+In file included from [01m[K/usr/include/boost/system/system_error.hpp:14:0[m[K,
+                 from [01m[K/usr/include/boost/thread/exceptions.hpp:22[m[K,
+                 from [01m[K/usr/include/boost/thread/pthread/recursive_mutex.hpp:11[m[K,
+                 from [01m[K/usr/include/boost/thread/recursive_mutex.hpp:16[m[K,
+                 from [01m[K/opt/ros/kinetic/include/class_loader/class_loader.h:34[m[K,
+                 from [01m[K/opt/ros/kinetic/include/class_loader/multi_library_class_loader.h:33[m[K,
+                 from [01m[K/opt/ros/kinetic/include/pluginlib/class_loader.h:33[m[K,
+                 from [01m[K/home/weety/tart5/src/path_planner/src/path_planner_2.cpp:1[m[K:
+[01m[K/usr/include/boost/system/error_code.hpp:59:9:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksuccess[m[K’
+         success = 0,
+[01;32m[K         ^[m[K
+[01m[K/home/weety/tart5/src/path_planner/src/path_planner_2.cpp:74:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kmy_plan[m[K’ was not declared in this scope
+    success = group.plan(my_plan);
+[01;32m[K                         ^[m[K
+[01m[K/home/weety/tart5/src/path_planner/src/path_planner_2.cpp:90:20:[m[K [01;31m[Kerror: [m[K‘[01m[Kmove_group[m[K’ was not declared in this scope
+    current_state = move_group.getCurrentState();
+[01;32m[K                    ^[m[K
+[01m[K/home/weety/tart5/src/path_planner/src/path_planner_2.cpp:91:43:[m[K [01;31m[Kerror: [m[K‘[01m[Kjoint_model_group[m[K’ was not declared in this scope
+    current_state->copyJointGroupPositions(joint_model_group, joint_group_positions);
+[01;32m[K                                           ^[m[K
+[01m[K/home/weety/tart5/src/path_planner/src/path_planner_2.cpp:94:4:[m[K [01;31m[Kerror: [m[K‘[01m[Ksuccess[m[K’ was not declared in this scope
+    success = move_group.plan(my_plan);  
+[01;32m[K    ^[m[K
+[01m[K/home/weety/tart5/src/path_planner/src/path_planner_2.cpp:94:4:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+In file included from [01m[K/usr/include/boost/exception/detail/exception_ptr.hpp:23:0[m[K,
+                 from [01m[K/usr/include/boost/exception_ptr.hpp:9[m[K,
+                 from [01m[K/usr/include/boost/thread/exceptional_ptr.hpp:10[m[K,
+                 from [01m[K/usr/include/boost/thread/future.hpp:23[m[K,
+                 from [01m[K/usr/include/boost/thread.hpp:24[m[K,
+                 from [01m[K/opt/ros/kinetic/include/class_loader/multi_library_class_loader.h:34[m[K,
+                 from [01m[K/opt/ros/kinetic/include/pluginlib/class_loader.h:33[m[K,
+                 from [01m[K/home/weety/tart5/src/path_planner/src/path_planner_2.cpp:1[m[K:
+[01m[K/usr/include/boost/exception/detail/clone_current_exception.hpp:34:23:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::exception_detail::clone_current_exception_result::success[m[K’
+             int const success=0;
+[01;32m[K                       ^[m[K
+In file included from [01m[K/usr/include/boost/system/system_error.hpp:14:0[m[K,
+                 from [01m[K/usr/include/boost/thread/exceptions.hpp:22[m[K,
+                 from [01m[K/usr/include/boost/thread/pthread/recursive_mutex.hpp:11[m[K,
+                 from [01m[K/usr/include/boost/thread/recursive_mutex.hpp:16[m[K,
+                 from [01m[K/opt/ros/kinetic/include/class_loader/class_loader.h:34[m[K,
+                 from [01m[K/opt/ros/kinetic/include/class_loader/multi_library_class_loader.h:33[m[K,
+                 from [01m[K/opt/ros/kinetic/include/pluginlib/class_loader.h:33[m[K,
+                 from [01m[K/home/weety/tart5/src/path_planner/src/path_planner_2.cpp:1[m[K:
+[01m[K/usr/include/boost/system/error_code.hpp:59:9:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksuccess[m[K’
+         success = 0,
+[01;32m[K         ^[m[K
+[01m[K/home/weety/tart5/src/path_planner/src/path_planner_2.cpp:94:30:[m[K [01;31m[Kerror: [m[K‘[01m[Kmy_plan[m[K’ was not declared in this scope
+    success = move_group.plan(my_plan);  
+[01;32m[K                              ^[m[K
+CMakeFiles/path_planner_2.dir/build.make:62: recipe for target 'CMakeFiles/path_planner_2.dir/src/path_planner_2.cpp.o' failed
+make[2]: *** [CMakeFiles/path_planner_2.dir/src/path_planner_2.cpp.o] Error 1
+CMakeFiles/Makefile2:104: recipe for target 'CMakeFiles/path_planner_2.dir/all' failed
+make[1]: *** [CMakeFiles/path_planner_2.dir/all] Error 2
+Makefile:138: recipe for target 'all' failed
+make: *** [all] Error 2

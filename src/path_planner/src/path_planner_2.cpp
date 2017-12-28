@@ -50,6 +50,11 @@ int main(int argc, char **argv) {
   geometry_msgs::Pose target_pose1;
   moveit_msgs::DisplayTrajectory display_trajectory;
   
+	//Initialize variables needed for joint-space planning
+	static const std::string PLANNING_GROUP = "manipulator";
+	std::vector<double> joint_group_positions;
+	moveit::core::RobotStatePtr current_state;
+	const robot_state::JointModelGroup *joint_model_group = group.getCurrentState()->getJointModelGroup(PLANNING_GROUP);
 
   
   //Loop
@@ -61,6 +66,17 @@ int main(int argc, char **argv) {
         ROS_INFO_STREAM("Current pose: #" << group.getCurrentPose());
 
         if (completeStatus == 1) {
+			
+			// sample joint-space target
+			
+			current_state = group.getCurrentState();
+            current_state->copyJointGroupPositions(joint_model_group, joint_group_positions);
+			joint_group_positions[1] = -1.0;  // radians
+            group.setJointValueTarget(joint_group_positions);
+			
+			/* sample pose target
+			
+			
           target_pose1.position.x = -0.195;
           target_pose1.position.y = -0.036;
           target_pose1.position.z = 0.129;
@@ -69,8 +85,15 @@ int main(int argc, char **argv) {
           target_pose1.orientation.y = 0.784;
           target_pose1.orientation.z = 0.620;
           group.setPoseTarget(target_pose1);
+		  */
         }
         else {
+			current_state = group.getCurrentState();
+			current_state->copyJointGroupPositions(joint_model_group, joint_group_positions);
+			joint_group_positions[1] = -0.5;  // radians
+            group.setJointValueTarget(joint_group_positions);
+			
+			/* sample pose target
           target_pose1.position.x = 0.082;
           target_pose1.position.y = 0.035;
           target_pose1.position.z = 0.279;
@@ -79,10 +102,11 @@ int main(int argc, char **argv) {
           target_pose1.orientation.y = 0.483;
           target_pose1.orientation.z = 0.648;
           group.setPoseTarget(target_pose1);
+		  */
         }
 
         completeStatus = 0;
-        ROS_INFO_STREAM("Target pose: " << group.getPoseTarget());
+        //ROS_INFO_STREAM("Target pose: " << group.getPoseTarget());
 
         group.setGoalTolerance(0.1);
         moveit::planning_interface::MoveGroupInterface::Plan my_plan;
@@ -90,6 +114,8 @@ int main(int argc, char **argv) {
         group.setPlanningTime(10);
 
         ROS_INFO("Visualizing plan 1 (pose goal) %s",success?"":"FAILED");
+		  
+        ROS_INFO("Visualizing plan 1 (joint-space goal) %s",success?"":"FAILED");
 
         //Recognize end of plan  
         trajectory_msgs::JointTrajectoryPoint plan_end;

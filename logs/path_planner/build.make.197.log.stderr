@@ -1,0 +1,10 @@
+[01m[K/home/weety/tart5/src/path_planner/src/path_planner_2.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/weety/tart5/src/path_planner/src/path_planner_2.cpp:56:58:[m[K [01;31m[Kerror: [m[K‘[01m[Kmove_group[m[K’ was not declared in this scope
+  const robot_state::JointModelGroup *joint_model_group = move_group.getCurrentState()->getJointModelGroup(PLANNING_GROUP);
+[01;32m[K                                                          ^[m[K
+[01m[K/home/weety/tart5/src/path_planner/src/path_planner_2.cpp:56:107:[m[K [01;31m[Kerror: [m[K‘[01m[KPLANNING_GROUP[m[K’ was not declared in this scope
+  const robot_state::JointModelGroup *joint_model_group = move_group.getCurrentState()->getJointModelGroup(PLANNING_GROUP);
+[01;32m[K                                                                                                           ^[m[K
+make[2]: *** [CMakeFiles/path_planner_2.dir/src/path_planner_2.cpp.o] Error 1
+make[1]: *** [CMakeFiles/path_planner_2.dir/all] Error 2
+make: *** [all] Error 2
