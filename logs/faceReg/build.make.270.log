@@ -1,0 +1,19 @@
+[  0%] Built target std_msgs_generate_messages_cpp
+[  0%] Built target std_msgs_generate_messages_lisp
+[  0%] Built target std_msgs_generate_messages_py
+[  0%] Built target _faceReg_generate_messages_check_deps_facePose
+[  0%] Built target std_msgs_generate_messages_nodejs
+[  0%] Built target std_msgs_generate_messages_eus
+[  1%] Built target faceReg_generate_messages_cpp
+[  2%] Built target faceReg_generate_messages_lisp
+[  4%] Built target faceReg_generate_messages_nodejs
+[  7%] Built target faceReg_generate_messages_py
+[ 10%] Built target faceReg_generate_messages_eus
+[ 13%] Built target listener
+[ 13%] Built target faceReg_generate_messages
+[ 94%] Built target dlib
+[35m[1mScanning dependencies of target faceMoveServo[0m
+[ 97%] Built target facePoseRecognition
+[ 98%] [32mBuilding CXX object CMakeFiles/faceMoveServo.dir/src/faceMoveServo.cpp.o[0m
+[100%] [32m[1mLinking CXX executable /home/weety/tart5/devel/.private/faceReg/lib/faceReg/faceMoveServo[0m
+[100%] Built target faceMoveServo

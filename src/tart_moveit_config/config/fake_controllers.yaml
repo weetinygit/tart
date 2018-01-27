@@ -4,3 +4,6 @@ controller_list:
       - motor_1
       - motor_2
       - motor_3
+      - dummy_joint
+      - servo_1
+      - servo_2

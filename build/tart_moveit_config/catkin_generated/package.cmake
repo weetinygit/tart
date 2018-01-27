@@ -1,6 +1,6 @@
 set(_CATKIN_CURRENT_PACKAGE "tart_moveit_config")
 set(tart_moveit_config_VERSION "0.3.0")
-set(tart_moveit_config_MAINTAINER "Wee Ting Yit <weet0009@e.ntu.edu.sg>")
+set(tart_moveit_config_MAINTAINER "Wee Ting Yit <weetingyit36@gmail.com>")
 set(tart_moveit_config_PACKAGE_FORMAT "1")
 set(tart_moveit_config_BUILD_DEPENDS )
 set(tart_moveit_config_BUILD_EXPORT_DEPENDS "moveit_ros_move_group" "moveit_kinematics" "moveit_planners_ompl" "moveit_ros_visualization" "joint_state_publisher" "robot_state_publisher" "xacro")

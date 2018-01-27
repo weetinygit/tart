@@ -145,7 +145,6 @@ facePoseRecognition_EXTERNAL_OBJECTS =
 /home/weety/tart5/devel/.private/faceReg/lib/faceReg/facePoseRecognition: /usr/lib/x86_64-linux-gnu/libpng.so
 /home/weety/tart5/devel/.private/faceReg/lib/faceReg/facePoseRecognition: /usr/lib/x86_64-linux-gnu/libz.so
 /home/weety/tart5/devel/.private/faceReg/lib/faceReg/facePoseRecognition: /usr/lib/x86_64-linux-gnu/libjpeg.so
-/home/weety/tart5/devel/.private/faceReg/lib/faceReg/facePoseRecognition: /usr/lib/libatlas.so
 /home/weety/tart5/devel/.private/faceReg/lib/faceReg/facePoseRecognition: /usr/lib/libcblas.so
 /home/weety/tart5/devel/.private/faceReg/lib/faceReg/facePoseRecognition: /usr/lib/liblapack.so
 /home/weety/tart5/devel/.private/faceReg/lib/faceReg/facePoseRecognition: /usr/lib/x86_64-linux-gnu/libsqlite3.so

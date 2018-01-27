@@ -190,9 +190,9 @@ int main(int argc, char **argv)
                 * in the constructor above.
                 */
                 /***chatter_pub.publish(msg);
+				*/
                 ros::spinOnce();
                 loop_rate.sleep();
-                ++count;*/
                 }
                 }
                 //Reset averages count

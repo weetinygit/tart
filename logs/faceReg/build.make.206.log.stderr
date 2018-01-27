@@ -1,0 +1,69 @@
+[01m[K/home/weety/tart5/src/faceReg/src/faceMoveServo.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/weety/tart5/src/faceReg/src/faceMoveServo.cpp:62:51:[m[K [01;31m[Kerror: [m[K‘[01m[Ksensor_msgs[m[K’ was not declared in this scope
+     ros::Publisher joint_states_pub = n.advertise<sensor_msgs::JointState>("/move_group/fake_controller_joint_states", 1000);
+[01;32m[K                                                   ^[m[K
+[01m[K/home/weety/tart5/src/faceReg/src/faceMoveServo.cpp:62:41:[m[K [01;31m[Kerror: [m[Kparse error in template argument list
+     ros::Publisher joint_states_pub = n.advertise<sensor_msgs::JointState>("/move_group/fake_controller_joint_states", 1000);
+[01;32m[K                                         ^[m[K
+[01m[K/home/weety/tart5/src/faceReg/src/faceMoveServo.cpp:62:124:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kros::NodeHandle::advertise(const char [41], int)[m[K’
+     ros::Publisher joint_states_pub = n.advertise<sensor_msgs::JointState>("/move_group/fake_controller_joint_states", 1000);
+[01;32m[K                                                                                                                            ^[m[K
+In file included from [01m[K/opt/ros/kinetic/include/ros/ros.h:45:0[m[K,
+                 from [01m[K/home/weety/tart5/src/faceReg/src/faceMoveServo.cpp:37[m[K:
+[01m[K/opt/ros/kinetic/include/ros/node_handle.h:248:15:[m[K [01;36m[Knote: [m[Kcandidate: template<class M> ros::Publisher ros::NodeHandle::advertise(const string&, uint32_t, bool)
+     Publisher advertise(const std::string& topic, uint32_t queue_size, bool latch = false)
+[01;32m[K               ^[m[K
+[01m[K/opt/ros/kinetic/include/ros/node_handle.h:248:15:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/weety/tart5/src/faceReg/src/faceMoveServo.cpp:62:124:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+     ros::Publisher joint_states_pub = n.advertise<sensor_msgs::JointState>("/move_group/fake_controller_joint_states", 1000);
+[01;32m[K                                                                                                                            ^[m[K
+In file included from [01m[K/opt/ros/kinetic/include/ros/ros.h:45:0[m[K,
+                 from [01m[K/home/weety/tart5/src/faceReg/src/faceMoveServo.cpp:37[m[K:
+[01m[K/opt/ros/kinetic/include/ros/node_handle.h:314:13:[m[K [01;36m[Knote: [m[Kcandidate: template<class M> ros::Publisher ros::NodeHandle::advertise(const string&, uint32_t, const SubscriberStatusCallback&, const SubscriberStatusCallback&, const VoidConstPtr&, bool)
+   Publisher advertise(const std::string& topic, uint32_t queue_size,
+[01;32m[K             ^[m[K
+[01m[K/opt/ros/kinetic/include/ros/node_handle.h:314:13:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/weety/tart5/src/faceReg/src/faceMoveServo.cpp:62:124:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+     ros::Publisher joint_states_pub = n.advertise<sensor_msgs::JointState>("/move_group/fake_controller_joint_states", 1000);
+[01;32m[K                                                                                                                            ^[m[K
+[01m[K/home/weety/tart5/src/faceReg/src/faceMoveServo.cpp:65:5:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K;[m[K’ before ‘[01m[KfaceReg[m[K’
+     faceReg::facePose rosMsg;
+[01;32m[K     ^[m[K
+[01m[K/home/weety/tart5/src/faceReg/src/faceMoveServo.cpp:124:17:[m[K [01;31m[Kerror: [m[K‘[01m[KrosMsg[m[K’ was not declared in this scope
+                 rosMsg.header.stamp = ros::Time::now();
+[01;32m[K                 ^[m[K
+[01m[K/home/weety/tart5/src/faceReg/src/faceMoveServo.cpp:132:17:[m[K [01;31m[Kerror: [m[K‘[01m[KfacePose_pub[m[K’ was not declared in this scope
+                 facePose_pub.publish(rosMsg);
+[01;32m[K                 ^[m[K
+[01m[K/home/weety/tart5/src/faceReg/src/faceMoveServo.cpp:158:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kshapes[m[K’ was not declared in this scope
+                 shapes.push_back(pose);
+[01;32m[K                 ^[m[K
+[01m[K/home/weety/tart5/src/faceReg/src/faceMoveServo.cpp:158:34:[m[K [01;31m[Kerror: [m[K‘[01m[Kpose[m[K’ was not declared in this scope
+                 shapes.push_back(pose);
+[01;32m[K                                  ^[m[K
+[01m[K/home/weety/tart5/src/faceReg/src/faceMoveServo.cpp:167:13:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[Kcatch[m[K’ before ‘[01m[Kwin[m[K’
+             win.clear_overlay();
+[01;32m[K             ^[m[K
+[01m[K/home/weety/tart5/src/faceReg/src/faceMoveServo.cpp:167:13:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K([m[K’ before ‘[01m[Kwin[m[K’
+[01m[K/home/weety/tart5/src/faceReg/src/faceMoveServo.cpp:167:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kwin[m[K’ does not name a type
+[01m[K/home/weety/tart5/src/faceReg/src/faceMoveServo.cpp:167:16:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K.[m[K’ token
+             win.clear_overlay();
+[01;32m[K                ^[m[K
+[01m[K/home/weety/tart5/src/faceReg/src/faceMoveServo.cpp:167:16:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K{[m[K’ before ‘[01m[K.[m[K’ token
+[01m[K/home/weety/tart5/src/faceReg/src/faceMoveServo.cpp:167:16:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K.[m[K’ token
+[01m[K/home/weety/tart5/src/faceReg/src/faceMoveServo.cpp:168:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kwin[m[K’ was not declared in this scope
+             win.set_image(cimg);
+[01;32m[K             ^[m[K
+[01m[K/home/weety/tart5/src/faceReg/src/faceMoveServo.cpp:168:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kcimg[m[K’ was not declared in this scope
+             win.set_image(cimg);
+[01;32m[K                           ^[m[K
+[01m[K/home/weety/tart5/src/faceReg/src/faceMoveServo.cpp:169:52:[m[K [01;31m[Kerror: [m[K‘[01m[Kshapes[m[K’ was not declared in this scope
+             win.add_overlay(render_face_detections(shapes));
+[01;32m[K                                                    ^[m[K
+[01m[K/home/weety/tart5/src/faceReg/src/faceMoveServo.cpp:[m[K At global scope:
+[01m[K/home/weety/tart5/src/faceReg/src/faceMoveServo.cpp:171:5:[m[K [01;31m[Kerror: [m[Kexpected declaration before ‘[01m[K}[m[K’ token
+     }
+[01;32m[K     ^[m[K
+make[2]: *** [CMakeFiles/faceMoveServo.dir/src/faceMoveServo.cpp.o] Error 1
+make[1]: *** [CMakeFiles/faceMoveServo.dir/all] Error 2
+make: *** [all] Error 2

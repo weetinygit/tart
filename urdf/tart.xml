@@ -77,7 +77,7 @@
 	<joint name="motor_2" type="continuous">
     	<parent link="plate_link"/>
     	<child link="main_link_1"/>
-    	<origin xyz="0.005 0 0.015" rpy="0 0 0"/>
+    	<origin xyz="0.005 0 0.015" rpy="-0.5 0 0"/>
     	<axis xyz="1 0 0"/>
 	</joint>
 	
@@ -86,10 +86,10 @@
 		<visual>
 		    <origin xyz="0 0 0.12" rpy="0 0 0"/>
 			<geometry>
-				<box size="0.01 0.01 0.24"/>
+				<box size="0.01 0.01 0.25"/>
 			</geometry>
-			<material name = "blue1">
-	       		<color rgba="0.2 0.2 1 1.0"/>
+			<material name="Green1">
+	     	    <color rgba="0.2 1.0 0.2 1.0"/>
 			</material>
 	</visual>
 	</link>
@@ -97,21 +97,99 @@
 	<joint name="motor_3" type="continuous">
     	<parent link="main_link_1"/>
     	<child link="main_link_2"/>
-    	<origin xyz="0.005 0 0.2" rpy="0 0 0"/>
+    	<origin xyz="0.005 0 0.25" rpy="-1.07 0 0"/>
     	<axis xyz="1 0 0"/>
 	</joint>
 	
 		
 	<link name="main_link_2">
 		<visual>
-		    <origin xyz="0 0 0.08" rpy="0 0 0"/>
+		    <origin xyz="0 0 0.125" rpy="0 0 0"/>
 			<geometry>
-				<box size="0.01 0.01 0.20"/>
+				<box size="0.01 0.01 0.25"/>
 			</geometry>
 			<material name = "brown1">
 	       		<color rgba="0.4 0 0 1.0"/>
 			</material>
 	</visual>
 	</link>
+	
+	<joint name="dummy_joint" type="continuous">
+    	<parent link="main_link_2"/>
+    	<child link="dummy_link"/>
+    	<origin xyz="0 0 0.25" rpy="-1.514 0 0"/>
+        <axis xyz="0 1 0"/>
+	</joint>
+	
+	<link name="dummy_link">
+		<visual>
+			<origin xyz="0 -0.005 0" rpy="0 0 0"/>
+			<geometry>
+				<box size="0.01 0.01 0.01"/>
+			</geometry>
+	     	<material name="Magenta1">
+	     	<color rgba="0.9 0 0.9 1.0"/>
+			</material>
+	   </visual>
+	</link>
+	
+	<joint name="servo_1" type="continuous">
+    	<parent link="dummy_link"/>
+    	<child link="tablet_bracket"/>
+    	<origin xyz="0 -0.005 0" rpy="-1.514 0 0"/>
+        <axis xyz="0 1 0"/>
+	</joint>
+	
+	<link name="tablet_bracket">
+		<visual>
+			<origin xyz="0 -0.01 0" rpy="0 0 0"/>
+			<geometry>
+				<box size="0.27 0.005 0.04"/>
+			</geometry>
+	     	<material name="Green1">
+	     	<color rgba="0.2 1.0 0.2 1.0"/>
+			</material>
+	   </visual>
+	</link>
+
+    <joint name="tablet_bracket_joint" type="fixed">
+    	<parent link="tablet_bracket"/>
+    	<child link="tablet_bracket_2"/>
+    	<origin xyz="0.1325 -0.015 0" rpy="0 0 0"/>
+    	<axis xyz="0 0 1"/>
+	</joint>
+	
+		
+	<link name="tablet_bracket_2">
+		<visual>
+			<origin xyz="0 -0.05 0" rpy="0 0 0"/>
+			<geometry>
+				<box size="0.005 0.11 0.04"/>
+			</geometry>
+	     	<material name="Green1">
+	     	<color rgba="0.2 1.0 0.2 1.0"/>
+			</material>
+	   </visual>
+    </link>
+
+    <joint name="servo_2" type="continuous">
+    	<parent link="tablet_bracket_2"/>
+    	<child link="tablet"/>
+    	<origin xyz="-0.0025 -0.11 0" rpy="0 0 0"/>
+    	<axis xyz="1 0 0"/>
+	</joint>
+	
+		
+	<link name="tablet">
+		<visual>
+			<origin xyz="-0.137 0 0" rpy="0 0 0"/>
+			<geometry>
+				<box size="0.24 0.167 0.04"/>
+			</geometry>
+	     	<material name="Black1">
+	     	<color rgba="0 0 0 1.0"/>
+			</material>
+	   </visual>
+    </link>
    
 </robot>

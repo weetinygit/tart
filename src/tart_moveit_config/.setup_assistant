@@ -6,5 +6,5 @@ moveit_setup_assistant_config:
     relative_path: config/tart_robot.srdf
   CONFIG:
     author_name: Wee Ting Yit
-    author_email: weet0009@e.ntu.edu.sg
-    generated_timestamp: 1514394950
+    author_email: weetingyit36@gmail.com
+    generated_timestamp: 1515616465

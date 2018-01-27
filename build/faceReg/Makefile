@@ -168,6 +168,19 @@ listener/fast:
 .PHONY : listener/fast
 
 #=============================================================================
+# Target rules for targets named faceMoveServo
+
+# Build rule for target.
+faceMoveServo: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 faceMoveServo
+.PHONY : faceMoveServo
+
+# fast build rule for target.
+faceMoveServo/fast:
+	$(MAKE) -f CMakeFiles/faceMoveServo.dir/build.make CMakeFiles/faceMoveServo.dir/build
+.PHONY : faceMoveServo/fast
+
+#=============================================================================
 # Target rules for targets named facePoseRecognition
 
 # Build rule for target.
@@ -700,6 +713,33 @@ dlib/fast:
 	$(MAKE) -f dlib_build/CMakeFiles/dlib.dir/build.make dlib_build/CMakeFiles/dlib.dir/build
 .PHONY : dlib/fast
 
+src/faceMoveServo.o: src/faceMoveServo.cpp.o
+
+.PHONY : src/faceMoveServo.o
+
+# target to build an object file
+src/faceMoveServo.cpp.o:
+	$(MAKE) -f CMakeFiles/faceMoveServo.dir/build.make CMakeFiles/faceMoveServo.dir/src/faceMoveServo.cpp.o
+.PHONY : src/faceMoveServo.cpp.o
+
+src/faceMoveServo.i: src/faceMoveServo.cpp.i
+
+.PHONY : src/faceMoveServo.i
+
+# target to preprocess a source file
+src/faceMoveServo.cpp.i:
+	$(MAKE) -f CMakeFiles/faceMoveServo.dir/build.make CMakeFiles/faceMoveServo.dir/src/faceMoveServo.cpp.i
+.PHONY : src/faceMoveServo.cpp.i
+
+src/faceMoveServo.s: src/faceMoveServo.cpp.s
+
+.PHONY : src/faceMoveServo.s
+
+# target to generate assembly for a file
+src/faceMoveServo.cpp.s:
+	$(MAKE) -f CMakeFiles/faceMoveServo.dir/build.make CMakeFiles/faceMoveServo.dir/src/faceMoveServo.cpp.s
+.PHONY : src/faceMoveServo.cpp.s
+
 src/facePoseRecognition.o: src/facePoseRecognition.cpp.o
 
 .PHONY : src/facePoseRecognition.o
@@ -765,6 +805,7 @@ help:
 	@echo "... test"
 	@echo "... install/local"
 	@echo "... listener"
+	@echo "... faceMoveServo"
 	@echo "... install"
 	@echo "... facePoseRecognition"
 	@echo "... faceReg_generate_messages_py"
@@ -808,6 +849,9 @@ help:
 	@echo "... gtest"
 	@echo "... gtest_main"
 	@echo "... dlib"
+	@echo "... src/faceMoveServo.o"
+	@echo "... src/faceMoveServo.i"
+	@echo "... src/faceMoveServo.s"
 	@echo "... src/facePoseRecognition.o"
 	@echo "... src/facePoseRecognition.i"
 	@echo "... src/facePoseRecognition.s"

@@ -3,6 +3,7 @@
 /home/weety/tart5/build/faceReg/CMakeFiles/test.dir
 /home/weety/tart5/build/faceReg/CMakeFiles/install/local.dir
 /home/weety/tart5/build/faceReg/CMakeFiles/listener.dir
+/home/weety/tart5/build/faceReg/CMakeFiles/faceMoveServo.dir
 /home/weety/tart5/build/faceReg/CMakeFiles/install.dir
 /home/weety/tart5/build/faceReg/CMakeFiles/facePoseRecognition.dir
 /home/weety/tart5/build/faceReg/CMakeFiles/faceReg_generate_messages_py.dir

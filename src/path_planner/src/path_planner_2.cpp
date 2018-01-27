@@ -121,7 +121,7 @@ int main(int argc, char **argv) {
         trajectory_msgs::JointTrajectoryPoint plan_end;
         plan_end.positions.push_back(-1000.0);
         my_plan.trajectory_.joint_trajectory.points.push_back(plan_end);
-       joint_states_msg.name = my_plan.trajectory_.joint_trajectory.joint_names; 
+        joint_states_msg.name = my_plan.trajectory_.joint_trajectory.joint_names; 
 
         int a = 0;
         try{
