@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/catkin_tools/execution/stages.py", line 174, in function_proxy
+    return function(logger, event_queue, *args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/catkin_tools/jobs/catkin.py", line 291, in link_devel_products
+    source_hash = md5(open(os.path.realpath(source_file)).read().encode('utf-8')).hexdigest()
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xd8 in position 74: ordinal not in range(128)
+
+Stage `symlink` failed with arguments:
+  package: {'package_format': 2, 'exports': [], 'buildtool_export_depends': [], 'exec_depends': [], 'name': 'facetrack_sim', 'filename': '/home/weety/tart5/src/facetrack_sim/package.xml', 'replaces': [], 'version_abi': None, 'build_export_depends': [], 'doc_depends': [], 'test_depends': [], 'maintainers': [<catkin_pkg.package.Person object at 0x7f6b0cdcd9d0>], 'version': '0.0.0', 'build_depends': [], 'urls': [], 'authors': [], 'licenses': ['TODO'], 'buildtool_depends': [<catkin_pkg.package.Dependency object at 0x7f6b0cdd0650>], 'conflicts': [], 'description': u'The facetrack_sim package'}
+  metadata_path: /home/weety/tart5/.catkin_tools/profiles/default
+  devel_manifest_path: /home/weety/tart5/.catkin_tools/profiles/default/packages/facetrack_sim
+  prebuild: False
+  package_path: facetrack_sim
+  dest_devel_path: /home/weety/tart5/devel
+  source_devel_path: /home/weety/tart5/devel/.private/facetrack_sim

@@ -1,0 +1,23 @@
+[01m[K/home/weety/tart5/src/faceReg/src/facetrack_sim.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/weety/tart5/src/faceReg/src/facetrack_sim.cpp:32:2:[m[K [01;31m[Kerror: [m[K‘[01m[Ktr[m[K’ has not been declared
+  tr::StampedTransform target_transform;
+[01;32m[K  ^[m[K
+[01m[K/home/weety/tart5/src/faceReg/src/facetrack_sim.cpp:143:63:[m[K [01;31m[Kerror: [m[K‘[01m[Ktarget_transform[m[K’ was not declared in this scope
+   lr.lookupTransform("base_link", "tablet_pos", ros::Time(0), target_transform);
+[01;32m[K                                                               ^[m[K
+[01m[K/home/weety/tart5/src/faceReg/src/facetrack_sim.cpp:150:26:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[Kgeometry_msgs::Pose_<std::allocator<void> >::_orientation_type {aka geometry_msgs::Quaternion_<std::allocator<void> >}[m[K’ and ‘[01m[Ktf::Quaternion[m[K’)
+   targetPose.orientation = qtr_trans1;
+[01;32m[K                          ^[m[K
+In file included from [01m[K/opt/ros/kinetic/include/geometry_msgs/Pose.h:19:0[m[K,
+                 from [01m[K/opt/ros/kinetic/include/visualization_msgs/Marker.h:19[m[K,
+                 from [01m[K/opt/ros/kinetic/include/visualization_msgs/MarkerArray.h:18[m[K,
+                 from [01m[K/home/weety/tart5/src/faceReg/src/facetrack_sim.cpp:3[m[K:
+[01m[K/opt/ros/kinetic/include/geometry_msgs/Quaternion.h:22:8:[m[K [01;36m[Knote: [m[Kcandidate: geometry_msgs::Quaternion_<std::allocator<void> >& geometry_msgs::Quaternion_<std::allocator<void> >::operator=(const geometry_msgs::Quaternion_<std::allocator<void> >&)
+ struct Quaternion_
+[01;32m[K        ^[m[K
+[01m[K/opt/ros/kinetic/include/geometry_msgs/Quaternion.h:22:8:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Ktf::Quaternion[m[K’ to ‘[01m[Kconst geometry_msgs::Quaternion_<std::allocator<void> >&[m[K’
+[01m[K/opt/ros/kinetic/include/geometry_msgs/Quaternion.h:22:8:[m[K [01;36m[Knote: [m[Kcandidate: geometry_msgs::Quaternion_<std::allocator<void> >& geometry_msgs::Quaternion_<std::allocator<void> >::operator=(geometry_msgs::Quaternion_<std::allocator<void> >&&)
+[01m[K/opt/ros/kinetic/include/geometry_msgs/Quaternion.h:22:8:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Ktf::Quaternion[m[K’ to ‘[01m[Kgeometry_msgs::Quaternion_<std::allocator<void> >&&[m[K’
+make[2]: *** [CMakeFiles/facetrack_sim.dir/src/facetrack_sim.cpp.o] Error 1
+make[1]: *** [CMakeFiles/facetrack_sim.dir/all] Error 2
+make: *** [all] Error 2

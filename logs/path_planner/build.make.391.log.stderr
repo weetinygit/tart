@@ -1,0 +1,66 @@
+In file included from [01m[K/opt/ros/kinetic/include/pluginlib/class_loader.h:38:0[m[K,
+                 from [01m[K/home/weety/tart5/src/path_planner/src/path_planner_2.cpp:1[m[K:
+[01m[K/home/weety/tart5/src/path_planner/src/path_planner_2.cpp:[m[K In function ‘[01m[Kvoid actionNodeCallback(const ConstPtr&)[m[K’:
+[01m[K/home/weety/tart5/src/path_planner/src/path_planner_2.cpp:27:39:[m[K [01;31m[Kerror: [m[K‘[01m[Kgroup[m[K’ was not declared in this scope
+  ROS_INFO_STREAM("Current pose: #" << group.getCurrentPose());
+[01;32m[K                                       ^[m[K
+[01m[K/opt/ros/kinetic/include/ros/console.h:356:64:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KROSCONSOLE_PRINT_STREAM_AT_LOCATION_WITH_FILTER[m[K’
+     __rosconsole_print_stream_at_location_with_filter__ss__ << args; \
+[01;32m[K                                                                ^[m[K
+[01m[K/opt/ros/kinetic/include/ros/console.h:398:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_STREAM_AT_LOCATION[m[K’
+       ROSCONSOLE_PRINT_STREAM_AT_LOCATION(args); \
+[01;32m[K       ^[m[K
+[01m[K/opt/ros/kinetic/include/ros/console.h:568:43:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG_STREAM_COND[m[K’
+ #define ROS_LOG_STREAM(level, name, args) ROS_LOG_STREAM_COND(true, level, name, args)
+[01;32m[K                                           ^[m[K
+[01m[K/opt/ros/kinetic/include/rosconsole/macros_generated.h:111:31:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG_STREAM[m[K’
+ #define ROS_INFO_STREAM(args) ROS_LOG_STREAM(::ros::console::levels::Info, ROSCONSOLE_DEFAULT_NAME, args)
+[01;32m[K                               ^[m[K
+[01m[K/home/weety/tart5/src/path_planner/src/path_planner_2.cpp:27:2:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_INFO_STREAM[m[K’
+  ROS_INFO_STREAM("Current pose: #" << group.getCurrentPose());
+[01;32m[K  ^[m[K
+[01m[K/home/weety/tart5/src/path_planner/src/path_planner_2.cpp:27:39:[m[K [01;36m[Knote: [m[Ksuggested alternative:
+  ROS_INFO_STREAM("Current pose: #" << group.getCurrentPose());
+[01;32m[K                                       ^[m[K
+[01m[K/opt/ros/kinetic/include/ros/console.h:356:64:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KROSCONSOLE_PRINT_STREAM_AT_LOCATION_WITH_FILTER[m[K’
+     __rosconsole_print_stream_at_location_with_filter__ss__ << args; \
+[01;32m[K                                                                ^[m[K
+[01m[K/opt/ros/kinetic/include/ros/console.h:398:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_STREAM_AT_LOCATION[m[K’
+       ROSCONSOLE_PRINT_STREAM_AT_LOCATION(args); \
+[01;32m[K       ^[m[K
+[01m[K/opt/ros/kinetic/include/ros/console.h:568:43:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG_STREAM_COND[m[K’
+ #define ROS_LOG_STREAM(level, name, args) ROS_LOG_STREAM_COND(true, level, name, args)
+[01;32m[K                                           ^[m[K
+[01m[K/opt/ros/kinetic/include/rosconsole/macros_generated.h:111:31:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG_STREAM[m[K’
+ #define ROS_INFO_STREAM(args) ROS_LOG_STREAM(::ros::console::levels::Info, ROSCONSOLE_DEFAULT_NAME, args)
+[01;32m[K                               ^[m[K
+[01m[K/home/weety/tart5/src/path_planner/src/path_planner_2.cpp:27:2:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_INFO_STREAM[m[K’
+  ROS_INFO_STREAM("Current pose: #" << group.getCurrentPose());
+[01;32m[K  ^[m[K
+In file included from [01m[K/usr/include/boost/format.hpp:48:0[m[K,
+                 from [01m[K/usr/include/boost/math/policies/error_handling.hpp:31[m[K,
+                 from [01m[K/usr/include/boost/math/special_functions/round.hpp:14[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/time.h:58[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/console.h:39[m[K,
+                 from [01m[K/opt/ros/kinetic/include/pluginlib/class_loader.h:38[m[K,
+                 from [01m[K/home/weety/tart5/src/path_planner/src/path_planner_2.cpp:1[m[K:
+[01m[K/usr/include/boost/format/group.hpp:667:3:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::io::group[m[K’
+   group(T1 a1,T2 a2,T3 a3,T4 a4,T5 a5,T6 a6,T7 a7,T8 a8,T9 a9, Var& var)
+[01;32m[K   ^[m[K
+[01m[K/home/weety/tart5/src/path_planner/src/path_planner_2.cpp:28:2:[m[K [01;31m[Kerror: [m[K‘[01m[Kgroup[m[K’ was not declared in this scope
+  group.setPoseTarget(msg);
+[01;32m[K  ^[m[K
+[01m[K/home/weety/tart5/src/path_planner/src/path_planner_2.cpp:28:2:[m[K [01;36m[Knote: [m[Ksuggested alternative:
+In file included from [01m[K/usr/include/boost/format.hpp:48:0[m[K,
+                 from [01m[K/usr/include/boost/math/policies/error_handling.hpp:31[m[K,
+                 from [01m[K/usr/include/boost/math/special_functions/round.hpp:14[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/time.h:58[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/console.h:39[m[K,
+                 from [01m[K/opt/ros/kinetic/include/pluginlib/class_loader.h:38[m[K,
+                 from [01m[K/home/weety/tart5/src/path_planner/src/path_planner_2.cpp:1[m[K:
+[01m[K/usr/include/boost/format/group.hpp:667:3:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::io::group[m[K’
+   group(T1 a1,T2 a2,T3 a3,T4 a4,T5 a5,T6 a6,T7 a7,T8 a8,T9 a9, Var& var)
+[01;32m[K   ^[m[K
+make[2]: *** [CMakeFiles/path_planner_2.dir/src/path_planner_2.cpp.o] Error 1
+make[1]: *** [CMakeFiles/path_planner_2.dir/all] Error 2
+make: *** [all] Error 2

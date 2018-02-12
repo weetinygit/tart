@@ -29,6 +29,8 @@ moveit_msgs/AttachedCollisionObject.h
 -
 moveit_msgs/CollisionObject.h
 -
+geometry_msgs/Pose.h
+-
 
 /opt/ros/kinetic/include/class_loader/class_loader.h
 boost/shared_ptr.hpp

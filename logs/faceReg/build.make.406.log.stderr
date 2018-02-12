@@ -1,0 +1,32 @@
+[01m[K/home/weety/tart5/src/faceReg/src/facetrack_sim.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/weety/tart5/src/faceReg/src/facetrack_sim.cpp:80:5:[m[K [01;31m[Kerror: [m[K‘[01m[KquaternionMsgtoTF[m[K’ is not a member of ‘[01m[Ktf[m[K’
+     tf::quaternionMsgtoTF(marker.pose.orientation, qtr);
+[01;32m[K     ^[m[K
+[01m[K/home/weety/tart5/src/faceReg/src/facetrack_sim.cpp:83:5:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Kbreak[m[K’
+     break;
+[01;32m[K     ^[m[K
+[01m[K/home/weety/tart5/src/faceReg/src/facetrack_sim.cpp:85:5:[m[K [01;31m[Kerror: [m[K‘[01m[KquaternionMsgtoTF[m[K’ is not a member of ‘[01m[Ktf[m[K’
+     tf::quaternionMsgtoTF(marker.pose.orientation, qtr);
+[01;32m[K     ^[m[K
+[01m[K/home/weety/tart5/src/faceReg/src/facetrack_sim.cpp:88:5:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Kbreak[m[K’
+     break;
+[01;32m[K     ^[m[K
+[01m[K/home/weety/tart5/src/faceReg/src/facetrack_sim.cpp:90:5:[m[K [01;31m[Kerror: [m[K‘[01m[KquaternionMsgtoTF[m[K’ is not a member of ‘[01m[Ktf[m[K’
+     tf::quaternionMsgtoTF(marker.pose.orientation, qtr);
+[01;32m[K     ^[m[K
+[01m[K/home/weety/tart5/src/faceReg/src/facetrack_sim.cpp:93:5:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Kbreak[m[K’
+     break;
+[01;32m[K     ^[m[K
+[01m[K/home/weety/tart5/src/faceReg/src/facetrack_sim.cpp:95:5:[m[K [01;31m[Kerror: [m[K‘[01m[KquaternionMsgtoTF[m[K’ is not a member of ‘[01m[Ktf[m[K’
+     tf::quaternionMsgtoTF(marker.pose.orientation, qtr);
+[01;32m[K     ^[m[K
+[01m[K/home/weety/tart5/src/faceReg/src/facetrack_sim.cpp:97:86:[m[K [01;31m[Kerror: [m[Ktoo few arguments to function ‘[01m[Kgeometry_msgs::Quaternion tf::createQuaternionMsgFromRollPitchYaw(double, double, double)[m[K’
+     marker.pose.orientation = tf::createQuaternionMsgFromRollPitchYaw(roll, pitch-0.3)
+[01;32m[K                                                                                      ^[m[K
+In file included from [01m[K/home/weety/tart5/src/faceReg/src/facetrack_sim.cpp:7:0[m[K:
+[01m[K/opt/ros/kinetic/include/tf/transform_datatypes.h:184:41:[m[K [01;36m[Knote: [m[Kdeclared here
+ static inline geometry_msgs::Quaternion createQuaternionMsgFromRollPitchYaw(double roll,double pitch,double yaw){
+[01;32m[K                                         ^[m[K
+make[2]: *** [CMakeFiles/facetrack_sim.dir/src/facetrack_sim.cpp.o] Error 1
+make[1]: *** [CMakeFiles/facetrack_sim.dir/all] Error 2
+make: *** [all] Error 2

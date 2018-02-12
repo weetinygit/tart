@@ -1,0 +1,10 @@
+[01m[K/home/weety/tart5/src/faceReg/src/facetrack_sim.cpp:9:2:[m[K [01;31m[Kerror: [m[Kinvalid preprocessing directive #DEFINE
+ #DEFINE X_DISPLACE 0.137
+[01;32m[K  ^[m[K
+[01m[K/home/weety/tart5/src/faceReg/src/facetrack_sim.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/weety/tart5/src/faceReg/src/facetrack_sim.cpp:78:50:[m[K [01;31m[Kerror: [m[K‘[01m[KX_DISPLACE[m[K’ was not declared in this scope
+   targetPose.position.x = marker.pose.position.x+X_DISPLACE;
+[01;32m[K                                                  ^[m[K
+make[2]: *** [CMakeFiles/facetrack_sim.dir/src/facetrack_sim.cpp.o] Error 1
+make[1]: *** [CMakeFiles/facetrack_sim.dir/all] Error 2
+make: *** [all] Error 2

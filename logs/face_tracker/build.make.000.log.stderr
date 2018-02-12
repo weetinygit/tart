@@ -1,0 +1,7 @@
+/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o: In function `_start':
+(.text+0x20): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+make[2]: *** [/home/weety/tart5/devel/.private/face_tracker/lib/face_tracker/facetrack_sim] Error 1
+make[1]: *** [CMakeFiles/facetrack_sim.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [all] Error 2

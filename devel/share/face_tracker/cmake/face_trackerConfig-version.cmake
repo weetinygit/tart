@@ -1,0 +1,1 @@
+/home/weety/tart5/devel/.private/face_tracker/share/face_tracker/cmake/face_trackerConfig-version.cmake

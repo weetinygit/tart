@@ -1,0 +1,8 @@
+prefix=/home/weety/tart5/devel/.private/facetrack_sim
+
+Name: facetrack_sim
+Description: Description of facetrack_sim
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/weety/tart5/devel/.private/facetrack_sim/lib 
+Requires: 

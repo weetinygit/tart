@@ -57,13 +57,15 @@
     <arg name="moveit_warehouse_database_path" value="$(arg db_path)"/>
   </include>
   
-   <node name="faceReg1" pkg="faceReg" type="faceMoveServo" cwd="node"/>
+   <!--<node name="faceReg1" pkg="faceReg" type="faceMoveServo" cwd="node"/>
    <node name="rosserial" pkg="rosserial_python" type="serial_node.py">
        <param name="port" value="$(arg arduino_usb)"/>
        <param name="baud" value="57600"/>
-   </node>
+   </node>-->
 	
 	
-   <node name="arduino_comm" pkg="path_planner" type="arduino_comm"/>
+  <node name="arduino_comm" pkg="path_planner" type="arduino_comm"/>
+  <node name="path_planner" pkg="path_planner" type="path_planner_2"/>
+  <node name="face_tablet_tf_broadcaster" pkg="faceReg" type="face_tablet_tf_broadcaster"/>
 
 </launch>

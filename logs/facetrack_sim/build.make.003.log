@@ -1,0 +1,13 @@
+[35m[1mScanning dependencies of target facetrack_sim[0m
+[  1%] [32mBuilding CXX object CMakeFiles/facetrack_sim.dir/src/facetrack_sim.cpp.o[0m
+[ 98%] Built target dlib
+[100%] [32m[1mLinking CXX executable /home/weety/tart5/devel/.private/facetrack_sim/lib/facetrack_sim/facetrack_sim[0m
+/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o: In function `_start':
+(.text+0x20): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+CMakeFiles/facetrack_sim.dir/build.make:178: recipe for target '/home/weety/tart5/devel/.private/facetrack_sim/lib/facetrack_sim/facetrack_sim' failed
+make[2]: *** [/home/weety/tart5/devel/.private/facetrack_sim/lib/facetrack_sim/facetrack_sim] Error 1
+CMakeFiles/Makefile2:835: recipe for target 'CMakeFiles/facetrack_sim.dir/all' failed
+make[1]: *** [CMakeFiles/facetrack_sim.dir/all] Error 2
+Makefile:138: recipe for target 'all' failed
+make: *** [all] Error 2

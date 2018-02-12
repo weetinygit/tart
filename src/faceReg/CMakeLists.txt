@@ -14,6 +14,7 @@ find_package(catkin REQUIRED COMPONENTS
   actionlib_msgs
   message_generation
   genmsg
+  tf
 )
 
 
@@ -102,9 +103,15 @@ else()
 endif()
 
 
-add_executable(listener src/listener.cpp)
-target_link_libraries(listener ${catkin_LIBRARIES})
-add_dependencies(listener faceReg_generate_messages_cpp)
+add_executable(facetrack_sim src/facetrack_sim)
+target_link_libraries(facetrack_sim ${catkin_LIBRARIES} ncurses)
+add_dependencies(facetrack_sim faceReg_generate_messages_cpp)
+
+add_executable(face_tablet_tf_broadcaster src/face_tablet_tf_broadcaster)
+target_link_libraries(face_tablet_tf_broadcaster ${catkin_LIBRARIES})
+add_dependencies(face_tablet_tf_broadcaster faceReg_generate_messages_cpp)
+
+
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
 #   src/${PROJECT_NAME}/faceReg.cpp

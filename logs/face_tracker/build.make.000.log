@@ -1,0 +1,70 @@
+[35m[1mScanning dependencies of target facetrack_sim[0m
+[35m[1mScanning dependencies of target dlib[0m
+[  1%] [32mBuilding CXX object CMakeFiles/facetrack_sim.dir/src/facetrack_sim.cpp.o[0m
+[  3%] [32m[1mLinking CXX executable /home/weety/tart5/devel/.private/face_tracker/lib/face_tracker/facetrack_sim[0m
+/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o: In function `_start':
+(.text+0x20): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+CMakeFiles/facetrack_sim.dir/build.make:178: recipe for target '/home/weety/tart5/devel/.private/face_tracker/lib/face_tracker/facetrack_sim' failed
+make[2]: *** [/home/weety/tart5/devel/.private/face_tracker/lib/face_tracker/facetrack_sim] Error 1
+CMakeFiles/Makefile2:835: recipe for target 'CMakeFiles/facetrack_sim.dir/all' failed
+make[1]: *** [CMakeFiles/facetrack_sim.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+[  5%] [32mBuilding CXX object dlib_build/CMakeFiles/dlib.dir/base64/base64_kernel_1.cpp.o[0m
+[  8%] [32mBuilding CXX object dlib_build/CMakeFiles/dlib.dir/bigint/bigint_kernel_1.cpp.o[0m
+[  8%] [32mBuilding CXX object dlib_build/CMakeFiles/dlib.dir/bigint/bigint_kernel_2.cpp.o[0m
+[ 10%] [32mBuilding CXX object dlib_build/CMakeFiles/dlib.dir/bit_stream/bit_stream_kernel_1.cpp.o[0m
+[ 12%] [32mBuilding CXX object dlib_build/CMakeFiles/dlib.dir/entropy_decoder/entropy_decoder_kernel_1.cpp.o[0m
+[ 14%] [32mBuilding CXX object dlib_build/CMakeFiles/dlib.dir/entropy_decoder/entropy_decoder_kernel_2.cpp.o[0m
+[ 15%] [32mBuilding CXX object dlib_build/CMakeFiles/dlib.dir/entropy_encoder/entropy_encoder_kernel_1.cpp.o[0m
+[ 17%] [32mBuilding CXX object dlib_build/CMakeFiles/dlib.dir/entropy_encoder/entropy_encoder_kernel_2.cpp.o[0m
+[ 19%] [32mBuilding CXX object dlib_build/CMakeFiles/dlib.dir/md5/md5_kernel_1.cpp.o[0m
+[ 21%] [32mBuilding CXX object dlib_build/CMakeFiles/dlib.dir/tokenizer/tokenizer_kernel_1.cpp.o[0m
+[ 22%] [32mBuilding CXX object dlib_build/CMakeFiles/dlib.dir/unicode/unicode.cpp.o[0m
+[ 24%] [32mBuilding CXX object dlib_build/CMakeFiles/dlib.dir/data_io/image_dataset_metadata.cpp.o[0m
+[ 26%] [32mBuilding CXX object dlib_build/CMakeFiles/dlib.dir/data_io/mnist.cpp.o[0m
+[ 28%] [32mBuilding CXX object dlib_build/CMakeFiles/dlib.dir/dnn/cpu_dlib.cpp.o[0m
+[ 29%] [32mBuilding CXX object dlib_build/CMakeFiles/dlib.dir/dnn/tensor_tools.cpp.o[0m
+[ 31%] [32mBuilding CXX object dlib_build/CMakeFiles/dlib.dir/sockets/sockets_kernel_1.cpp.o[0m
+[ 33%] [32mBuilding CXX object dlib_build/CMakeFiles/dlib.dir/bsp/bsp.cpp.o[0m
+[ 35%] [32mBuilding CXX object dlib_build/CMakeFiles/dlib.dir/dir_nav/dir_nav_kernel_1.cpp.o[0m
+[ 36%] [32mBuilding CXX object dlib_build/CMakeFiles/dlib.dir/dir_nav/dir_nav_kernel_2.cpp.o[0m
+[ 38%] [32mBuilding CXX object dlib_build/CMakeFiles/dlib.dir/dir_nav/dir_nav_extensions.cpp.o[0m
+[ 40%] [32mBuilding CXX object dlib_build/CMakeFiles/dlib.dir/linker/linker_kernel_1.cpp.o[0m
+[ 42%] [32mBuilding CXX object dlib_build/CMakeFiles/dlib.dir/logger/extra_logger_headers.cpp.o[0m
+[ 43%] [32mBuilding CXX object dlib_build/CMakeFiles/dlib.dir/logger/logger_kernel_1.cpp.o[0m
+[ 45%] [32mBuilding CXX object dlib_build/CMakeFiles/dlib.dir/logger/logger_config_file.cpp.o[0m
+[ 47%] [32mBuilding CXX object dlib_build/CMakeFiles/dlib.dir/misc_api/misc_api_kernel_1.cpp.o[0m
+[ 49%] [32mBuilding CXX object dlib_build/CMakeFiles/dlib.dir/misc_api/misc_api_kernel_2.cpp.o[0m
+[ 50%] [32mBuilding CXX object dlib_build/CMakeFiles/dlib.dir/sockets/sockets_extensions.cpp.o[0m
+[ 52%] [32mBuilding CXX object dlib_build/CMakeFiles/dlib.dir/sockets/sockets_kernel_2.cpp.o[0m
+[ 54%] [32mBuilding CXX object dlib_build/CMakeFiles/dlib.dir/sockstreambuf/sockstreambuf.cpp.o[0m
+[ 56%] [32mBuilding CXX object dlib_build/CMakeFiles/dlib.dir/sockstreambuf/sockstreambuf_unbuffered.cpp.o[0m
+[ 57%] [32mBuilding CXX object dlib_build/CMakeFiles/dlib.dir/server/server_kernel.cpp.o[0m
+[ 59%] [32mBuilding CXX object dlib_build/CMakeFiles/dlib.dir/server/server_iostream.cpp.o[0m
+[ 61%] [32mBuilding CXX object dlib_build/CMakeFiles/dlib.dir/server/server_http.cpp.o[0m
+[ 63%] [32mBuilding CXX object dlib_build/CMakeFiles/dlib.dir/threads/multithreaded_object_extension.cpp.o[0m
+[ 64%] [32mBuilding CXX object dlib_build/CMakeFiles/dlib.dir/threads/threaded_object_extension.cpp.o[0m
+[ 66%] [32mBuilding CXX object dlib_build/CMakeFiles/dlib.dir/threads/threads_kernel_1.cpp.o[0m
+[ 68%] [32mBuilding CXX object dlib_build/CMakeFiles/dlib.dir/threads/threads_kernel_2.cpp.o[0m
+[ 70%] [32mBuilding CXX object dlib_build/CMakeFiles/dlib.dir/threads/threads_kernel_shared.cpp.o[0m
+[ 71%] [32mBuilding CXX object dlib_build/CMakeFiles/dlib.dir/threads/thread_pool_extension.cpp.o[0m
+[ 73%] [32mBuilding CXX object dlib_build/CMakeFiles/dlib.dir/threads/async.cpp.o[0m
+[ 75%] [32mBuilding CXX object dlib_build/CMakeFiles/dlib.dir/timer/timer.cpp.o[0m
+[ 77%] [32mBuilding CXX object dlib_build/CMakeFiles/dlib.dir/stack_trace.cpp.o[0m
+[ 78%] [32mBuilding CXX object dlib_build/CMakeFiles/dlib.dir/gui_widgets/fonts.cpp.o[0m
+[ 80%] [32mBuilding CXX object dlib_build/CMakeFiles/dlib.dir/gui_widgets/widgets.cpp.o[0m
+[ 82%] [32mBuilding CXX object dlib_build/CMakeFiles/dlib.dir/gui_widgets/drawable.cpp.o[0m
+[ 84%] [32mBuilding CXX object dlib_build/CMakeFiles/dlib.dir/gui_widgets/canvas_drawing.cpp.o[0m
+[ 85%] [32mBuilding CXX object dlib_build/CMakeFiles/dlib.dir/gui_widgets/style.cpp.o[0m
+[ 87%] [32mBuilding CXX object dlib_build/CMakeFiles/dlib.dir/gui_widgets/base_widgets.cpp.o[0m
+[ 89%] [32mBuilding CXX object dlib_build/CMakeFiles/dlib.dir/gui_core/gui_core_kernel_1.cpp.o[0m
+[ 91%] [32mBuilding CXX object dlib_build/CMakeFiles/dlib.dir/gui_core/gui_core_kernel_2.cpp.o[0m
+[ 92%] [32mBuilding CXX object dlib_build/CMakeFiles/dlib.dir/image_loader/png_loader.cpp.o[0m
+[ 94%] [32mBuilding CXX object dlib_build/CMakeFiles/dlib.dir/image_saver/save_png.cpp.o[0m
+[ 96%] [32mBuilding CXX object dlib_build/CMakeFiles/dlib.dir/image_loader/jpeg_loader.cpp.o[0m
+[ 98%] [32mBuilding CXX object dlib_build/CMakeFiles/dlib.dir/image_saver/save_jpeg.cpp.o[0m
+[100%] [32m[1mLinking CXX static library /home/weety/tart5/devel/.private/face_tracker/lib/libdlib.a[0m
+[100%] Built target dlib
+Makefile:138: recipe for target 'all' failed
+make: *** [all] Error 2

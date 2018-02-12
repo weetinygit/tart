@@ -1,0 +1,20 @@
+[01m[K/home/weety/tart5/src/path_planner/src/path_planner_2.cpp:[m[K In function ‘[01m[Kvoid actionNodeCallback(const ConstPtr&)[m[K’:
+[01m[K/home/weety/tart5/src/path_planner/src/path_planner_2.cpp:26:13:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[Kgeometry_msgs::Pose {aka geometry_msgs::Pose_<std::allocator<void> >}[m[K’ and ‘[01m[Kconst ConstPtr {aka const boost::shared_ptr<const geometry_msgs::Pose_<std::allocator<void> > >}[m[K’)
+  targetPose = msg;
+[01;32m[K             ^[m[K
+In file included from [01m[K/opt/ros/kinetic/include/geometry_msgs/PoseStamped.h:19:0[m[K,
+                 from [01m[K/opt/ros/kinetic/include/moveit/kinematics_base/kinematics_base.h:40[m[K,
+                 from [01m[K/opt/ros/kinetic/include/moveit/robot_model/joint_model_group.h:43[m[K,
+                 from [01m[K/opt/ros/kinetic/include/moveit/robot_model/robot_model.h:48[m[K,
+                 from [01m[K/opt/ros/kinetic/include/moveit/robot_state/robot_state.h:41[m[K,
+                 from [01m[K/opt/ros/kinetic/include/moveit/move_group_interface/move_group_interface.h:43[m[K,
+                 from [01m[K/home/weety/tart5/src/path_planner/src/path_planner_2.cpp:9[m[K:
+[01m[K/opt/ros/kinetic/include/geometry_msgs/Pose.h:24:8:[m[K [01;36m[Knote: [m[Kcandidate: geometry_msgs::Pose_<std::allocator<void> >& geometry_msgs::Pose_<std::allocator<void> >::operator=(const geometry_msgs::Pose_<std::allocator<void> >&)
+ struct Pose_
+[01;32m[K        ^[m[K
+[01m[K/opt/ros/kinetic/include/geometry_msgs/Pose.h:24:8:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst ConstPtr {aka const boost::shared_ptr<const geometry_msgs::Pose_<std::allocator<void> > >}[m[K’ to ‘[01m[Kconst geometry_msgs::Pose_<std::allocator<void> >&[m[K’
+[01m[K/opt/ros/kinetic/include/geometry_msgs/Pose.h:24:8:[m[K [01;36m[Knote: [m[Kcandidate: geometry_msgs::Pose_<std::allocator<void> >& geometry_msgs::Pose_<std::allocator<void> >::operator=(geometry_msgs::Pose_<std::allocator<void> >&&)
+[01m[K/opt/ros/kinetic/include/geometry_msgs/Pose.h:24:8:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst ConstPtr {aka const boost::shared_ptr<const geometry_msgs::Pose_<std::allocator<void> > >}[m[K’ to ‘[01m[Kgeometry_msgs::Pose_<std::allocator<void> >&&[m[K’
+make[2]: *** [CMakeFiles/path_planner_2.dir/src/path_planner_2.cpp.o] Error 1
+make[1]: *** [CMakeFiles/path_planner_2.dir/all] Error 2
+make: *** [all] Error 2

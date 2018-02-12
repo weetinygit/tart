@@ -14,8 +14,10 @@ faceReg
 /home/weety/tart5/devel/.private/faceReg/share/gennodejs/ros/faceReg/msg/facePose.js /home/weety/tart5/devel/share/gennodejs/ros/faceReg/msg/facePose.js
 /home/weety/tart5/devel/.private/faceReg/share/gennodejs/ros/faceReg/msg/_index.js /home/weety/tart5/devel/share/gennodejs/ros/faceReg/msg/_index.js
 /home/weety/tart5/devel/.private/faceReg/lib/libdlib.a /home/weety/tart5/devel/lib/libdlib.a
+/home/weety/tart5/devel/.private/faceReg/lib/faceReg/facetrack_sim /home/weety/tart5/devel/lib/faceReg/facetrack_sim
 /home/weety/tart5/devel/.private/faceReg/lib/faceReg/facePoseRecognition /home/weety/tart5/devel/lib/faceReg/facePoseRecognition
 /home/weety/tart5/devel/.private/faceReg/lib/faceReg/faceMoveServo /home/weety/tart5/devel/lib/faceReg/faceMoveServo
+/home/weety/tart5/devel/.private/faceReg/lib/faceReg/face_tablet_tf_broadcaster /home/weety/tart5/devel/lib/faceReg/face_tablet_tf_broadcaster
 /home/weety/tart5/devel/.private/faceReg/lib/faceReg/listener /home/weety/tart5/devel/lib/faceReg/listener
 /home/weety/tart5/devel/.private/faceReg/lib/pkgconfig/faceReg.pc /home/weety/tart5/devel/lib/pkgconfig/faceReg.pc
 /home/weety/tart5/devel/.private/faceReg/lib/python2.7/dist-packages/faceReg/__init__.py /home/weety/tart5/devel/lib/python2.7/dist-packages/faceReg/__init__.py

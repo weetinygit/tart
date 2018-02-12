@@ -1,0 +1,6 @@
+[35m[1mScanning dependencies of target facetrack_sim[0m
+make[2]: *** No rule to make target '/home/weety/tart5/src/face_tracker/src/facetrack_sim.cpp', needed by 'CMakeFiles/facetrack_sim.dir/src/facetrack_sim.cpp.o'.  Stop.
+CMakeFiles/Makefile2:835: recipe for target 'CMakeFiles/facetrack_sim.dir/all' failed
+make[1]: *** [CMakeFiles/facetrack_sim.dir/all] Error 2
+Makefile:138: recipe for target 'all' failed
+make: *** [all] Error 2

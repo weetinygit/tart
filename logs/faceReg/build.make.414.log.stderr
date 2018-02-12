@@ -1,0 +1,18 @@
+[01m[K/home/weety/tart5/src/faceReg/src/facetrack_sim.cpp:68:12:[m[K [01;35m[Kwarning: [m[Kmissing terminating " character
+   ROS_INFO("Use 'WSAD' to displace, 'rf' and 'zx' to tilt);
+[01;32m[K            ^[m[K
+[01m[K/home/weety/tart5/src/faceReg/src/facetrack_sim.cpp:128:0:[m[K [01;31m[Kerror: [m[Kunterminated argument list invoking macro "ROS_INFO"
+ }
+[01;32m[K ^[m[K
+[01m[K/home/weety/tart5/src/faceReg/src/facetrack_sim.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/weety/tart5/src/faceReg/src/facetrack_sim.cpp:29:95:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K;[m[K’ token
+     br.sendTransform(tf::StampedTransform(transform, ros::Time::now(), "base_link", "carrot1");
+[01;32m[K                                                                                               ^[m[K
+[01m[K/home/weety/tart5/src/faceReg/src/facetrack_sim.cpp:68:3:[m[K [01;31m[Kerror: [m[K‘[01m[KROS_INFO[m[K’ was not declared in this scope
+   ROS_INFO("Use 'WSAD' to displace, 'rf' and 'zx' to tilt);
+[01;32m[K   ^[m[K
+[01m[K/home/weety/tart5/src/faceReg/src/facetrack_sim.cpp:68:3:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+[01m[K/home/weety/tart5/src/faceReg/src/facetrack_sim.cpp:68:3:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+make[2]: *** [CMakeFiles/facetrack_sim.dir/src/facetrack_sim.cpp.o] Error 1
+make[1]: *** [CMakeFiles/facetrack_sim.dir/all] Error 2
+make: *** [all] Error 2

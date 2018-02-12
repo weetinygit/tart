@@ -1,0 +1,5 @@
+[01m[K/home/weety/tart5/src/faceReg/src/facetrack_sim.cpp:4:17:[m[K [01;31m[Kfatal error: [m[Kconio: No such file or directory
+compilation terminated.
+make[2]: *** [CMakeFiles/facetrack_sim.dir/src/facetrack_sim.cpp.o] Error 1
+make[1]: *** [CMakeFiles/facetrack_sim.dir/all] Error 2
+make: *** [all] Error 2

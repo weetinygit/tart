@@ -1,0 +1,5 @@
+[35m[1mScanning dependencies of target facetrack_sim[0m
+[  1%] [32mBuilding CXX object CMakeFiles/facetrack_sim.dir/src/facetrack_sim.cpp.o[0m
+[ 98%] Built target dlib
+[100%] [32m[1mLinking CXX executable /home/weety/tart5/devel/.private/facetrack_sim/lib/facetrack_sim/facetrack_sim[0m
+[100%] Built target facetrack_sim

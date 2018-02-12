@@ -1,0 +1,23 @@
+[01m[K/home/weety/tart5/src/faceReg/src/face_tablet_tf_broadcaster.cpp:[m[K In function ‘[01m[Kvoid actionNodeCallback(const ConstPtr&)[m[K’:
+[01m[K/home/weety/tart5/src/faceReg/src/face_tablet_tf_broadcaster.cpp:15:16:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst ConstPtr {aka const class boost::shared_ptr<const visualization_msgs::MarkerArray_<std::allocator<void> > >}[m[K’ has no member named ‘[01m[Kmarkers[m[K’
+  marker = *msg.markers[0];
+[01;32m[K                ^[m[K
+[01m[K/home/weety/tart5/src/faceReg/src/face_tablet_tf_broadcaster.cpp:19:49:[m[K [01;31m[Kerror: [m[K‘[01m[Kqtr_trans1[m[K’ was not declared in this scope
+  tf::quaternionMsgToTF(marker.pose.orientation, qtr_trans1);
+[01;32m[K                                                 ^[m[K
+[01m[K/home/weety/tart5/src/faceReg/src/face_tablet_tf_broadcaster.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/weety/tart5/src/faceReg/src/face_tablet_tf_broadcaster.cpp:39:36:[m[K [01;31m[Kerror: [m[K‘[01m[KX_DISPLACE[m[K’ was not declared in this scope
+  qtr_trans2.setRPY(0.0, 0.0, YAW_DISPLACE);
+[01;32m[K                                    ^[m[K
+[01m[K/home/weety/tart5/src/faceReg/src/face_tablet_tf_broadcaster.cpp:39:48:[m[K [01;31m[Kerror: [m[K‘[01m[KY_DISPLACE[m[K’ was not declared in this scope
+[01m[K/home/weety/tart5/src/faceReg/src/face_tablet_tf_broadcaster.cpp:40:30:[m[K [01;31m[Kerror: [m[K‘[01m[KYAW_DISPLACE[m[K’ was not declared in this scope
+  transform2.setRotation(qtr_trans2);
+[01;32m[K                              ^[m[K
+[01m[K/home/weety/tart5/src/faceReg/src/face_tablet_tf_broadcaster.cpp:44:9:[m[K [01;31m[Kerror: [m[K‘[01m[Knode[m[K’ was not declared in this scope
+   br.sendTransform(tf::StampedTransform(transform1, ros::Time::now(), "base_link", "face_pos"));
+[01;32m[K         ^[m[K
+[01m[K/home/weety/tart5/src/faceReg/src/face_tablet_tf_broadcaster.cpp:47:3:[m[K [01;31m[Kerror: [m[K‘[01m[Krate[m[K’ was not declared in this scope
+make[2]: *** [CMakeFiles/face_tablet_tf_broadcaster.dir/src/face_tablet_tf_broadcaster.cpp.o] Error 1
+make[1]: *** [CMakeFiles/face_tablet_tf_broadcaster.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [all] Error 2

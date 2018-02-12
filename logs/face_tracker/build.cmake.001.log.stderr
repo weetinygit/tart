@@ -1,0 +1,8 @@
+[31m[1mCMake Error[0m at /home/weety/tart5/src/face_tracker/CMakeLists.txt:10 (find_package):
+  find_package called with invalid argument "rospy"
+
+
+[31m[1mCMake Error[0m at /home/weety/tart5/src/face_tracker/CMakeLists.txt:106 (catkin_package):
+  Unknown CMake command "catkin_package".
+
+
