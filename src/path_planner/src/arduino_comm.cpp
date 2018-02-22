@@ -15,7 +15,7 @@ void actionNodeCallback(const sensor_msgs::JointState& msg)
 	//msg to variable
 	
 	for(int i=0; i<6; i++){
-		joint_states[i] = msg.position[i];
+		joint_states[i] = msg.position[i]*57.3;
 		//variable to msg
 		joint_states_msg[i].data = joint_states[i];
 	}

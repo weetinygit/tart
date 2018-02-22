@@ -1,29 +1,21 @@
-#include <AccelStepper.h>
 #include <Servo.h>
 
 // Stepper motors pins
-#define MOTOR_1_PWM 3
-#define MOTOR_1_DIR 4
-#define MOTOR_2_PWM 5
-#define MOTOR_2_DIR 6
-#define MOTOR_3_PWM 7
-#define MOTOR_3_DIR 8
-#define MOTOR_2_LIMIT 24
-#define MOTOR_3_LIMIT 26
+#define MOTOR_1 9
+#define MOTOR_2 10
+#define MOTOR_3 11
 
-#define STEPPER_1_MAX_SPEED 3000
-#define STEPPER_1_MAX_ACCEL 1000
-
-#define STEPPER_2_MAX_SPEED 2000
-#define STEPPER_2_MAX_ACCEL 3000
-
-#define STEPPER_3_MAX_SPEED 2000
-#define STEPPER_3_MAX_ACCEL 800
+#define MOTOR_1_LOWER 80
+#define MOTOR_1_UPPER 100
+#define MOTOR_2_LOWER 80
+#define MOTOR_2_UPPER 100
+#define MOTOR_3_LOWER 80
+#define MOTOR_3_UPPER 100
 
 // Servo motors pins
-#define LSERVO_PIN 48// left servo motor
-#define RSERVO_PIN 50 // right servo motor
-#define TSERVO_PIN 52 // top servo motor
+#define LSERVO 6// left servo motor
+#define RSERVO 7 // right servo motor
+#define TSERVO 8 // top servo motor
 
 // For rosserial
 #define BAUD 57600
@@ -32,62 +24,43 @@
 #define CMD_RECEIVE_ACK 13
 #define TOGGLE_BUTTON 22
 
-// Constants
-#define MOTOR_1_RADPERSTEP 1.8*0.01745
-#define MOTOR_2_RADPERSTEP 1.8*0.01745
-#define MOTOR_3_RADPERSTEP 1.8*0.01745/(26+103/121)
-#define RAD_TO_DEG 57.2958
-
 #include <ros.h>
 #include <std_msgs/String.h>
 #include <std_msgs/Float32.h>
 #include <AccelStepper.h>
 
-// Define steppers and the pins they will use
-AccelStepper stepper1(AccelStepper::DRIVER, MOTOR_1_PWM, MOTOR_1_DIR);
-AccelStepper stepper2(AccelStepper::DRIVER, MOTOR_2_PWM, MOTOR_2_DIR);
-AccelStepper stepper3(AccelStepper::DRIVER, MOTOR_3_PWM, MOTOR_3_DIR);
 
 //Servo instances
-Servo LServo, RServo, TServo;
-
-int pos1 = 0;
-int pos2 = 0;
-int pos3 = 0;
+Servo motor1, motor2, motor3, LServo, RServo, TServo;
 double motor[6] = {0,0,0,0,0,0};
+int pos;
 
-double radToSteps(double rad, double radPerStep){
-  //return rad/radPerStep;
-  return rad*1000;
-}
+
+
 
 //Ros communication functions
 void motor1_cmd(const std_msgs::Float32& cmd_msg)
 {
   digitalWrite(CMD_RECEIVE_ACK, HIGH);
   motor[0] = cmd_msg.data;
-  //pos1 = (int)radToSteps(motor[0], MOTOR_1_RADPERSTEP);
   digitalWrite(CMD_RECEIVE_ACK, LOW);
 }
 void motor2_cmd(const std_msgs::Float32& cmd_msg)
 {
   digitalWrite(CMD_RECEIVE_ACK, HIGH);
   motor[1] = cmd_msg.data;
-   //pos2 = (int)radToSteps(motor[1], MOTOR_2_RADPERSTEP);
   digitalWrite(CMD_RECEIVE_ACK, LOW);
 }
 void motor3_cmd(const std_msgs::Float32& cmd_msg)
 {
   digitalWrite(CMD_RECEIVE_ACK, HIGH);
   motor[2] = cmd_msg.data;
-  //pos3 = (int)radToSteps(motor[2], MOTOR_2_RADPERSTEP);
   digitalWrite(CMD_RECEIVE_ACK, LOW);
 }
 void servo1_cmd(const std_msgs::Float32& cmd_msg)
 {
   digitalWrite(CMD_RECEIVE_ACK, HIGH);
   motor[4] = cmd_msg.data;
-  TServo.write(90-(int)(motor[4]*RAD_TO_DEG));
   digitalWrite(CMD_RECEIVE_ACK, LOW);
   
 }
@@ -95,8 +68,6 @@ void servo2_cmd(const std_msgs::Float32& cmd_msg)
 {
   digitalWrite(CMD_RECEIVE_ACK, HIGH);
   motor[5] = cmd_msg.data;
-  LServo.write(90-(int)(motor[5]*RAD_TO_DEG));
-  RServo.write(90+(int)(motor[5]*RAD_TO_DEG));
   digitalWrite(CMD_RECEIVE_ACK, LOW);
 }
 
@@ -118,59 +89,25 @@ char msg[2] = "1";
 void setup()
 {
   // Setup servo motors
-  LServo.attach(LSERVO_PIN);
-  RServo.attach(RSERVO_PIN);
-  TServo.attach(TSERVO_PIN);
+  motor1.attach(MOTOR_1);
+  motor2.attach(MOTOR_2);
+  motor3.attach(MOTOR_3);
+  LServo.attach(LSERVO);
+  RServo.attach(RSERVO);
+  TServo.attach(TSERVO);
+  motor1.write(90);
+  motor2.write(90);
+  motor3.write(90);
   LServo.write(90);
   RServo.write(90);
   TServo.write(90);
 
-  // Setup steppers
-  stepper1.setMaxSpeed(STEPPER_1_MAX_SPEED);
-  stepper1.setAcceleration(STEPPER_1_MAX_ACCEL);
-  stepper2.setMaxSpeed(STEPPER_2_MAX_SPEED);
-  stepper2.setAcceleration(STEPPER_2_MAX_ACCEL);
-  stepper3.setMaxSpeed(STEPPER_2_MAX_SPEED);
-  stepper3.setAcceleration(STEPPER_3_MAX_ACCEL);
-  
   pinMode(TOGGLE_BUTTON, INPUT);
   pinMode(CMD_RECEIVE_ACK, OUTPUT);
-  pinMode(MOTOR_2_LIMIT, INPUT);
-  pinMode(MOTOR_3_LIMIT, INPUT);
   
   digitalWrite(CMD_RECEIVE_ACK, HIGH);
   delay(3000);
   digitalWrite(CMD_RECEIVE_ACK, LOW);
-  //Moves to reference position for motors 2 and 3
-   /*
-  stepper2.moveTo(-5000);
-  stepper3.moveTo(5000);
-  while(digitalRead(MOTOR_2_LIMIT)&&digitalRead(MOTOR_3_LIMIT)){
-    stepper2.run();
-    stepper3.run();
-  }
-
-  if(!digitalRead(MOTOR_2_LIMIT)) {
-  
-    stepper2.stop();
-    stepper2.setCurrentPosition(0);
-    while(digitalRead(MOTOR_3_LIMIT)){
-      stepper3.run();
-    }
-    stepper3.stop();
-    stepper3.setCurrentPosition(0);
-  }
-  
-  else {
-    stepper3.stop();
-    stepper3.setCurrentPosition(0);
-    while(digitalRead(MOTOR_2_LIMIT)){
-      stepper2.run();
-    }
-    stepper2.stop();
-    stepper2.setCurrentPosition(0);
-  }
-  */
   
   //Initialize ros commands
   nh.initNode();
@@ -195,14 +132,16 @@ void loop()
     status = digitalRead(TOGGLE_BUTTON);
   }
    nh.spinOnce();
-
    //Move motors to position
-   stepper1.moveTo(pos1);
-   stepper2.moveTo(pos2);
-   stepper3.moveTo(pos3);
-   stepper1.run();
-   stepper2.run();
-   stepper3.run();
-   delay(2);
+   pos = 90+(int)motor[0];
+   if(pos>=MOTOR_1_LOWER && pos<=MOTOR_1_UPPER) motor1.write(pos);
+   pos = 90+(int)motor[1];
+   if(pos>=MOTOR_2_LOWER && pos<=MOTOR_2_UPPER) motor2.write(pos);
+   pos = 90+(int)motor[2];
+   if(pos>=MOTOR_3_LOWER && pos<=MOTOR_3_UPPER) motor3.write(pos);
+   TServo.write(90+(int)motor[5]);
+   LServo.write(90-(int)motor[5]);
+   RServo.write(90+(int)motor[5]);
+   delay(20);
    
 }

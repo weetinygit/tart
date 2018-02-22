@@ -1,0 +1,20 @@
+[  0%] Built target std_msgs_generate_messages_cpp
+[  0%] Built target _faceReg_generate_messages_check_deps_facePose
+[  0%] Built target std_msgs_generate_messages_lisp
+[  0%] Built target std_msgs_generate_messages_py
+[  0%] Built target std_msgs_generate_messages_nodejs
+[  0%] Built target std_msgs_generate_messages_eus
+[  1%] Built target faceReg_generate_messages_cpp
+[  2%] Built target faceReg_generate_messages_lisp
+[ 81%] Built target dlib
+[ 84%] Built target faceReg_generate_messages_py
+[ 85%] Built target faceReg_generate_messages_nodejs
+[35m[1mScanning dependencies of target facetrack_sim[0m
+[ 88%] Built target faceReg_generate_messages_eus
+[ 91%] Built target faceMoveServo
+[ 92%] [32mBuilding CXX object CMakeFiles/facetrack_sim.dir/src/facetrack_sim.cpp.o[0m
+[ 95%] Built target face_tablet_tf_broadcaster
+[ 98%] Built target facePoseRecognition
+[ 98%] Built target faceReg_generate_messages
+[100%] [32m[1mLinking CXX executable /home/weety/tart5/devel/.private/faceReg/lib/faceReg/facetrack_sim[0m
+[100%] Built target facetrack_sim

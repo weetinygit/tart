@@ -71,10 +71,10 @@ int main(int argc, char **argv) {
         completeStatus = 0;
         ROS_INFO_STREAM("Target pose: " << group.getPoseTarget());
 
-        group.setGoalTolerance(0.001);
+        group.setGoalTolerance(0.005);
         moveit::planning_interface::MoveGroupInterface::Plan my_plan;
         bool success = group.plan(my_plan);
-        group.setPlanningTime(10);
+        group.setPlanningTime(5);
 
         ROS_INFO("Visualizing plan (pose goal) %s",success?"":"FAILED");
 		

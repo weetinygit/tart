@@ -45,7 +45,7 @@ int main(int argc, char **argv)
 	marker.type = visualization_msgs::Marker::ARROW;
 	marker.action = visualization_msgs::Marker::ADD;
 	marker.pose.position.x = 0;
-	marker.pose.position.y = 0.6;
+	marker.pose.position.y = 1.0;
 	marker.pose.position.z = 0.3;
 	marker.pose.orientation.x = 0.0;
 	marker.pose.orientation.y = 0.0;
@@ -87,10 +87,10 @@ int main(int argc, char **argv)
 				marker.pose.position.z = marker.pose.position.z - 0.01;
 				break;
 			case 'a': 
-				marker.pose.position.x = marker.pose.position.x - 0.01;
+				marker.pose.position.x = marker.pose.position.x + 0.01;
 				break;
 			case 'd': 
-				marker.pose.position.x = marker.pose.position.x + 0.01;
+				marker.pose.position.x = marker.pose.position.x - 0.01;
 				break;
 			case 'r':
 				tf::quaternionMsgToTF(marker.pose.orientation, qtr_ref);

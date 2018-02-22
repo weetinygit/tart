@@ -20,8 +20,10 @@
     <disable_collisions link1="base_link" link2="rotating_plate" reason="Never" />
     <disable_collisions link1="base_motor_holder" link2="plate_link" reason="Never" />
     <disable_collisions link1="base_motor_holder" link2="rotating_plate" reason="Adjacent" />
+    <disable_collisions link1="dummy_link" link2="main_link_1" reason="Never" />
     <disable_collisions link1="dummy_link" link2="main_link_2" reason="Adjacent" />
     <disable_collisions link1="dummy_link" link2="plate_link" reason="Never" />
+    <disable_collisions link1="dummy_link" link2="rotating_plate" reason="Never" />
     <disable_collisions link1="dummy_link" link2="tablet" reason="Never" />
     <disable_collisions link1="dummy_link" link2="tablet_bracket" reason="Adjacent" />
     <disable_collisions link1="dummy_link" link2="tablet_bracket_2" reason="Never" />

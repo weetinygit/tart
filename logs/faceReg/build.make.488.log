@@ -1,0 +1,17 @@
+[  0%] Built target std_msgs_generate_messages_cpp
+[  0%] Built target _faceReg_generate_messages_check_deps_facePose
+[  0%] Built target std_msgs_generate_messages_lisp
+[  0%] Built target std_msgs_generate_messages_py
+[  0%] Built target std_msgs_generate_messages_nodejs
+[  1%] Built target faceReg_generate_messages_cpp
+[  1%] Built target std_msgs_generate_messages_eus
+[  2%] Built target faceReg_generate_messages_lisp
+[  5%] Built target faceReg_generate_messages_py
+[  8%] Built target faceReg_generate_messages_eus
+[ 11%] Built target facetrack_sim
+[ 12%] Built target faceReg_generate_messages_nodejs
+[ 15%] Built target face_tablet_tf_broadcaster
+[ 15%] Built target faceReg_generate_messages
+[ 94%] Built target dlib
+[ 97%] Built target faceMoveServo
+[100%] Built target facePoseRecognition

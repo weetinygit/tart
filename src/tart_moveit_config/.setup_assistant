@@ -1,10 +1,10 @@
 moveit_setup_assistant_config:
   URDF:
     package: ""
-    relative_path: /home/weety/tart5/urdf/tart.xml
+    relative_path: /home/weety/tart5/urdf/tart_test.xml
   SRDF:
     relative_path: config/tart_robot.srdf
   CONFIG:
     author_name: Wee Ting Yit
-    author_email: weetingyit36@gmail.com
-    generated_timestamp: 1515616465
+    author_email: weet0009@e.ntu.edu.sg
+    generated_timestamp: 1519261333

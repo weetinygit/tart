@@ -72,7 +72,7 @@ int main(int argc, char **argv)
     
     try
     {
-        cv::VideoCapture cap(0);
+        cv::VideoCapture cap(1);
         if (!cap.isOpened())
         {
             cerr << "Unable to connect to camera" << endl;
