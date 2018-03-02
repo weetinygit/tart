@@ -1,0 +1,7 @@
+[01m[K/home/weety/tart5/src/faceReg/src/face_tablet_tf_broadcaster_2.cpp:[m[K In function ‘[01m[Kvoid actionNodeCallback(const ConstPtr&)[m[K’:
+[01m[K/home/weety/tart5/src/faceReg/src/face_tablet_tf_broadcaster_2.cpp:25:16:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst struct faceReg::facePose_<std::allocator<void> >[m[K’ has no member named ‘[01m[Kmarkers[m[K’
+  marker = msg->markers[0];
+[01;32m[K                ^[m[K
+make[2]: *** [CMakeFiles/face_tablet_tf_broadcaster_2.dir/src/face_tablet_tf_broadcaster_2.cpp.o] Error 1
+make[1]: *** [CMakeFiles/face_tablet_tf_broadcaster_2.dir/all] Error 2
+make: *** [all] Error 2

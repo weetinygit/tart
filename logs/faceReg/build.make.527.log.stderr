@@ -1,0 +1,13 @@
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:66:44:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kros::TimeBase<T, D>::toSec<ros::Time, ros::Duration>[m[K’ from type ‘[01m[Kdouble (ros::TimeBase<ros::Time, ros::Duration>::)() const[m[K’ to type ‘[01m[Kdouble[m[K’
+  double prevCaptureTime = ros::Time::now().toSec;
+[01;32m[K                                            ^[m[K
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:180:35:[m[K [01;31m[Kerror: [m[Kinvalid use of member function (did you forget the ‘[01m[K()[m[K’ ?)
+       if(ros::Time::now().toSec - prevCaptureTime > 1) {
+[01;32m[K                                   ^[m[K
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:185:23:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kros::Time[m[K’ to ‘[01m[Kdouble[m[K’ in assignment
+       prevCaptureTime = ros::Time::now();
+[01;32m[K                       ^[m[K
+make[2]: *** [CMakeFiles/facePoseRecognition.dir/src/facePoseRecognition.cpp.o] Error 1
+make[1]: *** [CMakeFiles/facePoseRecognition.dir/all] Error 2
+make: *** [all] Error 2

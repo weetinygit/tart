@@ -1,0 +1,20 @@
+digraph G {
+"base_link" -> "base_motor_holder"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1519826908.449 sec old)\nBuffer length: 0.000 sec\n"];
+"rotating_plate" -> "plate_link"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1519826908.449 sec old)\nBuffer length: 0.000 sec\n"];
+"base_motor_holder" -> "rotating_plate"[label="Broadcaster: /robot_state_publisher\nAverage rate: 13.330 Hz\nMost recent transform: 1519826908.309 ( 0.140 sec old)\nBuffer length: 0.300 sec\n"];
+"tablet_bracket" -> "tablet_bracket_2"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1519826908.449 sec old)\nBuffer length: 0.000 sec\n"];
+"dummy_link" -> "tablet_bracket"[label="Broadcaster: /robot_state_publisher\nAverage rate: 13.330 Hz\nMost recent transform: 1519826908.309 ( 0.140 sec old)\nBuffer length: 0.300 sec\n"];
+"face_pos" -> "tablet_pos"[label="Broadcaster: /face_tablet_tf_broadcaster\nAverage rate: 53.125 Hz\nMost recent transform: 1519826908.304 ( 0.145 sec old)\nBuffer length: 0.320 sec\n"];
+"main_link_2" -> "dummy_link"[label="Broadcaster: /robot_state_publisher\nAverage rate: 13.330 Hz\nMost recent transform: 1519826908.309 ( 0.140 sec old)\nBuffer length: 0.300 sec\n"];
+"main_link_1" -> "main_link_2"[label="Broadcaster: /robot_state_publisher\nAverage rate: 13.330 Hz\nMost recent transform: 1519826908.309 ( 0.140 sec old)\nBuffer length: 0.300 sec\n"];
+"plate_link" -> "main_link_1"[label="Broadcaster: /robot_state_publisher\nAverage rate: 13.330 Hz\nMost recent transform: 1519826908.309 ( 0.140 sec old)\nBuffer length: 0.300 sec\n"];
+"tablet_bracket_2" -> "tablet"[label="Broadcaster: /robot_state_publisher\nAverage rate: 13.330 Hz\nMost recent transform: 1519826908.309 ( 0.140 sec old)\nBuffer length: 0.300 sec\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1519826908.449"[ shape=plaintext ] ;
+ }->"base_link";
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1519826908.449"[ shape=plaintext ] ;
+ }->"face_pos";
+}

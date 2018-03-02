@@ -46,7 +46,7 @@ int main(int argc, char **argv) {
 	group.setPlannerId("RRTConnectkConfigDefault");
 	//Attempt to write directly to /joint_states topic
 	ros::Publisher joint_states_pub = nh.advertise<sensor_msgs::JointState>("/move_group/fake_controller_joint_states", 1000);
-	ros::Rate loop_rate(10);
+	ros::Rate loop_rate(20);
 	sensor_msgs::JointState joint_states_msg;
 
 	//Initialize variables needed for pose and path planning

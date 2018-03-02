@@ -250,7 +250,9 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/face_tablet_tf_broadcaster_2.dir/DependInfo.cmake"
   "CMakeFiles/face_tablet_tf_broadcaster.dir/DependInfo.cmake"
+  "CMakeFiles/facetrack_sim2.dir/DependInfo.cmake"
   "CMakeFiles/facePoseRecognition.dir/DependInfo.cmake"
   "CMakeFiles/faceReg_genpy.dir/DependInfo.cmake"
   "CMakeFiles/faceReg_gennodejs.dir/DependInfo.cmake"

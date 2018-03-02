@@ -1,0 +1,16 @@
+[01m[K/home/weety/tart5/src/faceReg/src/face_tablet_tf_broadcaster_2.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/weety/tart5/src/faceReg/src/face_tablet_tf_broadcaster_2.cpp:37:2:[m[K [01;31m[Kerror: [m[K‘[01m[KTransformListener[m[K’ is not a member of ‘[01m[Ktf[m[K’
+  tf::TransformListener lr;
+[01;32m[K  ^[m[K
+[01m[K/home/weety/tart5/src/faceReg/src/face_tablet_tf_broadcaster_2.cpp:54:3:[m[K [01;31m[Kerror: [m[K‘[01m[Klr[m[K’ was not declared in this scope
+   lr.waitForTransform("base_link", "tablet",now, ros::Duration(3.0));
+[01;32m[K   ^[m[K
+[01m[K/home/weety/tart5/src/faceReg/src/face_tablet_tf_broadcaster_2.cpp:54:45:[m[K [01;31m[Kerror: [m[K‘[01m[Know[m[K’ was not declared in this scope
+   lr.waitForTransform("base_link", "tablet",now, ros::Duration(3.0));
+[01;32m[K                                             ^[m[K
+[01m[K/home/weety/tart5/src/faceReg/src/face_tablet_tf_broadcaster_2.cpp:55:50:[m[K [01;31m[Kerror: [m[K‘[01m[Ktarget_transform[m[K’ was not declared in this scope
+   lr.lookupTransform("base_link", "tablet", now, target_transform);
+[01;32m[K                                                  ^[m[K
+make[2]: *** [CMakeFiles/face_tablet_tf_broadcaster_2.dir/src/face_tablet_tf_broadcaster_2.cpp.o] Error 1
+make[1]: *** [CMakeFiles/face_tablet_tf_broadcaster_2.dir/all] Error 2
+make: *** [all] Error 2

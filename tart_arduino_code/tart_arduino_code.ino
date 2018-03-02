@@ -7,10 +7,17 @@
 
 #define MOTOR_1_LOWER 80
 #define MOTOR_1_UPPER 100
-#define MOTOR_2_LOWER 80
-#define MOTOR_2_UPPER 100
-#define MOTOR_3_LOWER 80
-#define MOTOR_3_UPPER 100
+#define MOTOR_2_LOWER 50
+#define MOTOR_2_UPPER 130
+#define MOTOR_3_LOWER 50
+#define MOTOR_3_UPPER 130
+
+#define MOTOR_1_POLARITY 1
+#define MOTOR_2_POLARITY 1
+#define MOTOR_3_POLARITY -1
+#define TSERVO_POLARITY 1
+#define LSERVO_POLARITY -1
+#define RSERVO_POLARITY 1
 
 // Servo motors pins
 #define LSERVO 6// left servo motor
@@ -36,31 +43,33 @@ double motor[6] = {0,0,0,0,0,0};
 int pos;
 
 
-
-
 //Ros communication functions
 void motor1_cmd(const std_msgs::Float32& cmd_msg)
 {
   digitalWrite(CMD_RECEIVE_ACK, HIGH);
   motor[0] = cmd_msg.data;
+  delay(10);
   digitalWrite(CMD_RECEIVE_ACK, LOW);
 }
 void motor2_cmd(const std_msgs::Float32& cmd_msg)
 {
   digitalWrite(CMD_RECEIVE_ACK, HIGH);
   motor[1] = cmd_msg.data;
+  delay(10);
   digitalWrite(CMD_RECEIVE_ACK, LOW);
 }
 void motor3_cmd(const std_msgs::Float32& cmd_msg)
 {
   digitalWrite(CMD_RECEIVE_ACK, HIGH);
   motor[2] = cmd_msg.data;
+  delay(10);
   digitalWrite(CMD_RECEIVE_ACK, LOW);
 }
 void servo1_cmd(const std_msgs::Float32& cmd_msg)
 {
   digitalWrite(CMD_RECEIVE_ACK, HIGH);
   motor[4] = cmd_msg.data;
+  delay(10);
   digitalWrite(CMD_RECEIVE_ACK, LOW);
   
 }
@@ -68,6 +77,7 @@ void servo2_cmd(const std_msgs::Float32& cmd_msg)
 {
   digitalWrite(CMD_RECEIVE_ACK, HIGH);
   motor[5] = cmd_msg.data;
+  delay(10);
   digitalWrite(CMD_RECEIVE_ACK, LOW);
 }
 
@@ -133,15 +143,15 @@ void loop()
   }
    nh.spinOnce();
    //Move motors to position
-   pos = 90+(int)motor[0];
+   pos = 90+(int)motor[0]*MOTOR_1_POLARITY;
    if(pos>=MOTOR_1_LOWER && pos<=MOTOR_1_UPPER) motor1.write(pos);
-   pos = 90+(int)motor[1];
+   pos = 90+(int)motor[1]*MOTOR_2_POLARITY;
    if(pos>=MOTOR_2_LOWER && pos<=MOTOR_2_UPPER) motor2.write(pos);
-   pos = 90+(int)motor[2];
+   pos = 90+((int)motor[2]*MOTOR_3_POLARITY+(int)motor[1]*MOTOR_2_POLARITY);
    if(pos>=MOTOR_3_LOWER && pos<=MOTOR_3_UPPER) motor3.write(pos);
-   TServo.write(90+(int)motor[5]);
-   LServo.write(90-(int)motor[5]);
-   RServo.write(90+(int)motor[5]);
+   TServo.write(90+(int)motor[5]*TSERVO_POLARITY);
+   LServo.write(90+(int)motor[5]*LSERVO_POLARITY);
+   RServo.write(90+(int)motor[5]*RSERVO_POLARITY);
    delay(20);
    
 }

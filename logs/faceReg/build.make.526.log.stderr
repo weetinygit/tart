@@ -1,0 +1,595 @@
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:180:45:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator>[m[K’ (operand types are ‘[01m[Kros::Duration[m[K’ and ‘[01m[Kint[m[K’)
+       if(ros::Time::now() - prevCaptureTime > 1) {
+[01;32m[K                                             ^[m[K
+In file included from [01m[K/opt/ros/kinetic/include/ros/time.h:57:0[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:37[m[K:
+[01m[K/opt/ros/kinetic/include/ros/duration.h:89:8:[m[K [01;36m[Knote: [m[Kcandidate: bool ros::DurationBase<T>::operator>(const T&) const [with T = ros::Duration]
+   bool operator>(const T &rhs) const;
+[01;32m[K        ^[m[K
+[01m[K/opt/ros/kinetic/include/ros/duration.h:89:8:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kint[m[K’ to ‘[01m[Kconst ros::Duration&[m[K’
+In file included from [01m[K/usr/include/c++/5/utility:70:0[m[K,
+                 from [01m[K/usr/include/c++/5/algorithm:60[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/base.hpp:55[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core.hpp:54[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/cv_image.h:6[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv.h:10[m[K,
+                 from [01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:30[m[K:
+[01m[K/usr/include/c++/5/bits/stl_pair.h:233:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _T1, class _T2> constexpr bool std::operator>(const std::pair<_T1, _T2>&, const std::pair<_T1, _T2>&)
+     operator>(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+[01;32m[K     ^[m[K
+[01m[K/usr/include/c++/5/bits/stl_pair.h:233:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:180:47:[m[K [01;36m[Knote: [m[K  ‘[01m[Kros::Duration[m[K’ is not derived from ‘[01m[Kconst std::pair<_T1, _T2>[m[K’
+       if(ros::Time::now() - prevCaptureTime > 1) {
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/usr/include/c++/5/bits/stl_algobase.h:67:0[m[K,
+                 from [01m[K/usr/include/c++/5/algorithm:61[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/base.hpp:55[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core.hpp:54[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/cv_image.h:6[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv.h:10[m[K,
+                 from [01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:30[m[K:
+[01m[K/usr/include/c++/5/bits/stl_iterator.h:310:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Iterator> bool std::operator>(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_Iterator>&)
+     operator>(const reverse_iterator<_Iterator>& __x,
+[01;32m[K     ^[m[K
+[01m[K/usr/include/c++/5/bits/stl_iterator.h:310:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:180:47:[m[K [01;36m[Knote: [m[K  ‘[01m[Kros::Duration[m[K’ is not derived from ‘[01m[Kconst std::reverse_iterator<_Iterator>[m[K’
+       if(ros::Time::now() - prevCaptureTime > 1) {
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/usr/include/c++/5/bits/stl_algobase.h:67:0[m[K,
+                 from [01m[K/usr/include/c++/5/algorithm:61[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/base.hpp:55[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core.hpp:54[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/cv_image.h:6[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv.h:10[m[K,
+                 from [01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:30[m[K:
+[01m[K/usr/include/c++/5/bits/stl_iterator.h:360:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _IteratorL, class _IteratorR> bool std::operator>(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)
+     operator>(const reverse_iterator<_IteratorL>& __x,
+[01;32m[K     ^[m[K
+[01m[K/usr/include/c++/5/bits/stl_iterator.h:360:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:180:47:[m[K [01;36m[Knote: [m[K  ‘[01m[Kros::Duration[m[K’ is not derived from ‘[01m[Kconst std::reverse_iterator<_Iterator>[m[K’
+       if(ros::Time::now() - prevCaptureTime > 1) {
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/usr/include/c++/5/bits/stl_algobase.h:67:0[m[K,
+                 from [01m[K/usr/include/c++/5/algorithm:61[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/base.hpp:55[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core.hpp:54[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/cv_image.h:6[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv.h:10[m[K,
+                 from [01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:30[m[K:
+[01m[K/usr/include/c++/5/bits/stl_iterator.h:1113:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _IteratorL, class _IteratorR> bool std::operator>(const std::move_iterator<_Iterator>&, const std::move_iterator<_IteratorR>&)
+     operator>(const move_iterator<_IteratorL>& __x,
+[01;32m[K     ^[m[K
+[01m[K/usr/include/c++/5/bits/stl_iterator.h:1113:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:180:47:[m[K [01;36m[Knote: [m[K  ‘[01m[Kros::Duration[m[K’ is not derived from ‘[01m[Kconst std::move_iterator<_Iterator>[m[K’
+       if(ros::Time::now() - prevCaptureTime > 1) {
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/usr/include/c++/5/bits/stl_algobase.h:67:0[m[K,
+                 from [01m[K/usr/include/c++/5/algorithm:61[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/base.hpp:55[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core.hpp:54[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/cv_image.h:6[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv.h:10[m[K,
+                 from [01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:30[m[K:
+[01m[K/usr/include/c++/5/bits/stl_iterator.h:1119:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Iterator> bool std::operator>(const std::move_iterator<_Iterator>&, const std::move_iterator<_Iterator>&)
+     operator>(const move_iterator<_Iterator>& __x,
+[01;32m[K     ^[m[K
+[01m[K/usr/include/c++/5/bits/stl_iterator.h:1119:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:180:47:[m[K [01;36m[Knote: [m[K  ‘[01m[Kros::Duration[m[K’ is not derived from ‘[01m[Kconst std::move_iterator<_Iterator>[m[K’
+       if(ros::Time::now() - prevCaptureTime > 1) {
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/usr/include/c++/5/string:52:0[m[K,
+                 from [01m[K/usr/include/c++/5/random:40[m[K,
+                 from [01m[K/usr/include/c++/5/bits/stl_algo.h:66[m[K,
+                 from [01m[K/usr/include/c++/5/algorithm:62[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/base.hpp:55[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core.hpp:54[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/cv_image.h:6[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv.h:10[m[K,
+                 from [01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:30[m[K:
+[01m[K/usr/include/c++/5/bits/basic_string.h:5024:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _CharT, class _Traits, class _Alloc> bool std::operator>(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)
+     operator>(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+[01;32m[K     ^[m[K
+[01m[K/usr/include/c++/5/bits/basic_string.h:5024:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:180:47:[m[K [01;36m[Knote: [m[K  ‘[01m[Kros::Duration[m[K’ is not derived from ‘[01m[Kconst std::__cxx11::basic_string<_CharT, _Traits, _Alloc>[m[K’
+       if(ros::Time::now() - prevCaptureTime > 1) {
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/usr/include/c++/5/string:52:0[m[K,
+                 from [01m[K/usr/include/c++/5/random:40[m[K,
+                 from [01m[K/usr/include/c++/5/bits/stl_algo.h:66[m[K,
+                 from [01m[K/usr/include/c++/5/algorithm:62[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/base.hpp:55[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core.hpp:54[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/cv_image.h:6[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv.h:10[m[K,
+                 from [01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:30[m[K:
+[01m[K/usr/include/c++/5/bits/basic_string.h:5036:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _CharT, class _Traits, class _Alloc> bool std::operator>(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)
+     operator>(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+[01;32m[K     ^[m[K
+[01m[K/usr/include/c++/5/bits/basic_string.h:5036:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:180:47:[m[K [01;36m[Knote: [m[K  ‘[01m[Kros::Duration[m[K’ is not derived from ‘[01m[Kconst std::__cxx11::basic_string<_CharT, _Traits, _Alloc>[m[K’
+       if(ros::Time::now() - prevCaptureTime > 1) {
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/usr/include/c++/5/string:52:0[m[K,
+                 from [01m[K/usr/include/c++/5/random:40[m[K,
+                 from [01m[K/usr/include/c++/5/bits/stl_algo.h:66[m[K,
+                 from [01m[K/usr/include/c++/5/algorithm:62[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/base.hpp:55[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core.hpp:54[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/cv_image.h:6[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv.h:10[m[K,
+                 from [01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:30[m[K:
+[01m[K/usr/include/c++/5/bits/basic_string.h:5048:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _CharT, class _Traits, class _Alloc> bool std::operator>(const _CharT*, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)
+     operator>(const _CharT* __lhs,
+[01;32m[K     ^[m[K
+[01m[K/usr/include/c++/5/bits/basic_string.h:5048:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:180:47:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst _CharT*[m[K’ and ‘[01m[Kros::Duration[m[K’
+       if(ros::Time::now() - prevCaptureTime > 1) {
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/usr/include/c++/5/vector:64:0[m[K,
+                 from [01m[K/usr/include/c++/5/bits/random.h:34[m[K,
+                 from [01m[K/usr/include/c++/5/random:49[m[K,
+                 from [01m[K/usr/include/c++/5/bits/stl_algo.h:66[m[K,
+                 from [01m[K/usr/include/c++/5/algorithm:62[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/base.hpp:55[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core.hpp:54[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/cv_image.h:6[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv.h:10[m[K,
+                 from [01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:30[m[K:
+[01m[K/usr/include/c++/5/bits/stl_vector.h:1541:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp, class _Alloc> bool std::operator>(const std::vector<_Tp, _Alloc>&, const std::vector<_Tp, _Alloc>&)
+     operator>(const vector<_Tp, _Alloc>& __x, const vector<_Tp, _Alloc>& __y)
+[01;32m[K     ^[m[K
+[01m[K/usr/include/c++/5/bits/stl_vector.h:1541:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:180:47:[m[K [01;36m[Knote: [m[K  ‘[01m[Kros::Duration[m[K’ is not derived from ‘[01m[Kconst std::vector<_Tp, _Alloc>[m[K’
+       if(ros::Time::now() - prevCaptureTime > 1) {
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/usr/include/c++/5/tuple:39:0[m[K,
+                 from [01m[K/usr/include/c++/5/bits/unique_ptr.h:37[m[K,
+                 from [01m[K/usr/include/c++/5/bits/locale_conv.h:41[m[K,
+                 from [01m[K/usr/include/c++/5/locale:43[m[K,
+                 from [01m[K/usr/include/c++/5/iomanip:43[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/../serialize.h:144[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/../pixel.h:7[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/cv_image.h:10[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv.h:10[m[K,
+                 from [01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:30[m[K:
+[01m[K/usr/include/c++/5/array:258:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp, long unsigned int _Nm> bool std::operator>(const std::array<_Tp, _Nm>&, const std::array<_Tp, _Nm>&)
+     operator>(const array<_Tp, _Nm>& __one, const array<_Tp, _Nm>& __two)
+[01;32m[K     ^[m[K
+[01m[K/usr/include/c++/5/array:258:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:180:47:[m[K [01;36m[Knote: [m[K  ‘[01m[Kros::Duration[m[K’ is not derived from ‘[01m[Kconst std::array<_Tp, _Nm>[m[K’
+       if(ros::Time::now() - prevCaptureTime > 1) {
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/usr/include/c++/5/bits/unique_ptr.h:37:0[m[K,
+                 from [01m[K/usr/include/c++/5/bits/locale_conv.h:41[m[K,
+                 from [01m[K/usr/include/c++/5/locale:43[m[K,
+                 from [01m[K/usr/include/c++/5/iomanip:43[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/../serialize.h:144[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/../pixel.h:7[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/cv_image.h:10[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv.h:10[m[K,
+                 from [01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:30[m[K:
+[01m[K/usr/include/c++/5/tuple:947:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class ... _TElements, class ... _UElements> constexpr bool std::operator>(const std::tuple<_Elements ...>&, const std::tuple<_Elements ...>&)
+     operator>(const tuple<_TElements...>& __t,
+[01;32m[K     ^[m[K
+[01m[K/usr/include/c++/5/tuple:947:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:180:47:[m[K [01;36m[Knote: [m[K  ‘[01m[Kros::Duration[m[K’ is not derived from ‘[01m[Kconst std::tuple<_Elements ...>[m[K’
+       if(ros::Time::now() - prevCaptureTime > 1) {
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/usr/include/c++/5/bits/locale_conv.h:41:0[m[K,
+                 from [01m[K/usr/include/c++/5/locale:43[m[K,
+                 from [01m[K/usr/include/c++/5/iomanip:43[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/../serialize.h:144[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/../pixel.h:7[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/cv_image.h:10[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv.h:10[m[K,
+                 from [01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:30[m[K:
+[01m[K/usr/include/c++/5/bits/unique_ptr.h:699:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp, class _Dp, class _Up, class _Ep> bool std::operator>(const std::unique_ptr<_Tp, _Dp>&, const std::unique_ptr<_Up, _Ep>&)
+     operator>(const unique_ptr<_Tp, _Dp>& __x,
+[01;32m[K     ^[m[K
+[01m[K/usr/include/c++/5/bits/unique_ptr.h:699:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:180:47:[m[K [01;36m[Knote: [m[K  ‘[01m[Kros::Duration[m[K’ is not derived from ‘[01m[Kconst std::unique_ptr<_Tp, _Dp>[m[K’
+       if(ros::Time::now() - prevCaptureTime > 1) {
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/usr/include/c++/5/bits/locale_conv.h:41:0[m[K,
+                 from [01m[K/usr/include/c++/5/locale:43[m[K,
+                 from [01m[K/usr/include/c++/5/iomanip:43[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/../serialize.h:144[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/../pixel.h:7[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/cv_image.h:10[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv.h:10[m[K,
+                 from [01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:30[m[K:
+[01m[K/usr/include/c++/5/bits/unique_ptr.h:705:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp, class _Dp> bool std::operator>(const std::unique_ptr<_Tp, _Dp>&, std::nullptr_t)
+     operator>(const unique_ptr<_Tp, _Dp>& __x, nullptr_t)
+[01;32m[K     ^[m[K
+[01m[K/usr/include/c++/5/bits/unique_ptr.h:705:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:180:47:[m[K [01;36m[Knote: [m[K  ‘[01m[Kros::Duration[m[K’ is not derived from ‘[01m[Kconst std::unique_ptr<_Tp, _Dp>[m[K’
+       if(ros::Time::now() - prevCaptureTime > 1) {
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/usr/include/c++/5/bits/locale_conv.h:41:0[m[K,
+                 from [01m[K/usr/include/c++/5/locale:43[m[K,
+                 from [01m[K/usr/include/c++/5/iomanip:43[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/../serialize.h:144[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/../pixel.h:7[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/cv_image.h:10[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv.h:10[m[K,
+                 from [01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:30[m[K:
+[01m[K/usr/include/c++/5/bits/unique_ptr.h:711:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp, class _Dp> bool std::operator>(std::nullptr_t, const std::unique_ptr<_Tp, _Dp>&)
+     operator>(nullptr_t, const unique_ptr<_Tp, _Dp>& __x)
+[01;32m[K     ^[m[K
+[01m[K/usr/include/c++/5/bits/unique_ptr.h:711:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:180:27:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kros::TimeBase<T, D>::operator-(const T&) const [with T = ros::Time; D = ros::Duration](prevCaptureTime)[m[K’ (type ‘[01m[Kros::Duration[m[K’) to type ‘[01m[Kstd::nullptr_t[m[K’
+       if(ros::Time::now() - prevCaptureTime > 1) {
+[01;32m[K                           ^[m[K
+In file included from [01m[K/usr/include/c++/5/deque:64:0[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/../serialize.h:151[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/../pixel.h:7[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/cv_image.h:10[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv.h:10[m[K,
+                 from [01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:30[m[K:
+[01m[K/usr/include/c++/5/bits/stl_deque.h:306:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp, class _Ref, class _Ptr> bool std::operator>(const std::_Deque_iterator<_Tp, _Ref, _Ptr>&, const std::_Deque_iterator<_Tp, _Ref, _Ptr>&)
+     operator>(const _Deque_iterator<_Tp, _Ref, _Ptr>& __x,
+[01;32m[K     ^[m[K
+[01m[K/usr/include/c++/5/bits/stl_deque.h:306:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:180:47:[m[K [01;36m[Knote: [m[K  ‘[01m[Kros::Duration[m[K’ is not derived from ‘[01m[Kconst std::_Deque_iterator<_Tp, _Ref, _Ptr>[m[K’
+       if(ros::Time::now() - prevCaptureTime > 1) {
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/usr/include/c++/5/deque:64:0[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/../serialize.h:151[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/../pixel.h:7[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/cv_image.h:10[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv.h:10[m[K,
+                 from [01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:30[m[K:
+[01m[K/usr/include/c++/5/bits/stl_deque.h:313:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp, class _RefL, class _PtrL, class _RefR, class _PtrR> bool std::operator>(const std::_Deque_iterator<_Tp, _Ref, _Ptr>&, const std::_Deque_iterator<_Tp, _RefR, _PtrR>&)
+     operator>(const _Deque_iterator<_Tp, _RefL, _PtrL>& __x,
+[01;32m[K     ^[m[K
+[01m[K/usr/include/c++/5/bits/stl_deque.h:313:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:180:47:[m[K [01;36m[Knote: [m[K  ‘[01m[Kros::Duration[m[K’ is not derived from ‘[01m[Kconst std::_Deque_iterator<_Tp, _Ref, _Ptr>[m[K’
+       if(ros::Time::now() - prevCaptureTime > 1) {
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/usr/include/c++/5/deque:64:0[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/../serialize.h:151[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/../pixel.h:7[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/cv_image.h:10[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv.h:10[m[K,
+                 from [01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:30[m[K:
+[01m[K/usr/include/c++/5/bits/stl_deque.h:2253:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp, class _Alloc> bool std::operator>(const std::deque<_Tp, _Alloc>&, const std::deque<_Tp, _Alloc>&)
+     operator>(const deque<_Tp, _Alloc>& __x,
+[01;32m[K     ^[m[K
+[01m[K/usr/include/c++/5/bits/stl_deque.h:2253:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:180:47:[m[K [01;36m[Knote: [m[K  ‘[01m[Kros::Duration[m[K’ is not derived from ‘[01m[Kconst std::deque<_Tp, _Alloc>[m[K’
+       if(ros::Time::now() - prevCaptureTime > 1) {
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/usr/include/c++/5/map:60:0[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/../serialize.h:153[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/../pixel.h:7[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/cv_image.h:10[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv.h:10[m[K,
+                 from [01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:30[m[K:
+[01m[K/usr/include/c++/5/bits/stl_tree.h:1300:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Key, class _Val, class _KeyOfValue, class _Compare, class _Alloc> bool std::operator>(const std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>&, const std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>&)
+     operator>(const _Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>& __x,
+[01;32m[K     ^[m[K
+[01m[K/usr/include/c++/5/bits/stl_tree.h:1300:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:180:47:[m[K [01;36m[Knote: [m[K  ‘[01m[Kros::Duration[m[K’ is not derived from ‘[01m[Kconst std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>[m[K’
+       if(ros::Time::now() - prevCaptureTime > 1) {
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/usr/include/c++/5/map:61:0[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/../serialize.h:153[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/../pixel.h:7[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/cv_image.h:10[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv.h:10[m[K,
+                 from [01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:30[m[K:
+[01m[K/usr/include/c++/5/bits/stl_map.h:1104:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Key, class _Tp, class _Compare, class _Alloc> bool std::operator>(const std::map<_Key, _Tp, _Compare, _Alloc>&, const std::map<_Key, _Tp, _Compare, _Alloc>&)
+     operator>(const map<_Key, _Tp, _Compare, _Alloc>& __x,
+[01;32m[K     ^[m[K
+[01m[K/usr/include/c++/5/bits/stl_map.h:1104:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:180:47:[m[K [01;36m[Knote: [m[K  ‘[01m[Kros::Duration[m[K’ is not derived from ‘[01m[Kconst std::map<_Key, _Tp, _Compare, _Alloc>[m[K’
+       if(ros::Time::now() - prevCaptureTime > 1) {
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/usr/include/c++/5/map:62:0[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/../serialize.h:153[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/../pixel.h:7[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/cv_image.h:10[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv.h:10[m[K,
+                 from [01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:30[m[K:
+[01m[K/usr/include/c++/5/bits/stl_multimap.h:1005:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Key, class _Tp, class _Compare, class _Alloc> bool std::operator>(const std::multimap<_Key, _Tp, _Compare, _Alloc>&, const std::multimap<_Key, _Tp, _Compare, _Alloc>&)
+     operator>(const multimap<_Key, _Tp, _Compare, _Alloc>& __x,
+[01;32m[K     ^[m[K
+[01m[K/usr/include/c++/5/bits/stl_multimap.h:1005:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:180:47:[m[K [01;36m[Knote: [m[K  ‘[01m[Kros::Duration[m[K’ is not derived from ‘[01m[Kconst std::multimap<_Key, _Tp, _Compare, _Alloc>[m[K’
+       if(ros::Time::now() - prevCaptureTime > 1) {
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/usr/include/c++/5/bits/shared_ptr.h:52:0[m[K,
+                 from [01m[K/usr/include/c++/5/memory:82[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/../serialize.h:154[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/../pixel.h:7[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/cv_image.h:10[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv.h:10[m[K,
+                 from [01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:30[m[K:
+[01m[K/usr/include/c++/5/bits/shared_ptr_base.h:1250:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp1, class _Tp2, __gnu_cxx::_Lock_policy _Lp> bool std::operator>(const std::__shared_ptr<_Tp1, _Lp>&, const std::__shared_ptr<_Tp2, _Lp>&)
+     operator>(const __shared_ptr<_Tp1, _Lp>& __a,
+[01;32m[K     ^[m[K
+[01m[K/usr/include/c++/5/bits/shared_ptr_base.h:1250:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:180:47:[m[K [01;36m[Knote: [m[K  ‘[01m[Kros::Duration[m[K’ is not derived from ‘[01m[Kconst std::__shared_ptr<_Tp1, _Lp>[m[K’
+       if(ros::Time::now() - prevCaptureTime > 1) {
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/usr/include/c++/5/bits/shared_ptr.h:52:0[m[K,
+                 from [01m[K/usr/include/c++/5/memory:82[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/../serialize.h:154[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/../pixel.h:7[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/cv_image.h:10[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv.h:10[m[K,
+                 from [01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:30[m[K:
+[01m[K/usr/include/c++/5/bits/shared_ptr_base.h:1256:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp, __gnu_cxx::_Lock_policy _Lp> bool std::operator>(const std::__shared_ptr<_Tp, _Lp>&, std::nullptr_t)
+     operator>(const __shared_ptr<_Tp, _Lp>& __a, nullptr_t) noexcept
+[01;32m[K     ^[m[K
+[01m[K/usr/include/c++/5/bits/shared_ptr_base.h:1256:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:180:47:[m[K [01;36m[Knote: [m[K  ‘[01m[Kros::Duration[m[K’ is not derived from ‘[01m[Kconst std::__shared_ptr<_Tp, _Lp>[m[K’
+       if(ros::Time::now() - prevCaptureTime > 1) {
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/usr/include/c++/5/bits/shared_ptr.h:52:0[m[K,
+                 from [01m[K/usr/include/c++/5/memory:82[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/../serialize.h:154[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/../pixel.h:7[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/cv_image.h:10[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv.h:10[m[K,
+                 from [01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:30[m[K:
+[01m[K/usr/include/c++/5/bits/shared_ptr_base.h:1261:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp, __gnu_cxx::_Lock_policy _Lp> bool std::operator>(std::nullptr_t, const std::__shared_ptr<_Tp, _Lp>&)
+     operator>(nullptr_t, const __shared_ptr<_Tp, _Lp>& __a) noexcept
+[01;32m[K     ^[m[K
+[01m[K/usr/include/c++/5/bits/shared_ptr_base.h:1261:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:180:27:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kros::TimeBase<T, D>::operator-(const T&) const [with T = ros::Time; D = ros::Duration](prevCaptureTime)[m[K’ (type ‘[01m[Kros::Duration[m[K’) to type ‘[01m[Kstd::nullptr_t[m[K’
+       if(ros::Time::now() - prevCaptureTime > 1) {
+[01;32m[K                           ^[m[K
+In file included from [01m[K/usr/include/c++/5/memory:82:0[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/../serialize.h:154[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/../pixel.h:7[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/cv_image.h:10[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv.h:10[m[K,
+                 from [01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:30[m[K:
+[01m[K/usr/include/c++/5/bits/shared_ptr.h:403:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp1, class _Tp2> bool std::operator>(const std::shared_ptr<_Tp1>&, const std::shared_ptr<_Tp2>&)
+     operator>(const shared_ptr<_Tp1>& __a,
+[01;32m[K     ^[m[K
+[01m[K/usr/include/c++/5/bits/shared_ptr.h:403:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:180:47:[m[K [01;36m[Knote: [m[K  ‘[01m[Kros::Duration[m[K’ is not derived from ‘[01m[Kconst std::shared_ptr<_Tp1>[m[K’
+       if(ros::Time::now() - prevCaptureTime > 1) {
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/usr/include/c++/5/memory:82:0[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/../serialize.h:154[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/../pixel.h:7[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/cv_image.h:10[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv.h:10[m[K,
+                 from [01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:30[m[K:
+[01m[K/usr/include/c++/5/bits/shared_ptr.h:409:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp> bool std::operator>(const std::shared_ptr<_Tp1>&, std::nullptr_t)
+     operator>(const shared_ptr<_Tp>& __a, nullptr_t) noexcept
+[01;32m[K     ^[m[K
+[01m[K/usr/include/c++/5/bits/shared_ptr.h:409:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:180:47:[m[K [01;36m[Knote: [m[K  ‘[01m[Kros::Duration[m[K’ is not derived from ‘[01m[Kconst std::shared_ptr<_Tp1>[m[K’
+       if(ros::Time::now() - prevCaptureTime > 1) {
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/usr/include/c++/5/memory:82:0[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/../serialize.h:154[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/../pixel.h:7[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/cv_image.h:10[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv.h:10[m[K,
+                 from [01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:30[m[K:
+[01m[K/usr/include/c++/5/bits/shared_ptr.h:414:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp> bool std::operator>(std::nullptr_t, const std::shared_ptr<_Tp1>&)
+     operator>(nullptr_t, const shared_ptr<_Tp>& __a) noexcept
+[01;32m[K     ^[m[K
+[01m[K/usr/include/c++/5/bits/shared_ptr.h:414:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:180:27:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kros::TimeBase<T, D>::operator-(const T&) const [with T = ros::Time; D = ros::Duration](prevCaptureTime)[m[K’ (type ‘[01m[Kros::Duration[m[K’) to type ‘[01m[Kstd::nullptr_t[m[K’
+       if(ros::Time::now() - prevCaptureTime > 1) {
+[01;32m[K                           ^[m[K
+In file included from [01m[K/usr/include/c++/5/set:61:0[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/../serialize.h:155[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/../pixel.h:7[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/cv_image.h:10[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv.h:10[m[K,
+                 from [01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:30[m[K:
+[01m[K/usr/include/c++/5/bits/stl_set.h:873:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Key, class _Compare, class _Alloc> bool std::operator>(const std::set<_Key, _Compare, _Alloc>&, const std::set<_Key, _Compare, _Alloc>&)
+     operator>(const set<_Key, _Compare, _Alloc>& __x,
+[01;32m[K     ^[m[K
+[01m[K/usr/include/c++/5/bits/stl_set.h:873:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:180:47:[m[K [01;36m[Knote: [m[K  ‘[01m[Kros::Duration[m[K’ is not derived from ‘[01m[Kconst std::set<_Key, _Compare, _Alloc>[m[K’
+       if(ros::Time::now() - prevCaptureTime > 1) {
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/usr/include/c++/5/set:62:0[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/../serialize.h:155[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/../pixel.h:7[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/cv_image.h:10[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv.h:10[m[K,
+                 from [01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:30[m[K:
+[01m[K/usr/include/c++/5/bits/stl_multiset.h:856:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Key, class _Compare, class _Alloc> bool std::operator>(const std::multiset<_Key, _Compare, _Alloc>&, const std::multiset<_Key, _Compare, _Alloc>&)
+     operator>(const multiset<_Key,_Compare,_Alloc>& __x,
+[01;32m[K     ^[m[K
+[01m[K/usr/include/c++/5/bits/stl_multiset.h:856:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:180:47:[m[K [01;36m[Knote: [m[K  ‘[01m[Kros::Duration[m[K’ is not derived from ‘[01m[Kconst std::multiset<_Key, _Compare, _Alloc>[m[K’
+       if(ros::Time::now() - prevCaptureTime > 1) {
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/usr/include/c++/5/list:63:0[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/stitching/detail/util.hpp:46[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/stitching/detail/motion_estimators.hpp:48[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/stitching.hpp:50[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/opencv.hpp:86[m[K,
+                 from [01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:32[m[K:
+[01m[K/usr/include/c++/5/bits/stl_list.h:1849:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp, class _Alloc> bool std::operator>(const std::__cxx11::list<_Tp, _Alloc>&, const std::__cxx11::list<_Tp, _Alloc>&)
+     operator>(const list<_Tp, _Alloc>& __x, const list<_Tp, _Alloc>& __y)
+[01;32m[K     ^[m[K
+[01m[K/usr/include/c++/5/bits/stl_list.h:1849:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:180:47:[m[K [01;36m[Knote: [m[K  ‘[01m[Kros::Duration[m[K’ is not derived from ‘[01m[Kconst std::__cxx11::list<_Tp, _Alloc>[m[K’
+       if(ros::Time::now() - prevCaptureTime > 1) {
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/usr/include/c++/5/queue:64:0[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/stitching/detail/util_inl.hpp:46[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/stitching/detail/util.hpp:119[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/stitching/detail/motion_estimators.hpp:48[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/stitching.hpp:50[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/opencv.hpp:86[m[K,
+                 from [01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:32[m[K:
+[01m[K/usr/include/c++/5/bits/stl_queue.h:301:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp, class _Seq> bool std::operator>(const std::queue<_Tp, _Seq>&, const std::queue<_Tp, _Seq>&)
+     operator>(const queue<_Tp, _Seq>& __x, const queue<_Tp, _Seq>& __y)
+[01;32m[K     ^[m[K
+[01m[K/usr/include/c++/5/bits/stl_queue.h:301:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:180:47:[m[K [01;36m[Knote: [m[K  ‘[01m[Kros::Duration[m[K’ is not derived from ‘[01m[Kconst std::queue<_Tp, _Seq>[m[K’
+       if(ros::Time::now() - prevCaptureTime > 1) {
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/usr/include/c++/5/stack:61:0[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../image_transforms/label_connected_blobs.h:8[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../image_transforms.h:21[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/scan_fhog_pyramid.h:8[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/frontal_face_detector.h:8[m[K,
+                 from [01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:33[m[K:
+[01m[K/usr/include/c++/5/bits/stl_stack.h:276:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp, class _Seq> bool std::operator>(const std::stack<_Tp, _Seq>&, const std::stack<_Tp, _Seq>&)
+     operator>(const stack<_Tp, _Seq>& __x, const stack<_Tp, _Seq>& __y)
+[01;32m[K     ^[m[K
+[01m[K/usr/include/c++/5/bits/stl_stack.h:276:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:180:47:[m[K [01;36m[Knote: [m[K  ‘[01m[Kros::Duration[m[K’ is not derived from ‘[01m[Kconst std::stack<_Tp, _Seq>[m[K’
+       if(ros::Time::now() - prevCaptureTime > 1) {
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../image_transforms/../threads/thread_pool_extension.h:8:0[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../image_transforms/../threads.h:22[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../image_transforms/random_cropper.h:7[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../image_transforms.h:28[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/scan_fhog_pyramid.h:8[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/frontal_face_detector.h:8[m[K,
+                 from [01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:33[m[K:
+[01m[K/usr/include/c++/5/thread:223:3:[m[K [01;36m[Knote: [m[Kcandidate: bool std::operator>(std::thread::id, std::thread::id)
+   operator>(thread::id __x, thread::id __y) noexcept
+[01;32m[K   ^[m[K
+[01m[K/usr/include/c++/5/thread:223:3:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kros::Duration[m[K’ to ‘[01m[Kstd::thread::id[m[K’
+In file included from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../image_transforms/../threads.h:22:0[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../image_transforms/random_cropper.h:7[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../image_transforms.h:28[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/scan_fhog_pyramid.h:8[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/frontal_face_detector.h:8[m[K,
+                 from [01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:33[m[K:
+[01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../image_transforms/../threads/thread_pool_extension.h:126:32:[m[K [01;36m[Knote: [m[Kcandidate: template<class T> bool dlib::operator>(const T&, const dlib::future<T>&)
+     template <typename T> bool operator>  (const T& a,         const future<T>& b) { return a       >  b.get(); }
+[01;32m[K                                ^[m[K
+[01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../image_transforms/../threads/thread_pool_extension.h:126:32:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:180:47:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst dlib::future<T>[m[K’ and ‘[01m[Kint[m[K’
+       if(ros::Time::now() - prevCaptureTime > 1) {
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../image_transforms/../threads.h:22:0[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../image_transforms/random_cropper.h:7[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../image_transforms.h:28[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/scan_fhog_pyramid.h:8[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/frontal_face_detector.h:8[m[K,
+                 from [01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:33[m[K:
+[01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../image_transforms/../threads/thread_pool_extension.h:125:32:[m[K [01;36m[Knote: [m[Kcandidate: template<class T> bool dlib::operator>(const dlib::future<T>&, const T&)
+     template <typename T> bool operator>  (const future<T>& a, const T& b)         { return a.get() >  b; }
+[01;32m[K                                ^[m[K
+[01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../image_transforms/../threads/thread_pool_extension.h:125:32:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:180:47:[m[K [01;36m[Knote: [m[K  ‘[01m[Kros::Duration[m[K’ is not derived from ‘[01m[Kconst dlib::future<T>[m[K’
+       if(ros::Time::now() - prevCaptureTime > 1) {
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../image_transforms/../threads.h:22:0[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../image_transforms/random_cropper.h:7[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../image_transforms.h:28[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/scan_fhog_pyramid.h:8[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/frontal_face_detector.h:8[m[K,
+                 from [01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:33[m[K:
+[01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../image_transforms/../threads/thread_pool_extension.h:113:32:[m[K [01;36m[Knote: [m[Kcandidate: template<class T> bool dlib::operator>(const dlib::future<T>&, const dlib::future<T>&)
+     template <typename T> bool operator>  (const future<T>& a, const future<T>& b) { return a.get() >  b.get(); }
+[01;32m[K                                ^[m[K
+[01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../image_transforms/../threads/thread_pool_extension.h:113:32:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:180:47:[m[K [01;36m[Knote: [m[K  ‘[01m[Kros::Duration[m[K’ is not derived from ‘[01m[Kconst dlib::future<T>[m[K’
+       if(ros::Time::now() - prevCaptureTime > 1) {
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../image_transforms/../simd.h:8:0[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../image_transforms/spatial_filtering.h:13[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../image_transforms.h:14[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/scan_fhog_pyramid.h:8[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/frontal_face_detector.h:8[m[K,
+                 from [01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:33[m[K:
+[01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../image_transforms/../simd/simd8f.h:256:24:[m[K [01;36m[Knote: [m[Kcandidate: dlib::simd8f_bool dlib::operator>(const dlib::simd8f&, const dlib::simd8f&)
+     inline simd8f_bool operator> (const simd8f& lhs, const simd8f& rhs) 
+[01;32m[K                        ^[m[K
+[01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../image_transforms/../simd/simd8f.h:256:24:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kros::Duration[m[K’ to ‘[01m[Kconst dlib::simd8f&[m[K’
+In file included from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../image_transforms/../simd/simd8f.h:8:0[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../image_transforms/../simd.h:8[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../image_transforms/spatial_filtering.h:13[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../image_transforms.h:14[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/scan_fhog_pyramid.h:8[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/frontal_face_detector.h:8[m[K,
+                 from [01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:33[m[K:
+[01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../image_transforms/../simd/simd8i.h:258:19:[m[K [01;36m[Knote: [m[Kcandidate: dlib::simd8i dlib::operator>(const dlib::simd8i&, const dlib::simd8i&)
+     inline simd8i operator> (const simd8i& lhs, const simd8i& rhs) 
+[01;32m[K                   ^[m[K
+[01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../image_transforms/../simd/simd8i.h:258:19:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kros::Duration[m[K’ to ‘[01m[Kconst dlib::simd8i&[m[K’
+In file included from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../image_transforms/../simd.h:6:0[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../image_transforms/spatial_filtering.h:13[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../image_transforms.h:14[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/scan_fhog_pyramid.h:8[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/frontal_face_detector.h:8[m[K,
+                 from [01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:33[m[K:
+[01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../image_transforms/../simd/simd4f.h:438:24:[m[K [01;36m[Knote: [m[Kcandidate: dlib::simd4f_bool dlib::operator>(const dlib::simd4f&, const dlib::simd4f&)
+     inline simd4f_bool operator> (const simd4f& lhs, const simd4f& rhs) 
+[01;32m[K                        ^[m[K
+[01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../image_transforms/../simd/simd4f.h:438:24:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kros::Duration[m[K’ to ‘[01m[Kconst dlib::simd4f&[m[K’
+In file included from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../image_transforms/../simd/simd4f.h:7:0[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../image_transforms/../simd.h:6[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../image_transforms/spatial_filtering.h:13[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../image_transforms.h:14[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/scan_fhog_pyramid.h:8[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/frontal_face_detector.h:8[m[K,
+                 from [01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:33[m[K:
+[01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../image_transforms/../simd/simd4i.h:445:19:[m[K [01;36m[Knote: [m[Kcandidate: dlib::simd4i dlib::operator>(const dlib::simd4i&, const dlib::simd4i&)
+     inline simd4i operator> (const simd4i& lhs, const simd4i& rhs) 
+[01;32m[K                   ^[m[K
+[01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../image_transforms/../simd/simd4i.h:445:19:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kros::Duration[m[K’ to ‘[01m[Kconst dlib::simd4i&[m[K’
+In file included from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../image_transforms/../statistics/../optimization/optimization_solve_qp_using_smo.h:9:0[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../image_transforms/../statistics/../optimization.h:8[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../image_transforms/../statistics/vector_normalizer_frobmetric.h:8[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../image_transforms/../statistics.h:13[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../image_transforms/assign_image.h:8[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../image_transforms.h:11[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/scan_fhog_pyramid.h:8[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/frontal_face_detector.h:8[m[K,
+                 from [01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:33[m[K:
+[01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../image_transforms/../statistics/../optimization/../unordered_pair.h:114:10:[m[K [01;36m[Knote: [m[Kcandidate: template<class T> bool dlib::operator>(const dlib::unordered_pair<T>&, const dlib::unordered_pair<T>&)
+     bool operator>(const unordered_pair<T>& a, const unordered_pair <T>& b)
+[01;32m[K          ^[m[K
+[01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../image_transforms/../statistics/../optimization/../unordered_pair.h:114:10:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:180:47:[m[K [01;36m[Knote: [m[K  ‘[01m[Kros::Duration[m[K’ is not derived from ‘[01m[Kconst dlib::unordered_pair<T>[m[K’
+       if(ros::Time::now() - prevCaptureTime > 1) {
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../geometry/../matrix.h:7:0[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../geometry/point_transforms.h:9[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../geometry.h:10[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/object_detector.h:7[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/frontal_face_detector.h:7[m[K,
+                 from [01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:33[m[K:
+[01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../geometry/../matrix/matrix_utilities.h:1353:100:[m[K [01;36m[Knote: [m[Kcandidate: template<class EXP, class S> const typename dlib::enable_if<dlib::is_built_in_scalar_type<S>, dlib::matrix_op<dlib::op_greaterthan<EXP, S> > >::type dlib::operator>(const dlib::matrix_exp<EXP>&, const S&)
+     const typename enable_if<is_built_in_scalar_type<S>, matrix_op<op_greaterthan<EXP,S> > >::type operator> (
+[01;32m[K                                                                                                    ^[m[K
+[01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../geometry/../matrix/matrix_utilities.h:1353:100:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:180:47:[m[K [01;36m[Knote: [m[K  ‘[01m[Kros::Duration[m[K’ is not derived from ‘[01m[Kconst dlib::matrix_exp<EXP>[m[K’
+       if(ros::Time::now() - prevCaptureTime > 1) {
+[01;32m[K                                               ^[m[K
+In file included from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../geometry/../matrix.h:7:0[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../geometry/point_transforms.h:9[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../geometry.h:10[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/object_detector.h:7[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/frontal_face_detector.h:7[m[K,
+                 from [01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:33[m[K:
+[01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../geometry/../matrix/matrix_utilities.h:1270:97:[m[K [01;36m[Knote: [m[Kcandidate: template<class EXP, class S> const typename dlib::enable_if<dlib::is_built_in_scalar_type<S>, dlib::matrix_op<dlib::op_lessthan<EXP, S> > >::type dlib::operator>(const S&, const dlib::matrix_exp<EXP>&)
+     const typename enable_if<is_built_in_scalar_type<S>, matrix_op<op_lessthan<EXP,S> > >::type operator> (
+[01;32m[K                                                                                                 ^[m[K
+[01m[K/home/weety/dlib-19.6/dlib/../dlib/image_processing/../image_processing/../geometry/../matrix/matrix_utilities.h:1270:97:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:180:47:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst dlib::matrix_exp<EXP>[m[K’ and ‘[01m[Kint[m[K’
+       if(ros::Time::now() - prevCaptureTime > 1) {
+[01;32m[K                                               ^[m[K
+make[2]: *** [CMakeFiles/facePoseRecognition.dir/src/facePoseRecognition.cpp.o] Error 1
+make[1]: *** [CMakeFiles/facePoseRecognition.dir/all] Error 2
+make: *** [all] Error 2

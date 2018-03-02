@@ -1,0 +1,13 @@
+CMakeFiles/facetrack_sim2.dir/src/facetrack_sim2.cpp.o: In function `main':
+facetrack_sim2.cpp:(.text.startup+0x3ee): undefined reference to `initscr'
+facetrack_sim2.cpp:(.text.startup+0x401): undefined reference to `cbreak'
+facetrack_sim2.cpp:(.text.startup+0x414): undefined reference to `noecho'
+facetrack_sim2.cpp:(.text.startup+0x5f8): undefined reference to `stdscr'
+facetrack_sim2.cpp:(.text.startup+0x601): undefined reference to `wgetch'
+facetrack_sim2.cpp:(.text.startup+0x158b): undefined reference to `clear'
+facetrack_sim2.cpp:(.text.startup+0x1590): undefined reference to `refresh'
+collect2: error: ld returned 1 exit status
+make[2]: *** [/home/weety/tart5/devel/.private/faceReg/lib/faceReg/facetrack_sim2] Error 1
+make[1]: *** [CMakeFiles/facetrack_sim2.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [all] Error 2

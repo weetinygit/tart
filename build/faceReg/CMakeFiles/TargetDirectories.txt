@@ -1,5 +1,7 @@
 /home/weety/tart5/build/faceReg/CMakeFiles/edit_cache.dir
+/home/weety/tart5/build/faceReg/CMakeFiles/face_tablet_tf_broadcaster_2.dir
 /home/weety/tart5/build/faceReg/CMakeFiles/face_tablet_tf_broadcaster.dir
+/home/weety/tart5/build/faceReg/CMakeFiles/facetrack_sim2.dir
 /home/weety/tart5/build/faceReg/CMakeFiles/facePoseRecognition.dir
 /home/weety/tart5/build/faceReg/CMakeFiles/faceReg_genpy.dir
 /home/weety/tart5/build/faceReg/CMakeFiles/faceReg_gennodejs.dir

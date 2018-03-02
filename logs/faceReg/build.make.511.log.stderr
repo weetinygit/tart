@@ -1,0 +1,13 @@
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:173:50:[m[K [01;31m[Kerror: [m[K‘[01m[Ktransave[m[K’ was not declared in this scope
+      transform1.setOrigin( tf::Vector3(transave(0), transave(1), transave(2)));
+[01;32m[K                                                  ^[m[K
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:174:6:[m[K [01;31m[Kerror: [m[K‘[01m[Kqtr_trans1[m[K’ was not declared in this scope
+      qtr_trans1.setRPY(rotave(0), rotave(1), rotave(2));
+[01;32m[K      ^[m[K
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:174:32:[m[K [01;31m[Kerror: [m[K‘[01m[Krotave[m[K’ was not declared in this scope
+      qtr_trans1.setRPY(rotave(0), rotave(1), rotave(2));
+[01;32m[K                                ^[m[K
+make[2]: *** [CMakeFiles/facePoseRecognition.dir/src/facePoseRecognition.cpp.o] Error 1
+make[1]: *** [CMakeFiles/facePoseRecognition.dir/all] Error 2
+make: *** [all] Error 2

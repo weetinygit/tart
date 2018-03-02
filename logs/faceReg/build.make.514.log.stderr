@@ -1,0 +1,8 @@
+[01m[K/home/weety/tart5/src/faceReg/src/facetrack_sim2.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/weety/tart5/src/faceReg/src/facetrack_sim2.cpp:68:6:[m[K [01;31m[Kerror: [m[K‘[01m[Knewmsg_status[m[K’ was not declared in this scope
+   if(newmsg_status == 1){
+[01;32m[K      ^[m[K
+make[2]: *** [CMakeFiles/facetrack_sim2.dir/src/facetrack_sim2.cpp.o] Error 1
+make[1]: *** [CMakeFiles/facetrack_sim2.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [all] Error 2

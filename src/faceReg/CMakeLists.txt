@@ -107,10 +107,17 @@ add_executable(facetrack_sim src/facetrack_sim)
 target_link_libraries(facetrack_sim ${catkin_LIBRARIES} ncurses)
 add_dependencies(facetrack_sim faceReg_generate_messages_cpp)
 
+add_executable(facetrack_sim2 src/facetrack_sim2)
+target_link_libraries(facetrack_sim2 ${catkin_LIBRARIES} ncurses)
+add_dependencies(facetrack_sim2 faceReg_generate_messages_cpp)
+
 add_executable(face_tablet_tf_broadcaster src/face_tablet_tf_broadcaster)
 target_link_libraries(face_tablet_tf_broadcaster ${catkin_LIBRARIES})
 add_dependencies(face_tablet_tf_broadcaster faceReg_generate_messages_cpp)
 
+add_executable(face_tablet_tf_broadcaster_2 src/face_tablet_tf_broadcaster_2)
+target_link_libraries(face_tablet_tf_broadcaster_2 ${catkin_LIBRARIES})
+add_dependencies(face_tablet_tf_broadcaster_2 faceReg_generate_messages_cpp)
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}

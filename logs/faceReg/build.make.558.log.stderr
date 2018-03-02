@@ -1,0 +1,154 @@
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:261:63:[m[K [01;31m[Kerror: [m[Kno match for call to ‘[01m[K(cv::Mat) (int, int)[m[K’
+       transform1.setOrigin( tf::Vector3(translation_vector(0,0)*X_SCALE, translation_vector(1,0)*Y_SCALE, translation_vector(2,0)*Z_SCALE));
+[01;32m[K                                                               ^[m[K
+In file included from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/mat.hpp:3518:0[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core.hpp:59[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/cv_image.h:6[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv.h:10[m[K,
+                 from [01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:30[m[K:
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/mat.inl.hpp:722:5:[m[K [01;36m[Knote: [m[Kcandidate: cv::Mat cv::Mat::operator()(cv::Range, cv::Range) const
+ Mat Mat::operator()( Range _rowRange, Range _colRange ) const
+[01;32m[K     ^[m[K
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/mat.inl.hpp:722:5:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kint[m[K’ to ‘[01m[Kcv::Range[m[K’
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/mat.inl.hpp:728:5:[m[K [01;36m[Knote: [m[Kcandidate: cv::Mat cv::Mat::operator()(const Rect&) const
+ Mat Mat::operator()( const Rect& roi ) const
+[01;32m[K     ^[m[K
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/mat.inl.hpp:728:5:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/mat.inl.hpp:734:5:[m[K [01;36m[Knote: [m[Kcandidate: cv::Mat cv::Mat::operator()(const cv::Range*) const
+ Mat Mat::operator()(const Range* ranges) const
+[01;32m[K     ^[m[K
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/mat.inl.hpp:734:5:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/mat.inl.hpp:740:5:[m[K [01;36m[Knote: [m[Kcandidate: cv::Mat cv::Mat::operator()(const std::vector<cv::Range>&) const
+ Mat Mat::operator()(const std::vector<Range>& ranges) const
+[01;32m[K     ^[m[K
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/mat.inl.hpp:740:5:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:261:96:[m[K [01;31m[Kerror: [m[Kno match for call to ‘[01m[K(cv::Mat) (int, int)[m[K’
+       transform1.setOrigin( tf::Vector3(translation_vector(0,0)*X_SCALE, translation_vector(1,0)*Y_SCALE, translation_vector(2,0)*Z_SCALE));
+[01;32m[K                                                                                                ^[m[K
+In file included from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/mat.hpp:3518:0[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core.hpp:59[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/cv_image.h:6[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv.h:10[m[K,
+                 from [01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:30[m[K:
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/mat.inl.hpp:722:5:[m[K [01;36m[Knote: [m[Kcandidate: cv::Mat cv::Mat::operator()(cv::Range, cv::Range) const
+ Mat Mat::operator()( Range _rowRange, Range _colRange ) const
+[01;32m[K     ^[m[K
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/mat.inl.hpp:722:5:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kint[m[K’ to ‘[01m[Kcv::Range[m[K’
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/mat.inl.hpp:728:5:[m[K [01;36m[Knote: [m[Kcandidate: cv::Mat cv::Mat::operator()(const Rect&) const
+ Mat Mat::operator()( const Rect& roi ) const
+[01;32m[K     ^[m[K
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/mat.inl.hpp:728:5:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/mat.inl.hpp:734:5:[m[K [01;36m[Knote: [m[Kcandidate: cv::Mat cv::Mat::operator()(const cv::Range*) const
+ Mat Mat::operator()(const Range* ranges) const
+[01;32m[K     ^[m[K
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/mat.inl.hpp:734:5:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/mat.inl.hpp:740:5:[m[K [01;36m[Knote: [m[Kcandidate: cv::Mat cv::Mat::operator()(const std::vector<cv::Range>&) const
+ Mat Mat::operator()(const std::vector<Range>& ranges) const
+[01;32m[K     ^[m[K
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/mat.inl.hpp:740:5:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:261:0:[m[K [01;31m[Kerror: [m[Kno match for call to ‘[01m[K(cv::Mat) (int, int)[m[K’
+       transform1.setOrigin( tf::Vector3(translation_vector(0,0)*X_SCALE, translation_vector(1,0)*Y_SCALE, translation_vector(2,0)*Z_SCALE));
+[01;32m[K ^[m[K
+In file included from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/mat.hpp:3518:0[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core.hpp:59[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/cv_image.h:6[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv.h:10[m[K,
+                 from [01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:30[m[K:
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/mat.inl.hpp:722:5:[m[K [01;36m[Knote: [m[Kcandidate: cv::Mat cv::Mat::operator()(cv::Range, cv::Range) const
+ Mat Mat::operator()( Range _rowRange, Range _colRange ) const
+[01;32m[K     ^[m[K
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/mat.inl.hpp:722:5:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kint[m[K’ to ‘[01m[Kcv::Range[m[K’
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/mat.inl.hpp:728:5:[m[K [01;36m[Knote: [m[Kcandidate: cv::Mat cv::Mat::operator()(const Rect&) const
+ Mat Mat::operator()( const Rect& roi ) const
+[01;32m[K     ^[m[K
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/mat.inl.hpp:728:5:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/mat.inl.hpp:734:5:[m[K [01;36m[Knote: [m[Kcandidate: cv::Mat cv::Mat::operator()(const cv::Range*) const
+ Mat Mat::operator()(const Range* ranges) const
+[01;32m[K     ^[m[K
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/mat.inl.hpp:734:5:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/mat.inl.hpp:740:5:[m[K [01;36m[Knote: [m[Kcandidate: cv::Mat cv::Mat::operator()(const std::vector<cv::Range>&) const
+ Mat Mat::operator()(const std::vector<Range>& ranges) const
+[01;32m[K     ^[m[K
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/mat.inl.hpp:740:5:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:262:37:[m[K [01;31m[Kerror: [m[Kno match for call to ‘[01m[K(cv::Mat) (int, int)[m[K’
+       qtr.setRPY(rotation_vector(0,0), rotation_vector(1,0), rotation_vector(2,0));
+[01;32m[K                                     ^[m[K
+In file included from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/mat.hpp:3518:0[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core.hpp:59[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/cv_image.h:6[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv.h:10[m[K,
+                 from [01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:30[m[K:
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/mat.inl.hpp:722:5:[m[K [01;36m[Knote: [m[Kcandidate: cv::Mat cv::Mat::operator()(cv::Range, cv::Range) const
+ Mat Mat::operator()( Range _rowRange, Range _colRange ) const
+[01;32m[K     ^[m[K
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/mat.inl.hpp:722:5:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kint[m[K’ to ‘[01m[Kcv::Range[m[K’
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/mat.inl.hpp:728:5:[m[K [01;36m[Knote: [m[Kcandidate: cv::Mat cv::Mat::operator()(const Rect&) const
+ Mat Mat::operator()( const Rect& roi ) const
+[01;32m[K     ^[m[K
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/mat.inl.hpp:728:5:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/mat.inl.hpp:734:5:[m[K [01;36m[Knote: [m[Kcandidate: cv::Mat cv::Mat::operator()(const cv::Range*) const
+ Mat Mat::operator()(const Range* ranges) const
+[01;32m[K     ^[m[K
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/mat.inl.hpp:734:5:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/mat.inl.hpp:740:5:[m[K [01;36m[Knote: [m[Kcandidate: cv::Mat cv::Mat::operator()(const std::vector<cv::Range>&) const
+ Mat Mat::operator()(const std::vector<Range>& ranges) const
+[01;32m[K     ^[m[K
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/mat.inl.hpp:740:5:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:262:59:[m[K [01;31m[Kerror: [m[Kno match for call to ‘[01m[K(cv::Mat) (int, int)[m[K’
+       qtr.setRPY(rotation_vector(0,0), rotation_vector(1,0), rotation_vector(2,0));
+[01;32m[K                                                           ^[m[K
+In file included from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/mat.hpp:3518:0[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core.hpp:59[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/cv_image.h:6[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv.h:10[m[K,
+                 from [01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:30[m[K:
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/mat.inl.hpp:722:5:[m[K [01;36m[Knote: [m[Kcandidate: cv::Mat cv::Mat::operator()(cv::Range, cv::Range) const
+ Mat Mat::operator()( Range _rowRange, Range _colRange ) const
+[01;32m[K     ^[m[K
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/mat.inl.hpp:722:5:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kint[m[K’ to ‘[01m[Kcv::Range[m[K’
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/mat.inl.hpp:728:5:[m[K [01;36m[Knote: [m[Kcandidate: cv::Mat cv::Mat::operator()(const Rect&) const
+ Mat Mat::operator()( const Rect& roi ) const
+[01;32m[K     ^[m[K
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/mat.inl.hpp:728:5:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/mat.inl.hpp:734:5:[m[K [01;36m[Knote: [m[Kcandidate: cv::Mat cv::Mat::operator()(const cv::Range*) const
+ Mat Mat::operator()(const Range* ranges) const
+[01;32m[K     ^[m[K
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/mat.inl.hpp:734:5:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/mat.inl.hpp:740:5:[m[K [01;36m[Knote: [m[Kcandidate: cv::Mat cv::Mat::operator()(const std::vector<cv::Range>&) const
+ Mat Mat::operator()(const std::vector<Range>& ranges) const
+[01;32m[K     ^[m[K
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/mat.inl.hpp:740:5:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:262:81:[m[K [01;31m[Kerror: [m[Kno match for call to ‘[01m[K(cv::Mat) (int, int)[m[K’
+       qtr.setRPY(rotation_vector(0,0), rotation_vector(1,0), rotation_vector(2,0));
+[01;32m[K                                                                                 ^[m[K
+In file included from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/mat.hpp:3518:0[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core.hpp:59[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv/cv_image.h:6[m[K,
+                 from [01m[K/home/weety/dlib-19.6/dlib/../dlib/opencv.h:10[m[K,
+                 from [01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:30[m[K:
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/mat.inl.hpp:722:5:[m[K [01;36m[Knote: [m[Kcandidate: cv::Mat cv::Mat::operator()(cv::Range, cv::Range) const
+ Mat Mat::operator()( Range _rowRange, Range _colRange ) const
+[01;32m[K     ^[m[K
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/mat.inl.hpp:722:5:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kint[m[K’ to ‘[01m[Kcv::Range[m[K’
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/mat.inl.hpp:728:5:[m[K [01;36m[Knote: [m[Kcandidate: cv::Mat cv::Mat::operator()(const Rect&) const
+ Mat Mat::operator()( const Rect& roi ) const
+[01;32m[K     ^[m[K
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/mat.inl.hpp:728:5:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/mat.inl.hpp:734:5:[m[K [01;36m[Knote: [m[Kcandidate: cv::Mat cv::Mat::operator()(const cv::Range*) const
+ Mat Mat::operator()(const Range* ranges) const
+[01;32m[K     ^[m[K
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/mat.inl.hpp:734:5:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/mat.inl.hpp:740:5:[m[K [01;36m[Knote: [m[Kcandidate: cv::Mat cv::Mat::operator()(const std::vector<cv::Range>&) const
+ Mat Mat::operator()(const std::vector<Range>& ranges) const
+[01;32m[K     ^[m[K
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/mat.inl.hpp:740:5:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+make[2]: *** [CMakeFiles/facePoseRecognition.dir/src/facePoseRecognition.cpp.o] Error 1
+make[1]: *** [CMakeFiles/facePoseRecognition.dir/all] Error 2
+make: *** [all] Error 2

@@ -1,0 +1,10 @@
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:55:2:[m[K [01;31m[Kerror: [m[K‘[01m[Kmodel_pts[m[K’ was not declared in this scope
+  model_pts.push_back(cv::Point3d(6.825897, 6.760612, 4.402142));     //#33 left brow left corner
+[01;32m[K  ^[m[K
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:152:40:[m[K [01;31m[Kerror: [m[K‘[01m[Kshape[m[K’ was not declared in this scope
+     image_points.push_back(cv::Point2d(shape.part(17).x(), shape.part(17).y())); //#17 left brow left corner
+[01;32m[K                                        ^[m[K
+make[2]: *** [CMakeFiles/facePoseRecognition.dir/src/facePoseRecognition.cpp.o] Error 1
+make[1]: *** [CMakeFiles/facePoseRecognition.dir/all] Error 2
+make: *** [all] Error 2

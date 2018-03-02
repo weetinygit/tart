@@ -1,0 +1,71 @@
+[01m[K/home/weety/tart5/src/faceReg/src/face_tablet_tf_broadcaster_2.cpp:[m[K In function ‘[01m[Kvoid actionNodeCallback(const facePose&)[m[K’:
+[01m[K/home/weety/tart5/src/faceReg/src/face_tablet_tf_broadcaster_2.cpp:24:28:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K([m[K’ token
+  transform1.setOrigin( tf::(Vector3(msg->trans_x, msg->trans_y, msg->trans_z));
+[01;32m[K                            ^[m[K
+[01m[K/home/weety/tart5/src/faceReg/src/face_tablet_tf_broadcaster_2.cpp:24:40:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kconst facePose {aka const faceReg::facePose_<std::allocator<void> >}[m[K’
+  transform1.setOrigin( tf::(Vector3(msg->trans_x, msg->trans_y, msg->trans_z));
+[01;32m[K                                        ^[m[K
+[01m[K/home/weety/tart5/src/faceReg/src/face_tablet_tf_broadcaster_2.cpp:24:54:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kconst facePose {aka const faceReg::facePose_<std::allocator<void> >}[m[K’
+  transform1.setOrigin( tf::(Vector3(msg->trans_x, msg->trans_y, msg->trans_z));
+[01;32m[K                                                      ^[m[K
+[01m[K/home/weety/tart5/src/faceReg/src/face_tablet_tf_broadcaster_2.cpp:24:68:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kconst facePose {aka const faceReg::facePose_<std::allocator<void> >}[m[K’
+  transform1.setOrigin( tf::(Vector3(msg->trans_x, msg->trans_y, msg->trans_z));
+[01;32m[K                                                                    ^[m[K
+[01m[K/home/weety/tart5/src/faceReg/src/face_tablet_tf_broadcaster_2.cpp:24:77:[m[K [01;31m[Kerror: [m[K‘[01m[KVector3[m[K’ was not declared in this scope
+  transform1.setOrigin( tf::(Vector3(msg->trans_x, msg->trans_y, msg->trans_z));
+[01;32m[K                                                                             ^[m[K
+[01m[K/home/weety/tart5/src/faceReg/src/face_tablet_tf_broadcaster_2.cpp:24:77:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+In file included from [01m[K/opt/ros/kinetic/include/tf2/transform_storage.h:35:0[m[K,
+                 from [01m[K/opt/ros/kinetic/include/tf2/buffer_core.h:35[m[K,
+                 from [01m[K/opt/ros/kinetic/include/tf2_ros/buffer_interface.h:35[m[K,
+                 from [01m[K/opt/ros/kinetic/include/tf2_ros/buffer.h:35[m[K,
+                 from [01m[K/opt/ros/kinetic/include/tf/tf.h:48[m[K,
+                 from [01m[K/opt/ros/kinetic/include/tf/transform_broadcaster.h:36[m[K,
+                 from [01m[K/home/weety/tart5/src/faceReg/src/face_tablet_tf_broadcaster_2.cpp:2[m[K:
+[01m[K/opt/ros/kinetic/include/tf2/LinearMath/Vector3.h:37:28:[m[K [01;36m[Knote: [m[K  ‘[01m[Ktf2::Vector3[m[K’
+ ATTRIBUTE_ALIGNED16(class) Vector3
+[01;32m[K                            ^[m[K
+In file included from [01m[K/opt/ros/kinetic/include/tf/LinearMath/Matrix3x3.h:19:0[m[K,
+                 from [01m[K/opt/ros/kinetic/include/tf/LinearMath/Transform.h:21[m[K,
+                 from [01m[K/opt/ros/kinetic/include/tf/transform_datatypes.h:41[m[K,
+                 from [01m[K/opt/ros/kinetic/include/tf/time_cache.h:38[m[K,
+                 from [01m[K/opt/ros/kinetic/include/tf/tf.h:43[m[K,
+                 from [01m[K/opt/ros/kinetic/include/tf/transform_broadcaster.h:36[m[K,
+                 from [01m[K/home/weety/tart5/src/faceReg/src/face_tablet_tf_broadcaster_2.cpp:2[m[K:
+[01m[K/opt/ros/kinetic/include/tf/LinearMath/Vector3.h:38:7:[m[K [01;36m[Knote: [m[K  ‘[01m[Ktf::Vector3[m[K’
+ class Vector3
+[01;32m[K       ^[m[K
+In file included from [01m[K/opt/ros/kinetic/include/geometry_msgs/Vector3Stamped.h:19:0[m[K,
+                 from [01m[K/opt/ros/kinetic/include/tf/transform_datatypes.h:37[m[K,
+                 from [01m[K/opt/ros/kinetic/include/tf/time_cache.h:38[m[K,
+                 from [01m[K/opt/ros/kinetic/include/tf/tf.h:43[m[K,
+                 from [01m[K/opt/ros/kinetic/include/tf/transform_broadcaster.h:36[m[K,
+                 from [01m[K/home/weety/tart5/src/faceReg/src/face_tablet_tf_broadcaster_2.cpp:2[m[K:
+[01m[K/opt/ros/kinetic/include/geometry_msgs/Vector3.h:57:58:[m[K [01;36m[Knote: [m[K  ‘[01m[Kgeometry_msgs::Vector3[m[K’
+ typedef ::geometry_msgs::Vector3_<std::allocator<void> > Vector3;
+[01;32m[K                                                          ^[m[K
+[01m[K/home/weety/tart5/src/faceReg/src/face_tablet_tf_broadcaster_2.cpp:25:20:[m[K [01;31m[Kerror: [m[K‘[01m[Krot_x[m[K’ was not declared in this scope
+  qtr_trans1.setRPY(rot_x, rot_y, rot_z);
+[01;32m[K                    ^[m[K
+[01m[K/home/weety/tart5/src/faceReg/src/face_tablet_tf_broadcaster_2.cpp:25:27:[m[K [01;31m[Kerror: [m[K‘[01m[Krot_y[m[K’ was not declared in this scope
+  qtr_trans1.setRPY(rot_x, rot_y, rot_z);
+[01;32m[K                           ^[m[K
+[01m[K/home/weety/tart5/src/faceReg/src/face_tablet_tf_broadcaster_2.cpp:25:34:[m[K [01;31m[Kerror: [m[K‘[01m[Krot_z[m[K’ was not declared in this scope
+  qtr_trans1.setRPY(rot_x, rot_y, rot_z);
+[01;32m[K                                  ^[m[K
+[01m[K/home/weety/tart5/src/faceReg/src/face_tablet_tf_broadcaster_2.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/weety/tart5/src/faceReg/src/face_tablet_tf_broadcaster_2.cpp:37:2:[m[K [01;31m[Kerror: [m[K‘[01m[KTransformListener[m[K’ is not a member of ‘[01m[Ktf[m[K’
+  tf::TransformListener lr;
+[01;32m[K  ^[m[K
+[01m[K/home/weety/tart5/src/faceReg/src/face_tablet_tf_broadcaster_2.cpp:54:3:[m[K [01;31m[Kerror: [m[K‘[01m[Klr[m[K’ was not declared in this scope
+   lr.waitForTransform("base_link", "tablet",now, ros::Duration(3.0));
+[01;32m[K   ^[m[K
+[01m[K/home/weety/tart5/src/faceReg/src/face_tablet_tf_broadcaster_2.cpp:54:45:[m[K [01;31m[Kerror: [m[K‘[01m[Know[m[K’ was not declared in this scope
+   lr.waitForTransform("base_link", "tablet",now, ros::Duration(3.0));
+[01;32m[K                                             ^[m[K
+[01m[K/home/weety/tart5/src/faceReg/src/face_tablet_tf_broadcaster_2.cpp:55:50:[m[K [01;31m[Kerror: [m[K‘[01m[Ktarget_transform[m[K’ was not declared in this scope
+   lr.lookupTransform("base_link", "tablet", now, target_transform);
+[01;32m[K                                                  ^[m[K
+make[2]: *** [CMakeFiles/face_tablet_tf_broadcaster_2.dir/src/face_tablet_tf_broadcaster_2.cpp.o] Error 1
+make[1]: *** [CMakeFiles/face_tablet_tf_broadcaster_2.dir/all] Error 2
+make: *** [all] Error 2

@@ -33,7 +33,7 @@ int main(int argc, char** argv){
 	ros::init(argc, argv, "tf_broadcaster_node");
 	ros::NodeHandle n;
 	ros::Subscriber marker_sub = n.subscribe("visualization_marker_array", 1000, actionNodeCallback);
-	ros::Rate loop_rate(50);
+	ros::Rate loop_rate(30);
 	
 	//Objects for transformation
 	tf::TransformBroadcaster br;

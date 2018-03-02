@@ -51,7 +51,7 @@ int main(int argc, char **argv)
 	marker.pose.orientation.y = 0.0;
 	marker.pose.orientation.z = -0.707;
 	marker.pose.orientation.w = 0.707;
-	marker.scale.x = 0.075;
+	marker.scale.x = 0.045;
 	marker.scale.y = 0.02;
 	marker.scale.z = 0.02;
 	marker.color.a = 1.0; // Don't forget to set the alpha!
