@@ -1,0 +1,1 @@
+/home/weety/tart5/devel/.private/tart_python/share/tart_python/cmake/tart_pythonConfig-version.cmake

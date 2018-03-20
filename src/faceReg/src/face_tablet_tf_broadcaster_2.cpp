@@ -6,8 +6,8 @@
 #include <faceReg/facePose.h>
 
 #define X_DISPLACE 0.137
-#define Y_DISPLACE 0
-#define Z_DISPLACE 0.2
+#define Y_DISPLACE -0.095
+#define Z_DISPLACE 0.6
 #define ROLL_DISPLACE 0
 #define PITCH_DISPLACE 0
 #define YAW_DISPLACE 0
@@ -50,9 +50,8 @@ int main(int argc, char** argv){
 	
 	//Publish initial pose to tf
 	while (n.ok()){
-		br.sendTransform(tf::StampedTransform(transform1, ros::Time::now(), "tablet", "face_pos"));
-		
-	ROS_INFO("transform sent");
+		br.sendTransform(tf::StampedTransform(transform1, ros::Time::now(), "camera", "face_pos"));
+		ROS_INFO("transform sent");
 		br.sendTransform(tf::StampedTransform(transform2, ros::Time::now(), "face_pos", "tablet_target_pos"));
 		ros::spinOnce();
 		loop_rate.sleep();

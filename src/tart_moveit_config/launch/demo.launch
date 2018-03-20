@@ -19,7 +19,7 @@
   It also provides a GUI to move the simulated robot around "manually".
   This corresponds to moving around the real robot without the use of MoveIt.
   -->
-  <arg name="use_gui" default="false" />
+  <arg name="use_gui" default="false"/>
 
   <!-- Load the URDF, SRDF and other .yaml configuration files on the param server -->
   <include file="$(find tart_moveit_config)/launch/planning_context.launch">
@@ -65,10 +65,15 @@
 	
 	
   <node name="arduino_comm" pkg="path_planner" type="arduino_comm"/>
-  <node name="path_planner" pkg="path_planner" type="path_planner_2"/>
+  <node name="unity_talker" pkg="tart_python" type="mqtt"/>
+	
+	
   <node name="face_tablet_tf_broadcaster" pkg="faceReg" type="face_tablet_tf_broadcaster_2"/>
   <node name="marker_broadcaster" pkg="faceReg" type="facetrack_sim2"/>
-  <node name="camera_processing" pkg="faceReg" type="facePoseRecognition"/>
+
+  <node name="path_planner" pkg="path_planner" type="path_planner_2"/>
+	<!--
+  <node name="camera_processing" pkg="faceReg" type="facePoseRecognition"/>-->
 	
 
 </launch>

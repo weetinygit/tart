@@ -34,7 +34,7 @@ int main(int argc, char **argv) {
   for(int i=0; i<6; i++){
 	  motor_pub[i] = nh.advertise<std_msgs::Float32>("/arduino/motor_"+std::to_string(i+1), 1, true);
   }
-  ros::Subscriber sub = nh.subscribe("/move_group/fake_controller_joint_states", 1000, actionNodeCallback);
+  ros::Subscriber sub = nh.subscribe("/joint_states", 1000, actionNodeCallback);
   ros::Rate loop_rate(10);
   //Loop
   while (ros::ok()){

@@ -1,0 +1,7 @@
+[01m[K/home/weety/tart5/src/path_planner/src/path_planner_2.cpp:[m[K In function ‘[01m[Kvoid modeCallback(const ConstPtr&)[m[K’:
+[01m[K/home/weety/tart5/src/path_planner/src/path_planner_2.cpp:34:7:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kconst std_msgs::Int16_<std::allocator<void> >[m[K’ to ‘[01m[Kint[m[K’ in assignment
+  mode = *msg;
+[01;32m[K       ^[m[K
+make[2]: *** [CMakeFiles/path_planner_2.dir/src/path_planner_2.cpp.o] Error 1
+make[1]: *** [CMakeFiles/path_planner_2.dir/all] Error 2
+make: *** [all] Error 2

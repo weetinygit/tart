@@ -1,0 +1,6 @@
+[ 33%] Built target arduino_comm
+[35m[1mScanning dependencies of target path_planner_2[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/path_planner_2.dir/src/path_planner_2.cpp.o[0m
+[ 83%] Built target path_planner
+[100%] [32m[1mLinking CXX executable /home/weety/tart5/devel/.private/path_planner/lib/path_planner/path_planner_2[0m
+[100%] Built target path_planner_2

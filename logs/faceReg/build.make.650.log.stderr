@@ -1,0 +1,10 @@
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:96:35:[m[K [01;31m[Kerror: [m[K‘[01m[Ktemp[m[K’ was not declared in this scope
+  cv::Point2d center = cv::Point2d(temp.cols/2,temp.rows/2);
+[01;32m[K                                   ^[m[K
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:97:52:[m[K [01;31m[Kerror: [m[K‘[01m[Kfocal_length[m[K’ was not declared in this scope
+  cv::Mat camera_matrix = (cv::Mat_<double>(3,3) << focal_length, 0, center.x, 0 , focal_length, center.y, 0, 0, 1);
+[01;32m[K                                                    ^[m[K
+make[2]: *** [CMakeFiles/facePoseRecognition.dir/src/facePoseRecognition.cpp.o] Error 1
+make[1]: *** [CMakeFiles/facePoseRecognition.dir/all] Error 2
+make: *** [all] Error 2

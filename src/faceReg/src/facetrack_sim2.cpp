@@ -26,7 +26,7 @@ int main(int argc, char **argv)
 	//Objects for publishing target pose
 	geometry_msgs::Pose targetPose;
 	double roll, pitch, yaw;
-	ros::Publisher targetPose_pub = n.advertise<geometry_msgs::Pose>("targetPose", 10);
+	//ros::Publisher targetPose_pub = n.advertise<geometry_msgs::Pose>("targetPose", 10);
 
 	
 	//Initialize face pose marker
@@ -100,14 +100,15 @@ int main(int argc, char **argv)
 			targetPose.position.y = target_transform.getOrigin().y();
 			targetPose.position.z = target_transform.getOrigin().z();
 			tf::quaternionTFToMsg(target_transform.getRotation(), targetPose.orientation);
+			marker_array.markers[1].pose = targetPose;
+			marker_array.markers[1].header.stamp = ros::Time();
+			vis_pub.publish( marker_array );
+			//targetPose_pub.publish( targetPose );
 		} catch (tf::TransformException &ex) {
 		  ROS_ERROR("%s",ex.what());
 		}
 
-		marker_array.markers[1].pose = targetPose;
-		marker_array.markers[1].header.stamp = ros::Time();
-		vis_pub.publish( marker_array );
-		targetPose_pub.publish( targetPose );
+		
 		ros::spinOnce();
 		loop_rate.sleep();
 	}

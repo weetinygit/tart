@@ -1,0 +1,16 @@
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:204:32:[m[K [01;31m[Kerror: [m[Kcould not convert ‘[01m[Kcv::operator>(const cv::Mat&, const cv::Mat&)(translation_vector.cv::Mat_<double>::<anonymous>)[m[K’ from ‘[01m[Kcv::MatExpr[m[K’ to ‘[01m[Kbool[m[K’
+      if(translation_vector_temp>translation_vector){
+[01;32m[K                                ^[m[K
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:232:73:[m[K [01;31m[Kerror: [m[K‘[01m[Kcamera_matrix[m[K’ was not declared in this scope
+    cv::projectPoints(reprojectsrc, rotation_vector, translation_vector, camera_matrix, dist_coeffs, reprojectdst);
+[01;32m[K                                                                         ^[m[K
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:232:88:[m[K [01;31m[Kerror: [m[K‘[01m[Kdist_coeffs[m[K’ was not declared in this scope
+    cv::projectPoints(reprojectsrc, rotation_vector, translation_vector, camera_matrix, dist_coeffs, reprojectdst);
+[01;32m[K                                                                                        ^[m[K
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:248:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kimage_points[m[K’ was not declared in this scope
+    for(int i=0; i < image_points.size(); i++) {
+[01;32m[K                     ^[m[K
+make[2]: *** [CMakeFiles/facePoseRecognition.dir/src/facePoseRecognition.cpp.o] Error 1
+make[1]: *** [CMakeFiles/facePoseRecognition.dir/all] Error 2
+make: *** [all] Error 2

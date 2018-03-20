@@ -1,0 +1,6 @@
+set(tart_python_SETUP_PY_VERSION "0.0.0")
+set(tart_python_SETUP_PY_SCRIPTS "")
+set(tart_python_SETUP_PY_PACKAGES "mqtt_with_unity;paho_mqtt")
+set(tart_python_SETUP_PY_PACKAGE_DIRS "src/mqtt_with_unity;src/paho_mqtt")
+set(tart_python_SETUP_PY_MODULES "")
+set(tart_python_SETUP_PY_MODULE_DIRS "")

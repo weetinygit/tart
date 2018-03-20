@@ -1,0 +1,7 @@
+[01m[K/home/weety/tart5/src/path_planner/src/path_planner_2.cpp:[m[K In function ‘[01m[Kvoid modeCallback(const ConstPtr&)[m[K’:
+[01m[K/home/weety/tart5/src/path_planner/src/path_planner_2.cpp:34:14:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst ConstPtr {aka const class boost::shared_ptr<const std_msgs::Int16_<std::allocator<void> > >}[m[K’ has no member named ‘[01m[Kdata[m[K’
+  mode = *msg.data;
+[01;32m[K              ^[m[K
+make[2]: *** [CMakeFiles/path_planner_2.dir/src/path_planner_2.cpp.o] Error 1
+make[1]: *** [CMakeFiles/path_planner_2.dir/all] Error 2
+make: *** [all] Error 2

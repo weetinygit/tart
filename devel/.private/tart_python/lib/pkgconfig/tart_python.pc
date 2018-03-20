@@ -1,0 +1,8 @@
+prefix=/home/weety/tart5/devel/.private/tart_python
+
+Name: tart_python
+Description: Description of tart_python
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/weety/tart5/devel/.private/tart_python/lib 
+Requires: 

@@ -41,13 +41,17 @@
 #include <sstream>
 
 
-#define X_SCALE -0.005
-#define Y_SCALE 0.005
-#define Z_SCALE 0.005
+#define X_SCALE -0.01
+#define Y_SCALE 0.01
+#define Z_SCALE 0.01
 
-#define X_DISPLACE -0.137
+#define X_DISPLACE 0
 #define Y_DISPLACE -0
 #define Z_DISPLACE 0
+
+#define ROLL_SCALE 1;
+#define PITCH_SCALE -1;
+#define YAW_SCALE -1;
 
 using namespace dlib;
 using namespace std;
@@ -74,18 +78,28 @@ int main(int argc, char **argv)
 	
 	//reproject 3D points world coordinate axis to verify result pose
     std::vector<cv::Point3d> reprojectsrc;
-    reprojectsrc.push_back(cv::Point3d(10.0, 10.0, 15.0));
-    reprojectsrc.push_back(cv::Point3d(10.0, 10.0, -5.0));
-    reprojectsrc.push_back(cv::Point3d(10.0, -10.0, -5.0));
-    reprojectsrc.push_back(cv::Point3d(10.0, -10.0, 15.0));
-    reprojectsrc.push_back(cv::Point3d(-10.0, 10.0, 15.0));
-    reprojectsrc.push_back(cv::Point3d(-10.0, 10.0, -5.0));
-    reprojectsrc.push_back(cv::Point3d(-10.0, -10.0, -5.0));
-    reprojectsrc.push_back(cv::Point3d(-10.0, -10.0, 15.0));
+    reprojectsrc.push_back(cv::Point3d(10.0, 10.0, 20.0));
+    reprojectsrc.push_back(cv::Point3d(10.0, 10.0, 0.0));
+    reprojectsrc.push_back(cv::Point3d(10.0, -10.0, 0.0));
+    reprojectsrc.push_back(cv::Point3d(10.0, -10.0, 20.0));
+    reprojectsrc.push_back(cv::Point3d(-10.0, 10.0, 20.0));
+    reprojectsrc.push_back(cv::Point3d(-10.0, 10.0, 0.0));
+    reprojectsrc.push_back(cv::Point3d(-10.0, -10.0, 0.0));
+    reprojectsrc.push_back(cv::Point3d(-10.0, -10.0, 20.0));
 
     //reprojected 2D points
     std::vector<cv::Point2d> reprojectdst;
 	reprojectdst.resize(8);
+	
+	// Output rotation and translation
+	cv::Mat_<double> rotation_vector, rotation_vector_temp; // Rotation in axis-angle form
+	cv::Mat_<double> translation_vector, translation_vector_temp;
+	
+	//Camera parmeters
+	double focal_length; // Approximate focal length.
+	cv::Point2d center;
+	cv::Mat camera_matrix;
+	cv::Mat dist_coeffs; // Assuming no lens distortion
 	
 	/*old model
     model_points.push_back(cv::Point3d(0.0f, 0.0f, 0.0f));               // Nose tip
@@ -107,18 +121,18 @@ int main(int argc, char **argv)
 	cv::Mat rotation_mat;                           //3 x 3 R
     cv::Mat pose_mat = cv::Mat(3, 4, CV_64FC1);     //3 x 4 R | T
 	cv::Mat euler_angle = cv::Mat(3, 1, CV_64FC1);
-        //temp buf for decomposeProjectionMatrix()
+	//temp buf for decomposeProjectionMatrix()
     cv::Mat out_intrinsics = cv::Mat(3, 3, CV_64FC1);
     cv::Mat out_rotation = cv::Mat(3, 3, CV_64FC1);
 	cv::Mat out_translation = cv::Mat(3, 1, CV_64FC1);
-	    //text on screen
+	//text on screen
 	std::ostringstream outtext;
     
 
     
     try
     {
-        cv::VideoCapture cap(0);
+        cv::VideoCapture cap(1);
         if (!cap.isOpened())
         {
             cerr << "Unable to connect to camera" << endl;
@@ -148,7 +162,7 @@ int main(int argc, char **argv)
             // to reallocate the memory which stores the image as that will make cimg
             // contain dangling pointers.  This basically means you shouldn't modify temp
             // while using cimg.
-			//transpose(temp, temp);
+			transpose(temp, temp);
             cv_image<bgr_pixel> cimg(temp);
 
             // Detect faces 
@@ -159,6 +173,7 @@ int main(int argc, char **argv)
                 full_object_detection pose = pose_model(cimg, faces[i]);
                 //Generate 2D locations of specific landmarks
                 std::vector<cv::Point2d> image_points;
+				
 				
 				/*old model
                 image_points.push_back( cv::Point2d((int)pose.part(33)(0), (int)pose.part(33)(1)));  // Nose tip
@@ -185,32 +200,52 @@ int main(int argc, char **argv)
 				image_points.push_back(cv::Point2d(pose.part(57).x(), pose.part(57).y())); //#57 mouth central bottom corner
 				image_points.push_back(cv::Point2d(pose.part(8).x(), pose.part(8).y())); //#8 chin corner
 				
+	
+				// Camera internals
+				focal_length = temp.cols; // Approximate focal length.
+				center = cv::Point2d(temp.cols/2,temp.rows/2);
+				camera_matrix = (cv::Mat_<double>(3,3) << focal_length, 0, center.x, 0 , focal_length, center.y, 0, 0, 1);
+				dist_coeffs = cv::Mat::zeros(4,1,cv::DataType<double>::type); // Assuming no lens distortion
+
+				// Solve for pose, account for multiple faces
+				if (i == 0) cv::solvePnP(model_points, image_points, camera_matrix, dist_coeffs, rotation_vector, translation_vector);
 				
-                // Camera internals
-                double focal_length = temp.cols; // Approximate focal length.
-                cv::Point2d center = cv::Point2d(temp.cols/2,temp.rows/2);
-                cv::Mat camera_matrix = (cv::Mat_<double>(3,3) << focal_length, 0, center.x, 0 , focal_length, center.y, 0, 0, 1);
-                cv::Mat dist_coeffs = cv::Mat::zeros(4,1,cv::DataType<double>::type); // Assuming no lens distortion
+				else {
+					
+				cout << i <<endl;
+					cv::solvePnP(model_points, image_points, camera_matrix, dist_coeffs, rotation_vector_temp, translation_vector_temp);		
+					//Only record closest face in main variable
+					if(translation_vector_temp(2)>translation_vector(2)){
+						translation_vector = translation_vector_temp;
+						rotation_vector = rotation_vector_temp;
+					}
+				}
+				
+				for(int i=0; i < image_points.size(); i++) {
+				circle(temp, image_points[i], 3, cv::Scalar(0,0,255), -1);
+				}
 
-                // Output rotation and translation
-                cv::Mat_<double> rotation_vector; // Rotation in axis-angle form
-                cv::Mat_<double> translation_vector;
-     
-                // Solve for pose
-                cv::solvePnP(model_points, image_points, camera_matrix, dist_coeffs, rotation_vector, translation_vector);
+                // You get the idea, you can get all the face part locations if
+                // you want them.  Here we just store them in shapes so we can
+                // put them on the screen.
+                
+                shapes.push_back(pose);
+             }
+			
+			
 
 
-				/*
-				// Project a 3D point (0, 0, 1000.0) onto the image plane.
-				// We use this to draw a line sticking out of the nose
+			/*
+			// Project a 3D point (0, 0, 1000.0) onto the image plane.
+			// We use this to draw a line sticking out of the nose
 
 
-				std::vector<cv::Point3d> nose_end_point3D;
-				std::vector<cv::Point2d> nose_end_point2D;
-				nose_end_point3D.push_back(cv::Point3d(0,0,100.0));
-				projectPoints(nose_end_point3D, rotateAve, transAve, camera_matrix, dist_coeffs, nose_end_point2D);
-				*/
-
+			std::vector<cv::Point3d> nose_end_point3D;
+			std::vector<cv::Point2d> nose_end_point2D;
+			nose_end_point3D.push_back(cv::Point3d(0,0,100.0));
+			projectPoints(nose_end_point3D, rotateAve, transAve, camera_matrix, dist_coeffs, nose_end_point2D);
+			*/
+			if(faces.size()>0){
 				//reproject
 				cv::projectPoints(reprojectsrc, rotation_vector, translation_vector, camera_matrix, dist_coeffs, reprojectdst);
 
@@ -228,9 +263,6 @@ int main(int argc, char **argv)
 				cv::line(temp, reprojectdst[2], reprojectdst[6], cv::Scalar(0, 0, 255));
 				cv::line(temp, reprojectdst[3], reprojectdst[7], cv::Scalar(0, 0, 255));
 
-				for(int i=0; i < image_points.size(); i++) {
-				circle(temp, image_points[i], 3, cv::Scalar(0,0,255), -1);
-				}
 
 				//cv::line(temp,image_points[0], nose_end_point2D[0], cv::Scalar(255,0,0), 2);
 				cout << "Translation Vector" << endl << translation_vector << endl;
@@ -256,30 +288,18 @@ int main(int argc, char **argv)
 				if (ros::ok()) {
 					rosMsg.header.stamp = ros::Time::now();
 					rosMsg.header.frame_id = "/face_pos";
-					rosMsg.trans_x = translation_vector(0)*X_SCALE+X_DISPLACE;
+					rosMsg.trans_x = 0*X_SCALE+X_DISPLACE;
 					rosMsg.trans_y = translation_vector(1)*Y_SCALE+Y_DISPLACE;
 					rosMsg.trans_z = translation_vector(2)*Z_SCALE+Z_DISPLACE;
-					rosMsg.rot_x = rotation_vector(0);
-					rosMsg.rot_y = rotation_vector(1)*-1;
-					rosMsg.rot_z = rotation_vector(2)*-1;
+					rosMsg.rot_x = rotation_vector(0)*ROLL_SCALE;
+					rosMsg.rot_y = 0;
+					rosMsg.rot_z = 0;
 
 					facePose_pub.publish(rosMsg);
 					ros::spinOnce();
 					loop_rate.sleep();
 				}
-     
-                // You get the idea, you can get all the face part locations if
-                // you want them.  Here we just store them in shapes so we can
-                // put them on the screen.
-                
-                shapes.push_back(pose);
-             }
-             
-
-            //cout << "Rotation Vector " << endl << rotation_vector << endl;
-            //cout << "Translation Vector" << endl << translation_vector << endl;
-
-            // Display it all on the screen
+			}
 
             win.clear_overlay();
             win.set_image(cimg);

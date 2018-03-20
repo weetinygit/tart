@@ -1,0 +1,13 @@
+[01m[K/home/weety/tart5/src/path_planner/src/path_planner_2.cpp:31:35:[m[K [01;31m[Kerror: [m[K‘[01m[Kint16_t[m[K’ in namespace ‘[01m[Kstd_msgs[m[K’ does not name a type
+ void modeCallback(const std_msgs::int16_t::ConstPtr& msg)
+[01;32m[K                                   ^[m[K
+[01m[K/home/weety/tart5/src/path_planner/src/path_planner_2.cpp:31:52:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K&[m[K’ token
+ void modeCallback(const std_msgs::int16_t::ConstPtr& msg)
+[01;32m[K                                                    ^[m[K
+[01m[K/home/weety/tart5/src/path_planner/src/path_planner_2.cpp:31:52:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K&[m[K’ token
+[01m[K/home/weety/tart5/src/path_planner/src/path_planner_2.cpp:31:54:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[Kmsg[m[K’
+ void modeCallback(const std_msgs::int16_t::ConstPtr& msg)
+[01;32m[K                                                      ^[m[K
+make[2]: *** [CMakeFiles/path_planner_2.dir/src/path_planner_2.cpp.o] Error 1
+make[1]: *** [CMakeFiles/path_planner_2.dir/all] Error 2
+make: *** [all] Error 2

@@ -1,0 +1,9 @@
+controller_list:
+  - name: fake_manipulator_controller
+    joints:
+      - motor_1
+      - motor_2
+      - motor_3
+      - dummy_joint
+      - servo_1
+      - servo_2
