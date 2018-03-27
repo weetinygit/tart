@@ -16,8 +16,8 @@
 #define MOTOR_2_ZERO 92
 #define MOTOR_3_ZERO 86
 #define TSERVO_ZERO 0
-#define LSERVO_ZERO 55
-#define RSERVO_ZERO 0
+#define LSERVO_ZERO 90
+#define RSERVO_ZERO 90
 
 #define MOTOR_1_POLARITY 1
 #define MOTOR_2_POLARITY 1
@@ -157,8 +157,8 @@ void loop()
    pos = MOTOR_3_ZERO+((int)motor[2]*MOTOR_3_POLARITY-(int)motor[1]*MOTOR_2_POLARITY);
    if(pos>=MOTOR_3_LOWER && pos<=MOTOR_3_UPPER) motor3.write(pos);
    TServo.write(90+(int)motor[5]*TSERVO_POLARITY);
-   LServo.write(LSERVO_ZERO+(int)motor[5]*LSERVO_POLARITY-(int)motor[2]*MOTOR_3_POLARITY);
-   RServo.write(RSERVO_ZERO-(int)motor[5]*RSERVO_POLARITY);
+   LServo.write(90+(int)motor[5]*LSERVO_POLARITY);
+   RServo.write(90-(int)motor[5]*RSERVO_POLARITY);
    delay(20);
    
 }

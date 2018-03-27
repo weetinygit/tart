@@ -1,0 +1,29 @@
+[  0%] Built target std_msgs_generate_messages_cpp
+[  0%] Built target std_msgs_generate_messages_lisp
+[  0%] Built target std_msgs_generate_messages_nodejs
+[  0%] Built target std_msgs_generate_messages_py
+[  0%] Built target _faceReg_generate_messages_check_deps_facePose
+[  0%] Built target std_msgs_generate_messages_eus
+[  2%] Built target faceReg_generate_messages_cpp
+[  2%] Built target faceReg_generate_messages_lisp
+[  5%] Built target faceReg_generate_messages_py
+[  8%] Built target faceReg_generate_messages_eus
+[  9%] Built target faceReg_generate_messages_nodejs
+[35m[1mScanning dependencies of target face_tablet_tf_broadcaster_2[0m
+[ 12%] Built target facetrack_sim
+[ 14%] Built target face_tablet_tf_broadcaster
+[ 16%] [32mBuilding CXX object CMakeFiles/face_tablet_tf_broadcaster_2.dir/src/face_tablet_tf_broadcaster_2.cpp.o[0m
+[ 18%] Built target facetrack_sim2
+[ 18%] Built target faceReg_generate_messages
+[ 93%] Built target dlib
+[ 95%] Built target facePoseRecognition
+[ 98%] Built target faceMoveServo
+[01m[K/home/weety/tart5/src/faceReg/src/face_tablet_tf_broadcaster_2.cpp:16:1:[m[K [01;31m[Kerror: [m[K‘[01m[Kvisualization_msgs[m[K’ does not name a type
+ visualization_msgs::Marker marker;
+[01;32m[K ^[m[K
+CMakeFiles/face_tablet_tf_broadcaster_2.dir/build.make:62: recipe for target 'CMakeFiles/face_tablet_tf_broadcaster_2.dir/src/face_tablet_tf_broadcaster_2.cpp.o' failed
+make[2]: *** [CMakeFiles/face_tablet_tf_broadcaster_2.dir/src/face_tablet_tf_broadcaster_2.cpp.o] Error 1
+CMakeFiles/Makefile2:67: recipe for target 'CMakeFiles/face_tablet_tf_broadcaster_2.dir/all' failed
+make[1]: *** [CMakeFiles/face_tablet_tf_broadcaster_2.dir/all] Error 2
+Makefile:127: recipe for target 'all' failed
+make: *** [all] Error 2

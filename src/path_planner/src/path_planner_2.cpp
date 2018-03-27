@@ -27,7 +27,8 @@ int completeStatus = 0;
 void modeCallback(const std_msgs::Int16::ConstPtr& msg)
 {
 	ROS_INFO("Mode received");
-	mode = msg->data;
+	//mode = msg->data;
+	mode = 2;
 	completeStatus = 1;
 }
 
@@ -55,7 +56,7 @@ int main(int argc, char **argv) {
 	group.setPlannerId("RRTConnectkConfigDefault");
 	//Write directly to /joint_states topic
 	ros::Publisher joint_states_pub = nh.advertise<sensor_msgs::JointState>("/move_group/fake_controller_joint_states", 1000);
-	ros::Rate loop_rate(20);
+	ros::Rate loop_rate(10);
 	sensor_msgs::JointState joint_states_msg;
 
 	//Initialize variables needed for pose and path planning
@@ -116,8 +117,6 @@ int main(int argc, char **argv) {
 		  ROS_ERROR("%s",ex.what());
 			}
 		}
-		  
-		loop_rate.sleep();
 		ROS_INFO_STREAM("Target pose: " << group.getPoseTarget());
 
 		group.setGoalTolerance(0.005);
@@ -135,17 +134,20 @@ int main(int argc, char **argv) {
 		joint_states_msg.name = my_plan.trajectory_.joint_trajectory.joint_names; 
 
 		int a = 0;
-		try{
-			while(my_plan.trajectory_.joint_trajectory.points[a].positions[0] != -1000.0f){
-				joint_states_msg.position = my_plan.trajectory_.joint_trajectory.points[a].positions;
-				joint_states_pub.publish(joint_states_msg);
-				a = a+1;
-				ROS_INFO("a: %d",a);
-				loop_rate.sleep();
-				ROS_INFO("Conditional value: %f", my_plan.trajectory_.joint_trajectory.points[a].positions[0]);
-				} 
-		 }catch(int e){
-		 }
+		  if(success){
+			try{
+
+				//ROS_INFO("Conditional value: %f", my_plan.trajectory_.joint_trajectory.points[a].positions[0]);
+				ROS_INFO("New path found");
+				while(my_plan.trajectory_.joint_trajectory.points[a].positions[0] != -1000.0f){
+					joint_states_msg.position = my_plan.trajectory_.joint_trajectory.points[a].positions;
+					joint_states_pub.publish(joint_states_msg);
+					a = a+1;
+					loop_rate.sleep();
+					} 
+			 }catch(int e){
+			 }
+		  } else ROS_INFO("New path not found");
 
 		}
 	}

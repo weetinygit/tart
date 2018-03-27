@@ -1,0 +1,12 @@
+[01m[K/home/weety/tart5/src/faceReg/src/face_tablet_tf_broadcaster_2.cpp:19:1:[m[K [01;31m[Kerror: [m[K‘[01m[Ktransform1[m[K’ does not name a type
+ transform1.setOrigin( tf::Vector3(0, 0, 0));
+[01;32m[K ^[m[K
+[01m[K/home/weety/tart5/src/faceReg/src/face_tablet_tf_broadcaster_2.cpp:20:1:[m[K [01;31m[Kerror: [m[K‘[01m[Kqtr_trans1[m[K’ does not name a type
+ qtr_trans1.setRPY(0, 0, 0);
+[01;32m[K ^[m[K
+[01m[K/home/weety/tart5/src/faceReg/src/face_tablet_tf_broadcaster_2.cpp:21:1:[m[K [01;31m[Kerror: [m[K‘[01m[Ktransform1[m[K’ does not name a type
+ transform1.setRotation(qtr_trans1);
+[01;32m[K ^[m[K
+make[2]: *** [CMakeFiles/face_tablet_tf_broadcaster_2.dir/src/face_tablet_tf_broadcaster_2.cpp.o] Error 1
+make[1]: *** [CMakeFiles/face_tablet_tf_broadcaster_2.dir/all] Error 2
+make: *** [all] Error 2

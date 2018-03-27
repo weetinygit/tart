@@ -37,6 +37,7 @@
 #include <ros/ros.h>
 #include <std_msgs/String.h>
 #include <faceReg/facePose.h>
+#include<math.h>
 
 #include <sstream>
 
@@ -49,12 +50,20 @@
 #define Y_DISPLACE -0
 #define Z_DISPLACE 0
 
-#define ROLL_SCALE 1;
-#define PITCH_SCALE -1;
-#define YAW_SCALE -1;
+#define ROLL_SCALE 1
+#define PITCH_SCALE -1
+#define YAW_SCALE -1
+
+#define SUDDENCHANGETOLERANCE 20
+#define NOISECOUNTLIMIT 5
 
 using namespace dlib;
 using namespace std;
+
+//Check difference
+double measureTranslationChange(cv::Mat_<double> v1, cv::Mat_<double> v2){
+	return sqrt((v1(0)-v2(0))*(v1(0)-v2(0))+(v1(1)-v2(1))*(v1(1)-v2(1))+(v1(2)-v2(2))*(v1(2)-v2(2)));
+}
 
 int main(int argc, char **argv)
 {
@@ -93,7 +102,8 @@ int main(int argc, char **argv)
 	
 	// Output rotation and translation
 	cv::Mat_<double> rotation_vector, rotation_vector_temp; // Rotation in axis-angle form
-	cv::Mat_<double> translation_vector, translation_vector_temp;
+	cv::Mat_<double> translation_vector, translation_vector_temp, translation_vector_prev(3,1,0.0f);
+	int noiseDataCount = NOISECOUNTLIMIT; //Variable to check if data is noise
 	
 	//Camera parmeters
 	double focal_length; // Approximate focal length.
@@ -114,7 +124,7 @@ int main(int argc, char **argv)
     ros::init(argc, argv, "talker");    //Initialize ROS
     ros::NodeHandle n;
     ros::Publisher facePose_pub = n.advertise<faceReg::facePose>("facePose", 10);
-    ros::Rate loop_rate(10);
+    ros::Rate loop_rate(20);
     faceReg::facePose rosMsg;
 	
     
@@ -132,7 +142,7 @@ int main(int argc, char **argv)
     
     try
     {
-        cv::VideoCapture cap(1);
+        cv::VideoCapture cap(0);
         if (!cap.isOpened())
         {
             cerr << "Unable to connect to camera" << endl;
@@ -286,20 +296,26 @@ int main(int argc, char **argv)
 
 
 				if (ros::ok()) {
-					rosMsg.header.stamp = ros::Time::now();
-					rosMsg.header.frame_id = "/face_pos";
-					rosMsg.trans_x = 0*X_SCALE+X_DISPLACE;
-					rosMsg.trans_y = translation_vector(1)*Y_SCALE+Y_DISPLACE;
-					rosMsg.trans_z = translation_vector(2)*Z_SCALE+Z_DISPLACE;
-					rosMsg.rot_x = rotation_vector(0)*ROLL_SCALE;
-					rosMsg.rot_y = 0;
-					rosMsg.rot_z = 0;
+					if ( (measureTranslationChange(translation_vector, translation_vector_prev) < SUDDENCHANGETOLERANCE)||(noiseDataCount>NOISECOUNTLIMIT)){
+						rosMsg.header.stamp = ros::Time::now();
+						rosMsg.header.frame_id = "/face_pos";		
 
-					facePose_pub.publish(rosMsg);
+						rosMsg.trans_x = translation_vector(0)*X_SCALE+X_DISPLACE;
+						rosMsg.trans_y = translation_vector(1)*Y_SCALE+Y_DISPLACE;
+						rosMsg.trans_z = translation_vector(2)*Z_SCALE+Z_DISPLACE;
+						rosMsg.rot_x = rotation_vector(0)*ROLL_SCALE;
+						rosMsg.rot_y = 0*PITCH_SCALE;
+						rosMsg.rot_z = 0;
+						facePose_pub.publish(rosMsg);
+						noiseDataCount = 0;  //Reset count to 0 upon successful publishing
+						translation_vector_prev = translation_vector;  //Record sent pose upon successful publishing
+					} else noiseDataCount++;
 					ros::spinOnce();
 					loop_rate.sleep();
 				}
 			}
+			
+			
 
             win.clear_overlay();
             win.set_image(cimg);

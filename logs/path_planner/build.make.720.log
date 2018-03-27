@@ -1,8 +1,0 @@
-[35m[1mScanning dependencies of target path_planner_2[0m
-[ 16%] [32m[1mLinking CXX executable /home/weety/tart5/devel/.private/path_planner/lib/path_planner/arduino_comm[0m
-[ 33%] [32m[1mLinking CXX executable /home/weety/tart5/devel/.private/path_planner/lib/path_planner/path_planner[0m
-[ 50%] [32mBuilding CXX object CMakeFiles/path_planner_2.dir/src/path_planner_2.cpp.o[0m
-[ 66%] Built target arduino_comm
-[ 83%] Built target path_planner
-[100%] [32m[1mLinking CXX executable /home/weety/tart5/devel/.private/path_planner/lib/path_planner/path_planner_2[0m
-[100%] Built target path_planner_2

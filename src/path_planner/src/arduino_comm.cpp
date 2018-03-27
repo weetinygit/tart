@@ -21,7 +21,7 @@ void actionNodeCallback(const sensor_msgs::JointState& msg)
 	}
 	
 	//Transmit loop variable
-	ROS_INFO("I heard: [%f]", joint_states_msg[0].data);
+	//ROS_INFO("I heard: [%f]", joint_states_msg[0].data);
 	newmsg_status = 1;
 }
 
@@ -43,7 +43,7 @@ int main(int argc, char **argv) {
 		  for(int i=0; i<6; i++){
 			  motor_pub[i].publish(joint_states_msg[i]);
 		  }
-		  ROS_INFO("I sent: [%f]", joint_states_msg[0].data);
+		  //ROS_INFO("I sent: [%f]", joint_states_msg[0].data);
 		  newmsg_status=0;
 	  }
   }

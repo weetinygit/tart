@@ -64,16 +64,13 @@
    </node>
 	
 	
-  <node name="arduino_comm" pkg="path_planner" type="arduino_comm"/>
-  <node name="unity_talker" pkg="tart_python" type="mqtt"/>
+  <node name="arduino_comm" pkg="path_planner" type="arduino_comm" output="screen"/>
+  <node name="unity_talker" pkg="tart_python" type="mqtt" output="screen"/>
 	
-	
-  <node name="face_tablet_tf_broadcaster" pkg="faceReg" type="face_tablet_tf_broadcaster_2"/>
-  <node name="marker_broadcaster" pkg="faceReg" type="facetrack_sim2"/>
+  <node name="path_planner" pkg="path_planner" type="path_planner_2" output="screen"/>
+  <node name="face_tablet_tf_broadcaster" pkg="faceReg" type="face_tablet_tf_broadcaster_2" output="log"/>
 
-  <node name="path_planner" pkg="path_planner" type="path_planner_2"/>
-	<!--
-  <node name="camera_processing" pkg="faceReg" type="facePoseRecognition"/>-->
+  <node name="camera_processing" pkg="faceReg" type="facePoseRecognition" cwd="node" output="log"/>
 	
 
 </launch>

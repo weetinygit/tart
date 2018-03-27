@@ -16,7 +16,7 @@
 #define MOTOR_2_ZERO 92
 #define MOTOR_3_ZERO 86
 #define TSERVO_OFFSET 0
-#define LSERVO_ZERO 55
+#define LSERVO_ZERO 0
 #define RSERVO_ZERO 0
 
 #define MOTOR_1_POLARITY 1
@@ -81,8 +81,8 @@ void setup()
   motor1.write(MOTOR_1_ZERO);
   motor2.write(MOTOR_2_ZERO);
   motor3.write(MOTOR_3_ZERO);
-  LServo.write(LSERVO_ZERO);
-  RServo.write(RSERVO_ZERO);
+  LServo.write(90);
+  RServo.write(90);
   TServo.write(90+TSERVO_OFFSET);
 
   printChoices();
@@ -151,7 +151,7 @@ void loop()
     // Move L/R Servo motors
     else if(choice == 4){
       pos4 = readAngle();
-      LServo.write(90+pos4);
+      LServo.write(pos4);
       RServo.write(180-pos4);
       Serial.print("Writing to servo LR value of ");
       Serial.println(pos4);

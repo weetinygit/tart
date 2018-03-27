@@ -1,0 +1,10 @@
+[01m[K/home/weety/tart5/src/faceReg/src/face_tablet_tf_broadcaster_2.cpp:16:1:[m[K [01;31m[Kerror: [m[K‘[01m[Kvisualization_msgs[m[K’ does not name a type
+ visualization_msgs::Marker marker;
+[01;32m[K ^[m[K
+[01m[K/home/weety/tart5/src/faceReg/src/face_tablet_tf_broadcaster_2.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/weety/tart5/src/faceReg/src/face_tablet_tf_broadcaster_2.cpp:44:29:[m[K [01;31m[Kerror: [m[K‘[01m[Knh[m[K’ was not declared in this scope
+  ros::Subscriber mode_sub = nh.subscribe("tartMode", 1000, modeCallback);
+[01;32m[K                             ^[m[K
+make[2]: *** [CMakeFiles/face_tablet_tf_broadcaster_2.dir/src/face_tablet_tf_broadcaster_2.cpp.o] Error 1
+make[1]: *** [CMakeFiles/face_tablet_tf_broadcaster_2.dir/all] Error 2
+make: *** [all] Error 2
