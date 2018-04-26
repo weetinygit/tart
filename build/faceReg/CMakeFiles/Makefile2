@@ -66,7 +66,7 @@ CMAKE_BINARY_DIR = /home/weety/tart5/build/faceReg
 CMakeFiles/face_tablet_tf_broadcaster_2.dir/all: CMakeFiles/faceReg_generate_messages_cpp.dir/all
 	$(MAKE) -f CMakeFiles/face_tablet_tf_broadcaster_2.dir/build.make CMakeFiles/face_tablet_tf_broadcaster_2.dir/depend
 	$(MAKE) -f CMakeFiles/face_tablet_tf_broadcaster_2.dir/build.make CMakeFiles/face_tablet_tf_broadcaster_2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/weety/tart5/build/faceReg/CMakeFiles --progress-num=69,70 "Built target face_tablet_tf_broadcaster_2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/weety/tart5/build/faceReg/CMakeFiles --progress-num=67,68 "Built target face_tablet_tf_broadcaster_2"
 .PHONY : CMakeFiles/face_tablet_tf_broadcaster_2.dir/all
 
 # Include target in all.
@@ -103,7 +103,7 @@ clean: CMakeFiles/face_tablet_tf_broadcaster_2.dir/clean
 CMakeFiles/face_tablet_tf_broadcaster.dir/all: CMakeFiles/faceReg_generate_messages_cpp.dir/all
 	$(MAKE) -f CMakeFiles/face_tablet_tf_broadcaster.dir/build.make CMakeFiles/face_tablet_tf_broadcaster.dir/depend
 	$(MAKE) -f CMakeFiles/face_tablet_tf_broadcaster.dir/build.make CMakeFiles/face_tablet_tf_broadcaster.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/weety/tart5/build/faceReg/CMakeFiles --progress-num=67,68 "Built target face_tablet_tf_broadcaster"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/weety/tart5/build/faceReg/CMakeFiles --progress-num=65,66 "Built target face_tablet_tf_broadcaster"
 .PHONY : CMakeFiles/face_tablet_tf_broadcaster.dir/all
 
 # Include target in all.
@@ -140,7 +140,7 @@ clean: CMakeFiles/face_tablet_tf_broadcaster.dir/clean
 CMakeFiles/facetrack_sim2.dir/all: CMakeFiles/faceReg_generate_messages_cpp.dir/all
 	$(MAKE) -f CMakeFiles/facetrack_sim2.dir/build.make CMakeFiles/facetrack_sim2.dir/depend
 	$(MAKE) -f CMakeFiles/facetrack_sim2.dir/build.make CMakeFiles/facetrack_sim2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/weety/tart5/build/faceReg/CMakeFiles --progress-num=73,74 "Built target facetrack_sim2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/weety/tart5/build/faceReg/CMakeFiles --progress-num=71,72 "Built target facetrack_sim2"
 .PHONY : CMakeFiles/facetrack_sim2.dir/all
 
 # Include target in all.
@@ -178,7 +178,7 @@ CMakeFiles/facePoseRecognition.dir/all: CMakeFiles/faceReg_generate_messages_cpp
 CMakeFiles/facePoseRecognition.dir/all: dlib_build/CMakeFiles/dlib.dir/all
 	$(MAKE) -f CMakeFiles/facePoseRecognition.dir/build.make CMakeFiles/facePoseRecognition.dir/depend
 	$(MAKE) -f CMakeFiles/facePoseRecognition.dir/build.make CMakeFiles/facePoseRecognition.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/weety/tart5/build/faceReg/CMakeFiles --progress-num=58,59 "Built target facePoseRecognition"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/weety/tart5/build/faceReg/CMakeFiles --progress-num=56,57 "Built target facePoseRecognition"
 .PHONY : CMakeFiles/facePoseRecognition.dir/all
 
 # Include target in all.
@@ -280,7 +280,7 @@ CMakeFiles/faceReg_generate_messages_py.dir/all: CMakeFiles/_faceReg_generate_me
 CMakeFiles/faceReg_generate_messages_py.dir/all: CMakeFiles/std_msgs_generate_messages_py.dir/all
 	$(MAKE) -f CMakeFiles/faceReg_generate_messages_py.dir/build.make CMakeFiles/faceReg_generate_messages_py.dir/depend
 	$(MAKE) -f CMakeFiles/faceReg_generate_messages_py.dir/build.make CMakeFiles/faceReg_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/weety/tart5/build/faceReg/CMakeFiles --progress-num=65,66 "Built target faceReg_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/weety/tart5/build/faceReg/CMakeFiles --progress-num=63,64 "Built target faceReg_generate_messages_py"
 .PHONY : CMakeFiles/faceReg_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
@@ -313,7 +313,7 @@ CMakeFiles/faceReg_generate_messages_nodejs.dir/all: CMakeFiles/_faceReg_generat
 CMakeFiles/faceReg_generate_messages_nodejs.dir/all: CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
 	$(MAKE) -f CMakeFiles/faceReg_generate_messages_nodejs.dir/build.make CMakeFiles/faceReg_generate_messages_nodejs.dir/depend
 	$(MAKE) -f CMakeFiles/faceReg_generate_messages_nodejs.dir/build.make CMakeFiles/faceReg_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/weety/tart5/build/faceReg/CMakeFiles --progress-num=64 "Built target faceReg_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/weety/tart5/build/faceReg/CMakeFiles --progress-num=62 "Built target faceReg_generate_messages_nodejs"
 .PHONY : CMakeFiles/faceReg_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
@@ -346,7 +346,7 @@ CMakeFiles/faceReg_generate_messages_eus.dir/all: CMakeFiles/_faceReg_generate_m
 CMakeFiles/faceReg_generate_messages_eus.dir/all: CMakeFiles/std_msgs_generate_messages_eus.dir/all
 	$(MAKE) -f CMakeFiles/faceReg_generate_messages_eus.dir/build.make CMakeFiles/faceReg_generate_messages_eus.dir/depend
 	$(MAKE) -f CMakeFiles/faceReg_generate_messages_eus.dir/build.make CMakeFiles/faceReg_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/weety/tart5/build/faceReg/CMakeFiles --progress-num=61,62 "Built target faceReg_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/weety/tart5/build/faceReg/CMakeFiles --progress-num=59,60 "Built target faceReg_generate_messages_eus"
 .PHONY : CMakeFiles/faceReg_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
@@ -676,7 +676,7 @@ CMakeFiles/faceReg_generate_messages_cpp.dir/all: CMakeFiles/_faceReg_generate_m
 CMakeFiles/faceReg_generate_messages_cpp.dir/all: CMakeFiles/std_msgs_generate_messages_cpp.dir/all
 	$(MAKE) -f CMakeFiles/faceReg_generate_messages_cpp.dir/build.make CMakeFiles/faceReg_generate_messages_cpp.dir/depend
 	$(MAKE) -f CMakeFiles/faceReg_generate_messages_cpp.dir/build.make CMakeFiles/faceReg_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/weety/tart5/build/faceReg/CMakeFiles --progress-num=60 "Built target faceReg_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/weety/tart5/build/faceReg/CMakeFiles --progress-num=58 "Built target faceReg_generate_messages_cpp"
 .PHONY : CMakeFiles/faceReg_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -932,7 +932,7 @@ clean: CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
 CMakeFiles/facetrack_sim.dir/all: CMakeFiles/faceReg_generate_messages_cpp.dir/all
 	$(MAKE) -f CMakeFiles/facetrack_sim.dir/build.make CMakeFiles/facetrack_sim.dir/depend
 	$(MAKE) -f CMakeFiles/facetrack_sim.dir/build.make CMakeFiles/facetrack_sim.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/weety/tart5/build/faceReg/CMakeFiles --progress-num=71,72 "Built target facetrack_sim"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/weety/tart5/build/faceReg/CMakeFiles --progress-num=69,70 "Built target facetrack_sim"
 .PHONY : CMakeFiles/facetrack_sim.dir/all
 
 # Include target in all.
@@ -1311,44 +1311,6 @@ CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean:
 
 # clean rule for target.
 clean: CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/faceMoveServo.dir
-
-# All Build rule for target.
-CMakeFiles/faceMoveServo.dir/all: CMakeFiles/faceReg_generate_messages_cpp.dir/all
-CMakeFiles/faceMoveServo.dir/all: dlib_build/CMakeFiles/dlib.dir/all
-	$(MAKE) -f CMakeFiles/faceMoveServo.dir/build.make CMakeFiles/faceMoveServo.dir/depend
-	$(MAKE) -f CMakeFiles/faceMoveServo.dir/build.make CMakeFiles/faceMoveServo.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/weety/tart5/build/faceReg/CMakeFiles --progress-num=56,57 "Built target faceMoveServo"
-.PHONY : CMakeFiles/faceMoveServo.dir/all
-
-# Include target in all.
-all: CMakeFiles/faceMoveServo.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/faceMoveServo.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/weety/tart5/build/faceReg/CMakeFiles 58
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/faceMoveServo.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/weety/tart5/build/faceReg/CMakeFiles 0
-.PHONY : CMakeFiles/faceMoveServo.dir/rule
-
-# Convenience name for target.
-faceMoveServo: CMakeFiles/faceMoveServo.dir/rule
-
-.PHONY : faceMoveServo
-
-# clean rule for target.
-CMakeFiles/faceMoveServo.dir/clean:
-	$(MAKE) -f CMakeFiles/faceMoveServo.dir/build.make CMakeFiles/faceMoveServo.dir/clean
-.PHONY : CMakeFiles/faceMoveServo.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/faceMoveServo.dir/clean
 
 .PHONY : clean
 
@@ -1904,7 +1866,7 @@ CMakeFiles/faceReg_generate_messages_lisp.dir/all: CMakeFiles/_faceReg_generate_
 CMakeFiles/faceReg_generate_messages_lisp.dir/all: CMakeFiles/std_msgs_generate_messages_lisp.dir/all
 	$(MAKE) -f CMakeFiles/faceReg_generate_messages_lisp.dir/build.make CMakeFiles/faceReg_generate_messages_lisp.dir/depend
 	$(MAKE) -f CMakeFiles/faceReg_generate_messages_lisp.dir/build.make CMakeFiles/faceReg_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/weety/tart5/build/faceReg/CMakeFiles --progress-num=63 "Built target faceReg_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/weety/tart5/build/faceReg/CMakeFiles --progress-num=61 "Built target faceReg_generate_messages_lisp"
 .PHONY : CMakeFiles/faceReg_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2307,7 +2269,7 @@ gtest/preinstall:
 gtest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f gtest/CMakeFiles/gtest.dir/build.make gtest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f gtest/CMakeFiles/gtest.dir/build.make gtest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/weety/tart5/build/faceReg/CMakeFiles --progress-num=75,76 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/weety/tart5/build/faceReg/CMakeFiles --progress-num=73,74 "Built target gtest"
 .PHONY : gtest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2339,7 +2301,7 @@ clean: gtest/CMakeFiles/gtest.dir/clean
 gtest/CMakeFiles/gtest_main.dir/all: gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/CMakeFiles/gtest_main.dir/build.make gtest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f gtest/CMakeFiles/gtest_main.dir/build.make gtest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/weety/tart5/build/faceReg/CMakeFiles --progress-num=77,78 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/weety/tart5/build/faceReg/CMakeFiles --progress-num=75,76 "Built target gtest_main"
 .PHONY : gtest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.

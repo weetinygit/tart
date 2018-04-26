@@ -22,14 +22,12 @@
     <disable_collisions link1="camera" link2="tablet_bracket_2" reason="Never" />
     <disable_collisions link1="camera" link2="tablet_bracket_3" reason="Never" />
     <disable_collisions link1="dummy_link" link2="main_link_2" reason="Adjacent" />
-    <disable_collisions link1="dummy_link" link2="rotating_plate" reason="Never" />
     <disable_collisions link1="dummy_link" link2="tablet" reason="Never" />
     <disable_collisions link1="dummy_link" link2="tablet_bracket" reason="Adjacent" />
     <disable_collisions link1="dummy_link" link2="tablet_bracket_2" reason="Never" />
     <disable_collisions link1="dummy_link" link2="tablet_bracket_3" reason="Never" />
     <disable_collisions link1="main_link_1" link2="main_link_2" reason="Adjacent" />
     <disable_collisions link1="main_link_1" link2="rotating_plate" reason="Adjacent" />
-    <disable_collisions link1="main_link_2" link2="rotating_plate" reason="Never" />
     <disable_collisions link1="main_link_2" link2="tablet" reason="Never" />
     <disable_collisions link1="main_link_2" link2="tablet_bracket" reason="Never" />
     <disable_collisions link1="main_link_2" link2="tablet_bracket_2" reason="Never" />

@@ -7,24 +7,24 @@
 
 #define MOTOR_1_LOWER 65
 #define MOTOR_1_UPPER 85
-#define MOTOR_2_LOWER 70
-#define MOTOR_2_UPPER 110
-#define MOTOR_3_LOWER 66
-#define MOTOR_3_UPPER 106
+#define MOTOR_2_LOWER 80
+#define MOTOR_2_UPPER 140
+#define MOTOR_3_LOWER 63
+#define MOTOR_3_UPPER 108
 
 #define MOTOR_1_ZERO 90
-#define MOTOR_2_ZERO 92
-#define MOTOR_3_ZERO 86
-#define TSERVO_ZERO 0
+#define MOTOR_2_ZERO 110
+#define MOTOR_3_ZERO 88
+#define TSERVO_ZERO 90
 #define LSERVO_ZERO 90
 #define RSERVO_ZERO 90
 
 #define MOTOR_1_POLARITY 1
 #define MOTOR_2_POLARITY 1
 #define MOTOR_3_POLARITY -1
-#define TSERVO_POLARITY 1
-#define LSERVO_POLARITY 1
-#define RSERVO_POLARITY 1
+#define TSERVO_POLARITY -1
+#define LSERVO_POLARITY -1
+#define RSERVO_POLARITY -1
 
 // Servo motors pins
 #define LSERVO 6// left servo motor
@@ -47,7 +47,8 @@
 //Servo instances
 Servo motor1, motor2, motor3, LServo, RServo, TServo;
 double motor[6] = {0,0,0,0,0,0};
-int pos;
+int targetpos = 0;
+int currentpos[6]={MOTOR_1_ZERO,MOTOR_2_ZERO,MOTOR_3_ZERO,0,TSERVO_ZERO,LSERVO_ZERO};
 
 
 //Ros communication functions
@@ -150,15 +151,35 @@ void loop()
   }
    nh.spinOnce();
    //Move motors to position
-   pos = MOTOR_1_ZERO+(int)motor[0]*MOTOR_1_POLARITY;
-   if(pos>=MOTOR_1_LOWER && pos<=MOTOR_1_UPPER) motor1.write(pos);
-   pos = MOTOR_2_ZERO+(int)motor[1]*MOTOR_2_POLARITY;
-   if(pos>=MOTOR_2_LOWER && pos<=MOTOR_2_UPPER) motor2.write(pos);
-   pos = MOTOR_3_ZERO+((int)motor[2]*MOTOR_3_POLARITY-(int)motor[1]*MOTOR_2_POLARITY);
-   if(pos>=MOTOR_3_LOWER && pos<=MOTOR_3_UPPER) motor3.write(pos);
-   TServo.write(90+(int)motor[5]*TSERVO_POLARITY);
-   LServo.write(90+(int)motor[5]*LSERVO_POLARITY);
-   RServo.write(90-(int)motor[5]*RSERVO_POLARITY);
-   delay(20);
+   targetpos = MOTOR_1_ZERO+(int)motor[0]*MOTOR_1_POLARITY;
+   if(targetpos>=MOTOR_1_LOWER && targetpos<=MOTOR_1_UPPER) {
+     if(targetpos<currentpos[0]) currentpos[0]--;
+     else if (targetpos>currentpos[0]) currentpos[0]++;
+     motor1.write(currentpos[0]);
+   }
+   targetpos = MOTOR_2_ZERO+(int)motor[1]*MOTOR_2_POLARITY;
+   if(targetpos>=MOTOR_2_LOWER && targetpos<=MOTOR_2_UPPER) {
+     if(targetpos<currentpos[1]) currentpos[1]--;
+     else if (targetpos>currentpos[1]) currentpos[1]++;
+     motor2.write(currentpos[1]);
+   }
+   targetpos = MOTOR_3_ZERO+((int)motor[2]*MOTOR_3_POLARITY-(int)motor[1]*MOTOR_2_POLARITY);
+   if(targetpos>=MOTOR_3_LOWER && targetpos<=MOTOR_3_UPPER) {
+     if(targetpos<currentpos[2]) currentpos[2]--;
+     else if (targetpos>currentpos[2]) currentpos[2]++;
+     motor3.write(currentpos[2]);
+   }
+   
+   targetpos=TSERVO_ZERO+(int)motor[4]*TSERVO_POLARITY;
+   if(targetpos<currentpos[4]) currentpos[4]--;
+   else if (targetpos>currentpos[4]) currentpos[4]++;
+   TServo.write(targetpos);
+   
+   targetpos=(int)motor[5]*LSERVO_POLARITY;
+   if(targetpos<currentpos[5]) currentpos[5]--;
+   else if (targetpos>currentpos[5]) currentpos[5]++;
+   LServo.write(90+targetpos);
+   RServo.write(90-targetpos);
+   delay(10);
    
 }

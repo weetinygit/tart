@@ -93,10 +93,7 @@ else()
       add_executable(facePoseRecognition src/facePoseRecognition.cpp)
       target_link_libraries(facePoseRecognition dlib::dlib ${OpenCV_LIBS} ${catkin_LIBRARIES})
       add_dependencies(facePoseRecognition faceReg_generate_messages_cpp)
-      add_executable(faceMoveServo src/faceMoveServo.cpp)
-      target_link_libraries(faceMoveServo dlib::dlib ${OpenCV_LIBS} ${catkin_LIBRARIES}) 
-      add_dependencies(faceMoveServo faceReg_generate_messages_cpp)
-	  
+
    else()
       message("OpenCV not found, so we won't build the webcam_face_pose_ex example.")
    endif()

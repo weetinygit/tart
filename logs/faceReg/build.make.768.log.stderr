@@ -1,0 +1,10 @@
+make[2]: *** No rule to make target '/home/weety/tart5/src/faceReg/src/calibration.cpp', needed by 'CMakeFiles/calibration.dir/src/calibration.cpp.o'.  Stop.
+make[1]: *** [CMakeFiles/calibration.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/weety/tart5/src/faceReg/src/facePoseRecognition.cpp:223:70:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before numeric constant
+     camera_matrix = (cv::Mat_<double>(3,3) << 3.7679114264332711e+03 0. 320. 0. 3.7679114264332711e+03 240. 0. 0. 1.);
+[01;32m[K                                                                      ^[m[K
+make[2]: *** [CMakeFiles/facePoseRecognition.dir/src/facePoseRecognition.cpp.o] Error 1
+make[1]: *** [CMakeFiles/facePoseRecognition.dir/all] Error 2
+make: *** [all] Error 2

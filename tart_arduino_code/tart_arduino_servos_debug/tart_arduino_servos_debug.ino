@@ -7,15 +7,15 @@
 
 #define MOTOR_1_LOWER 65
 #define MOTOR_1_UPPER 85
-#define MOTOR_2_LOWER 70
-#define MOTOR_2_UPPER 110
-#define MOTOR_3_LOWER 66
-#define MOTOR_3_UPPER 106
+#define MOTOR_2_LOWER 80
+#define MOTOR_2_UPPER 140
+#define MOTOR_3_LOWER 63
+#define MOTOR_3_UPPER 108
 
 #define MOTOR_1_ZERO 90
-#define MOTOR_2_ZERO 92
-#define MOTOR_3_ZERO 86
-#define TSERVO_OFFSET 0
+#define MOTOR_2_ZERO 110
+#define MOTOR_3_ZERO 88
+#define TSERVO_OFFSET -17
 #define LSERVO_ZERO 0
 #define RSERVO_ZERO 0
 

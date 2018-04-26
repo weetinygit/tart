@@ -42,7 +42,7 @@
 #include <sstream>
 
 
-#define X_SCALE -0.01
+#define X_SCALE 0.01
 #define Y_SCALE 0.01
 #define Z_SCALE 0.01
 
@@ -69,7 +69,6 @@ int main(int argc, char **argv)
 {
     //3D model points used for pose estimation
     std::vector<cv::Point3d> model_points;
-    //model_points.push_back(cv::Point3d(0.0f, 0.0f, 0.0f));               // Nose tip
     model_points.push_back(cv::Point3d(6.825897, 6.760612, 4.402142));     //#33 left brow left corner
     model_points.push_back(cv::Point3d(1.330353, 7.122144, 6.903745));     //#29 left brow right corner
     model_points.push_back(cv::Point3d(-1.330353, 7.122144, 6.903745));    //#34 right brow left corner
@@ -95,7 +94,9 @@ int main(int argc, char **argv)
     reprojectsrc.push_back(cv::Point3d(-10.0, 10.0, 0.0));
     reprojectsrc.push_back(cv::Point3d(-10.0, -10.0, 0.0));
     reprojectsrc.push_back(cv::Point3d(-10.0, -10.0, 20.0));
-
+	
+	/*NECESSARY INITIALIZATIONS*/
+	
     //reprojected 2D points
     std::vector<cv::Point2d> reprojectdst;
 	reprojectdst.resize(8);
@@ -127,7 +128,6 @@ int main(int argc, char **argv)
     ros::Rate loop_rate(20);
     faceReg::facePose rosMsg;
 	
-    
 	cv::Mat rotation_mat;                           //3 x 3 R
     cv::Mat pose_mat = cv::Mat(3, 4, CV_64FC1);     //3 x 4 R | T
 	cv::Mat euler_angle = cv::Mat(3, 1, CV_64FC1);
@@ -139,10 +139,10 @@ int main(int argc, char **argv)
 	std::ostringstream outtext;
     
 
-    
+    /*START OF VIDEO CAPTURE LOOP*/
     try
     {
-        cv::VideoCapture cap(0);
+        cv::VideoCapture cap(1);
         if (!cap.isOpened())
         {
             cerr << "Unable to connect to camera" << endl;
@@ -161,7 +161,7 @@ int main(int argc, char **argv)
         {
 			
             // Grab a frame
-            cv::Mat temp;
+            cv::Mat temp0, temp;
             if (!cap.read(temp))
             {
                 break;
@@ -172,8 +172,18 @@ int main(int argc, char **argv)
             // to reallocate the memory which stores the image as that will make cimg
             // contain dangling pointers.  This basically means you shouldn't modify temp
             // while using cimg.
+			
+			//undistort
+			//camera_matrix = (cv::Mat_<double>(3,3) << 2.3227180367866636e+03, 0., 320., 0., 2.3227180367866636e+03, 240., 0., 0., 1.);
+			//dist_coeffs = (cv::Mat_<double>(5,1) << 2.7657565130008392e+00, -4.9238754066884417e+02, 0., 0., 1.2714707127163863e+04);
+			//cv::undistort(temp0,temp,camera_matrix, dist_coeffs);
 			transpose(temp, temp);
+			//cv::flip(temp,temp,1);
+			//temp.convertTo(temp, -1, 1.5, 10);  //brightness and contrast
+			
+			
             cv_image<bgr_pixel> cimg(temp);
+			
 
             // Detect faces 
             std::vector<rectangle> faces = detector(cimg);
@@ -210,21 +220,26 @@ int main(int argc, char **argv)
 				image_points.push_back(cv::Point2d(pose.part(57).x(), pose.part(57).y())); //#57 mouth central bottom corner
 				image_points.push_back(cv::Point2d(pose.part(8).x(), pose.part(8).y())); //#8 chin corner
 				
-	
-				// Camera internals
+				
+				// Camera internals (original)
 				focal_length = temp.cols; // Approximate focal length.
 				center = cv::Point2d(temp.cols/2,temp.rows/2);
 				camera_matrix = (cv::Mat_<double>(3,3) << focal_length, 0, center.x, 0 , focal_length, center.y, 0, 0, 1);
-				dist_coeffs = cv::Mat::zeros(4,1,cv::DataType<double>::type); // Assuming no lens distortion
+				dist_coeffs = cv::Mat::zeros(4,1,cv::DataType<double>::type); // Assuming no lens distortion*/
+				
+				/*// Camera internals (current)
+				focal_length = temp.cols; // Approximate focal length.
+				center = cv::Point2d(temp.cols/2,temp.rows/2);
+				camera_matrix = (cv::Mat_<double>(3,3) << 1.7647874090475282e+03, 0., 320., 0., 1.7647874090475282e+03, 240., 0., 0., 1.);
+				dist_coeffs = (cv::Mat_<double>(5,1) << -1.1996815733941411e-01, -1.1389524422393094e+02, 0., 0., 1.9493590560763098e+03);*/
+				
 
-				// Solve for pose, account for multiple faces
+				// Solve for pose, account for multiple faces by only taking values from the nearest
 				if (i == 0) cv::solvePnP(model_points, image_points, camera_matrix, dist_coeffs, rotation_vector, translation_vector);
 				
 				else {
-					
 				cout << i <<endl;
 					cv::solvePnP(model_points, image_points, camera_matrix, dist_coeffs, rotation_vector_temp, translation_vector_temp);		
-					//Only record closest face in main variable
 					if(translation_vector_temp(2)>translation_vector(2)){
 						translation_vector = translation_vector_temp;
 						rotation_vector = rotation_vector_temp;
@@ -234,32 +249,15 @@ int main(int argc, char **argv)
 				for(int i=0; i < image_points.size(); i++) {
 				circle(temp, image_points[i], 3, cv::Scalar(0,0,255), -1);
 				}
-
-                // You get the idea, you can get all the face part locations if
-                // you want them.  Here we just store them in shapes so we can
-                // put them on the screen.
                 
                 shapes.push_back(pose);
              }
-			
-			
-
-
-			/*
-			// Project a 3D point (0, 0, 1000.0) onto the image plane.
-			// We use this to draw a line sticking out of the nose
-
-
-			std::vector<cv::Point3d> nose_end_point3D;
-			std::vector<cv::Point2d> nose_end_point2D;
-			nose_end_point3D.push_back(cv::Point3d(0,0,100.0));
-			projectPoints(nose_end_point3D, rotateAve, transAve, camera_matrix, dist_coeffs, nose_end_point2D);
-			*/
+		
 			if(faces.size()>0){
+				
+				/*DRAWING RED VISUAL BOX*/
 				//reproject
 				cv::projectPoints(reprojectsrc, rotation_vector, translation_vector, camera_matrix, dist_coeffs, reprojectdst);
-
-				//draw axis
 				cv::line(temp, reprojectdst[0], reprojectdst[1], cv::Scalar(0, 0, 255));
 				cv::line(temp, reprojectdst[1], reprojectdst[2], cv::Scalar(0, 0, 255));
 				cv::line(temp, reprojectdst[2], reprojectdst[3], cv::Scalar(0, 0, 255));
@@ -274,9 +272,9 @@ int main(int argc, char **argv)
 				cv::line(temp, reprojectdst[3], reprojectdst[7], cv::Scalar(0, 0, 255));
 
 
-				//cv::line(temp,image_points[0], nose_end_point2D[0], cv::Scalar(255,0,0), 2);
-				cout << "Translation Vector" << endl << translation_vector << endl;
-				cout << "Rotation Vector " << endl << rotation_vector << endl;
+				//cout << "Translation Vector" << endl << translation_vector << endl;
+				//cout << "Rotation Vector " << endl << rotation_vector << endl;
+				
 				//calc euler angle
 				cv::Rodrigues(rotation_vector, rotation_mat);
 				cv::hconcat(rotation_mat, translation_vector, pose_mat);
@@ -296,7 +294,8 @@ int main(int argc, char **argv)
 
 
 				if (ros::ok()) {
-					if ( (measureTranslationChange(translation_vector, translation_vector_prev) < SUDDENCHANGETOLERANCE)||(noiseDataCount>NOISECOUNTLIMIT)){
+					//cout<< measureTranslationChange(translation_vector, translation_vector_prev) <<endl;
+					if ( ((measureTranslationChange(translation_vector, translation_vector_prev) < SUDDENCHANGETOLERANCE)||(noiseDataCount>NOISECOUNTLIMIT))&&translation_vector(2)<0){
 						rosMsg.header.stamp = ros::Time::now();
 						rosMsg.header.frame_id = "/face_pos";		
 
@@ -310,6 +309,7 @@ int main(int argc, char **argv)
 						noiseDataCount = 0;  //Reset count to 0 upon successful publishing
 						translation_vector_prev = translation_vector;  //Record sent pose upon successful publishing
 					} else noiseDataCount++;
+					//cout<< noiseDataCount <<endl;
 					ros::spinOnce();
 					loop_rate.sleep();
 				}
